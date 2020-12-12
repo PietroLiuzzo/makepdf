@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"
+   xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas"
+   xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex"
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:o="urn:schemas-microsoft-com:office:office"
+   xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+   xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math"
+   xmlns:v="urn:schemas-microsoft-com:vml"
+   xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing"
+   xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+   xmlns:w10="urn:schemas-microsoft-com:office:word"
+   xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+   xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml"
+   xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml"
+   xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex"
+   xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup"
+   xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk"
+   xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
+   xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape"
+   xmlns:t="http://www.tei-c.org/ns/1.0" type="mss" xml:id="AddisAbabaManuscripts">
+   <teiHeader xml:base="https://betamasaheft.eu/">
+      <fileDesc>
+         <titleStmt>
+            <title>Title of your contribution</title>
+            <author>Author Name</author>
+<!--            more authors, editors, contributors can be added here-->
+         </titleStmt>
+         <publicationStmt>
+            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <pubPlace>Hamburg</pubPlace>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                  licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <p/>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <!--            Person names and place names for the indexes are taken from Beta Masahft.
+            you may define here a local list in listPerson or listPlaces to use in your introduction-->
+            <listPerson>
+               <person xml:id="p1">
+                  <persName><name>Joliet</name></persName>
+               </person>
+               <person xml:id="p2">
+                  <persName>
+                     <forename>Elwood</forename>
+                     <surname>Blues</surname>
+                  </persName>
+               </person>
+            </listPerson>
+         </particDesc>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="am">Amharic</language>
+            <language ident="gez">Gǝʿǝz</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change>Information on revisions of the work</change>
+         <!--         <change who="MA" when="2020-12-08+01:00">transformed from Word to teiCorpus file for print</change>-->
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div>
+            <head>Aknow</head>
+            <p>Aknowledgements text</p>
+         </div>
+      </front>
+      <body>
+         <div>
+            <head>Intro</head>
+            <p> your introduction!</p>
+            <div type="chapter">
+               <head>chapter head</head>
+               <p>my text</p>
+               <p> You can use here 
+                  <list>
+                     <item><ref target="http://www.thelevantinefoundation.co.uk"/></item>
+                     <item>ref with type figure, internal, manuscript, work with 
+                        respectively the ids of a figure in a figure element, a chapter 
+                        or any other node with a xml:id, a manuscript in BM a work in BM</item>
+                     <item><bibl><ptr target="bm:Meinardus1961Monks"/><citedRange unit="page">117</citedRange></bibl></item>
+                     <item><placeName ref="LOC6126WadinN"></placeName></item>
+                     <item><persName ref="PRS7185Mosesof"></persName></item>
+                     <item><note>to make a footnote</note></item>
+                     <item>lists like this one</item>
+                     <item>cit and quote</item>
+                  </list>
+               </p>
+               <div type="section">
+                  <head>section head</head>
+                  <p>my section text</p>
+               </div>
+            </div>
+         </div>
+      </body>
+      <back>
+         <div>
+            <head>Plates</head>
+            <table>
+               <row role="label">
+                  <cell/>
+                  <cell/>
+               </row>
+               <row>
+                  <cell><figure>
+                     <graphic url="images/AP-046_014.jpg">
+                           <desc>Caption of my image on the left</desc>
+                        </graphic>
+                     </figure></cell>
+                  <cell><figure>
+                        <graphic url="images/AP-046_014.jpg">
+                           <desc>Caption of my image on the right</desc>
+                        </graphic>
+                     </figure>
+                  </cell>
+               </row>
+            </table>
+            <figure>
+               <graphic url="https://betamasaheft.eu/iiif/AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
+                  <desc>Caption of my image</desc>
+               </graphic>
+            </figure>
+         </div>
+      </back>
+   </text>
+<!--   
+      here you can use xi:include to point to the manuscripts files. 
+      You can have as many as you want, here there is one simple example
+   -->
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
+      <xi:fallback>
+         <p>(The Psalter)</p>
+      </xi:fallback>
+   </xi:include>
+</teiCorpus>

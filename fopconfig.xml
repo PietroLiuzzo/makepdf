@@ -1,0 +1,42 @@
+<fop version="1.0">
+    <hyphenation-pattern lang="en">en_GB</hyphenation-pattern>
+    <hyphenation-pattern lang="de">de</hyphenation-pattern>
+    <hyphenation-pattern lang="it">it</hyphenation-pattern>
+    <hyphenation-pattern lang="gz">mul_ET</hyphenation-pattern>
+    <strict-configuration>true</strict-configuration>
+    <strict-validation>false</strict-validation>
+    <base>./</base>
+    <renderers>
+        <renderer mime="application/pdf">
+            <fonts>
+                <font kerning="yes" embed-url="fonts/Cardo-Regular.ttf"><font-triplet name="Cardo" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/Cardo-Bold.ttf"><font-triplet name="Cardo" style="normal" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/Cardo-Italic.ttf"><font-triplet name="Cardo" style="italic" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/coranica_1145.ttf"><font-triplet name="coranica" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/TitusCBZ.TTF"><font-triplet name="Titus" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/LudolfusNormal.ttf"><font-triplet name="Ludolfus" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/LudolfusBold.ttf"><font-triplet name="Ludolfus" style="normal" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/LudolfusItalic.ttf"><font-triplet name="Ludolfus" style="italic" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/LudolfusBoldItalic.ttf"><font-triplet name="Ludolfus" style="italic" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSans-Regular.ttf"><font-triplet name="Noto" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSans-Bold.ttf"><font-triplet name="Noto" style="normal" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSans-Italic.ttf"><font-triplet name="Noto" style="italic" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSans-BoldItalic.ttf"><font-triplet name="Noto" style="italic" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansEthiopic-Regular.ttf"><font-triplet name="NotoSansEthiopic" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansEthiopic-Bold.ttf"><font-triplet name="NotoSansEthiopic" style="normal" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/NotoNaskhArabic-Regular.ttf"><font-triplet name="NotoNaskhArabic" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoNaskhArabic-Bold.ttf"><font-triplet name="NotoNaskhArabic" style="normal" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansArmenian-Bold.ttf"><font-triplet name="NotoSansArmenian" style="normal" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansArmenian-Regular.ttf"><font-triplet name="NotoSansArmenian" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansAvestan-Regular.ttf"><font-triplet name="NotoSansAvestan" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansCoptic-Regular.ttf"><font-triplet name="NotoSansCoptic" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansGeorgian-Regular.ttf"><font-triplet name="NotoSansGeorgian" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansHebrew-Regular.ttf"><font-triplet name="NotoSansHebrew" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansSyriacEstrangela-Regular.ttf"><font-triplet name="NotoSansSyriacEstrangela" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansDevanagari-Regular.ttf"><font-triplet  name="NotoSansDevanagari" style="normal" weight="normal"/></font>
+                <font kerning="yes" embed-url="fonts/NotoSansDevanagari-bold.ttf"><font-triplet name="NotoSansDevanagari" style="normal" weight="700"/></font>
+                <font kerning="yes" embed-url="fonts/ScheherazadeRegOT.ttf"><font-triplet name="Scheherazade" style="normal" weight="normal"/></font>
+            </fonts>
+        </renderer>
+    </renderers>
+</fop>
