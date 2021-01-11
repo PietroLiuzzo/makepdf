@@ -2,14 +2,14 @@
 
 This package produces a PDF output from TEI files including Manuscripts 
 encoded following the [Beta maṣāḥǝft Guidelines](https://betamasaheft.eu/Guidelines/) 
-which follows most of the layout requirements of [Aethiopica](https://doaj.org/toc/2194-4024) and the Supplments to Aethiopica.
-It is mainly intended for those users which, abiding to the copyright of the data available would want to 
+which follows most of the layout requirements of [Aethiopica](https://doaj.org/toc/2194-4024) and the Supplements to Aethiopica.
+It is mainly intended for those users who, abiding to the copyright of the data available would want to 
 produce a contribution for Aethiopica starting from existing XML data, or curate 
 a catalogue to be submitted as article or as a book to the Journal Aethiopica.
 
 This is similar to the PDF print functionality
 available on the Beta maṣāḥǝft website. This package will allow you to compile a PDF  with basic customizable parts. You
-can then specify all its features in the script if you want to, or you can ask the mantainer of the package
+can then specify all its features in the script if you want to, or you can ask the maintainer of the package
 to help you with that opening issues or asking in discussions in this repository.
 
 This can eventually be modified for other TEI based projects.
@@ -27,7 +27,7 @@ initially for a new publication project by Mersha Alehegne.
 It has been generalized and made a bit more flexible and usable without a browser and only on a local machine 
 to meet the requirements of other projects at the HLCEES. This means it
 is simpler than previous projects, but tries to deal with more options and 
-allow more setting, so that people can have a start playing around and figuring out 
+allow more settings, so that people can have a start playing around and figuring out 
 their requirements.
 
 ## Setup
@@ -54,7 +54,7 @@ There are then three directories,
  
 Note that the img folder contains instead the image used in this documentation page, and is not used by the script.
 Once you open the project, allow it to set up your software and make sure you can 
-use xi:include in the preferences. This should be set by the project it self for you.
+use xi:include in the preferences. This should be set by the project itself for you.
 ![img/XInclude.png](img/XInclude.png)
 
 You will need to create a directory called fonts and store in it the fonts listed in `fopconfig.xml`.
@@ -106,7 +106,7 @@ Having a fallback will help you in case you have many files and one cannot be fo
 
 By default manuscripts are printed and ordered regardless of their position of inclusion in `driver.xml`, looking instead at their shelfmark.
 
-Note that the print process supports lightly as well as more deeply encoded manuscripts. the example has three paragraphs of information as text, no further encoding.
+Note that the print process supports lightly as well as more deeply encoded manuscripts. The example has three paragraphs of information as text, no further encoding.
 The package was developed to support manuscripts deeply encoded as, e.g. those 
 of the (Dayr as-Suryān Collection)[https://betamasaheft.eu/DSintro.html].
 
@@ -117,9 +117,9 @@ The Package uses
 - the [Beta maṣāḥǝft API](https://betamasaheft.eu/apidoc.html) to print standard names of persons, places and manuscripts, as well as the standard title of literary works including their Clavis Aethiopica number (CAe)
 
 If these resources happen to be unavailable or you have 
-no internet connection to let oxygen access them, this will not work.
+no internet connection to let Oxygen access them, this will not work.
 This also means that there is a certain amount of dependency on 
-the Beta Masaheft research environment and Zotero API.
+the Beta maṣāḥǝft research environment and Zotero API.
 
 
 Validation with a specific style schema is on the way and will be included in driver.xml, so that it does not affect the included TEI files and their schema association.
@@ -240,16 +240,16 @@ The `settings.xml`file has already some configuration, if you want to get back t
 
 ` <format>book</format>`
 
-This value can be set to "book", for the layout of a supplment 
+This value can be set to "book", for the layout of a supplement 
         for Aethiopica or to "article" for a contribution to the 
         journal Aethiopica. In the second case, 
-        items in orderOfParts like title page, aknowledgments, 
+        items in orderOfParts like title page, acknowledgments, 
         toc, indexes should be omitted.
   
 If your manuscripts all use a specific prefix for identification, please state it in the following element
  `  <localPrefix>Addis Ababa </localPrefix>`
 
-In `<orderOfParts>` you can set the order and existince of parts of your catalogue
+In `<orderOfParts>` you can set the order and existence of parts of your catalogue
         simply move the tags and add the value 'yes' or 'no'.
         more parts can be added, but will require modifications to the package. If a manuscript does not contain a given part this will not be used.
 
