@@ -3234,7 +3234,7 @@ declare function fo:introduction($r){
                 hyphenate="true">
   <!-- INTRODUCTION     -->          
          <fo:block id="introduction">{
-                fo:tei2fo($r//tei:body)
+                fo:tei2fo($r/node())
                 }</fo:block>
             </fo:flow>
         </fo:page-sequence> 
