@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="22.1">
+<project>
     <meta>
         <filters directoryPatterns="" filePatterns="catalogue.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
         <options>
-            <serialized version="22.1" xml:space="preserve">
+            <serialized xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
                         <String>enable.parser.caching</String>
                         <Boolean>false</Boolean>
+                    </entry>
+                    <entry>
+                        <String>enable.project.master.files.support</String>
+                        <Boolean>true</Boolean>
                     </entry>
                     <entry>
                         <String>fop.configuration.file.path</String>
@@ -28,6 +32,26 @@
                     <entry>
                         <String>scenario.associations</String>
                         <scenarioAssociation-array>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>driver.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>catalogue2PDF</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML_XQUERY</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>catalogue.xml</String>
@@ -472,6 +496,9 @@
         </options>
     </meta>
     <projectTree name="catalogue.xpr">
+        <folder masterFiles="true" name="Main Files">
+            <file name="driver.xml"/>
+        </folder>
         <folder path="."/>
     </projectTree>
 </project>

@@ -38,6 +38,30 @@
             <p/>
          </sourceDesc>
       </fileDesc>
+      <encodingDesc>
+         <listPrefixDef xmlns="http://www.tei-c.org/ns/1.0">
+            <prefixDef ident="bmdocdts"
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/$1">
+            </prefixDef>
+            <prefixDef ident="bmcoldts"
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://betamasaheft.eu/api/dts/collections?id=https://betamasaheft.eu/$1">
+            </prefixDef>
+            <prefixDef ident="bmnavdts"
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://betamasaheft.eu/api/dts/navigation?id=https://betamasaheft.eu/$1">
+            </prefixDef>
+            <prefixDef ident="bmiiif"
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://betamasaheft.eu/iiif/$1">
+            </prefixDef>
+            <prefixDef ident="bm"
+               matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm:$1">
+            </prefixDef>
+         </listPrefixDef>
+      </encodingDesc>
       <profileDesc>
          <particDesc>
             <!--            Person names and place names for the indexes are taken from Beta Masahft.
@@ -123,7 +147,7 @@
                </row>
             </table>
             <figure>
-               <graphic url="https://betamasaheft.eu/iiif/AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
+               <graphic url="bmiiif:AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
                   <desc>Caption of my image</desc>
                </graphic>
             </figure>
@@ -137,6 +161,21 @@
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
       <xi:fallback>
          <p>(The Psalter)</p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/BMLacq810">
+      <xi:fallback>
+         <p>Masahfa Genzat Florence (with images available via IIIF at https://betamasaheft.eu/api/iiif/BMLacq810/manifest)</p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/DW03">
+      <xi:fallback>
+         <p>DW 03 </p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/ESum035">
+      <xi:fallback>
+         <p>ES um 35 with images available and linked transkribus-transcription</p>
       </xi:fallback>
    </xi:include>
 </teiCorpus>
