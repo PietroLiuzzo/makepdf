@@ -127,6 +127,7 @@
       <back>
          <div>
             <head>Plates</head>
+            <p>examples of mixing and matching different images from different sources.</p>
             <table>
                <row role="label">
                   <cell/>
@@ -135,20 +136,20 @@
                <row>
                   <cell><figure>
                      <graphic url="images/AP-046_014.jpg">
-                           <desc>Caption of my image on the left</desc>
+                           <desc>Image on the left using a TEI table from a locally stored image</desc>
                         </graphic>
                      </figure></cell>
                   <cell><figure>
-                        <graphic url="images/AP-046_014.jpg">
-                           <desc>Caption of my image on the right</desc>
+                     <graphic url="bmiiif:AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
+                           <desc>Image on the right using a TEI table from a remotely stored image fetched with a IIIF Image API request </desc>
                         </graphic>
                      </figure>
                   </cell>
                </row>
             </table>
             <figure>
-               <graphic url="bmiiif:AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
-                  <desc>Caption of my image</desc>
+               <graphic url="https://digi.vatlib.it/pub/digit/MSS_Vat.et.1/thumb/Vat.et.1_0001.tif.jpg">
+                  <desc>Image from a different IIIF API (Vatican Library) added explicitly</desc>
                </graphic>
             </figure>
          </div>
@@ -158,7 +159,12 @@
       here you can use xi:include to point to the manuscripts files. 
       You can have as many as you want, here there is one simple example
    -->
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/ESum035">
+      <xi:fallback>
+         <p>ES um 35 with images available and linked transkribus-transcription</p>
+      </xi:fallback>
+   </xi:include>
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
       <xi:fallback>
          <p>(The Psalter)</p>
       </xi:fallback>
@@ -172,10 +178,6 @@
       <xi:fallback>
          <p>DW 03 </p>
       </xi:fallback>
-   </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/ESum035">
-      <xi:fallback>
-         <p>ES um 35 with images available and linked transkribus-transcription</p>
-      </xi:fallback>
-   </xi:include>
+   </xi:include>-->
+   
 </teiCorpus>

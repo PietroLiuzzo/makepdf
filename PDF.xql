@@ -12,7 +12,7 @@ declare namespace xslfo = "http://exist-db.org/xquery/xslfo";
 declare namespace tei = "http://www.tei-c.org/ns/1.0";
 declare namespace functx = "http://www.functx.com";
 declare namespace s = "local.print";
-
+declare namespace map = "http://www.w3.org/2005/xpath-functions/map";
 
 declare variable $local:settings := doc('settings.xml')/s:settings;
 declare variable $local:catalogue := doc('driver.xml')/tei:teiCorpus;
@@ -3784,6 +3784,64 @@ declare function fo:back($back) {
                 text-align="center"
                 display-align="center">Plates</fo:block>
             {fo:tei2fo($back)}
+             <fo:block
+                id="Appendix"
+                font-size="12pt"
+                space-before="25.2pt"
+                space-after="12.24pt"
+                font-family="Ludolfus"
+                font-weight="700"
+                text-align="center"
+                display-align="center">Standardized print out of the first 5 images of each set of available images for a listed manuscript</fo:block>
+            {for $file in $local:entries
+            let $dtsCall := (substring-before($local:dtscollprefix, '$') || string($file/@xml:id))
+            let $dtscollectionapi := try{json-doc($dtsCall) } catch * {
+           map{'info' : 'no depiction'}
+            }            
+            let $msmainid := number(substring-after($file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text(), $local:prefix))
+                order by $msmainid
+            return
+                if(count($dtscollectionapi?("dts:extensions")?("foaf:depiction")) ge 1) 
+                then 
+                let $manifest := $dtscollectionapi?("dts:extensions")?("foaf:depiction")?('svcs:has_service')?('@id') 
+            let $iiif := json-doc($manifest)
+            let $label:=$iiif?label
+            let $canvases := $iiif?sequences?*?canvases?*
+            return
+             (  for $canvas at $p in subsequence($canvases, 1, 5)
+              let $figure := 
+                <figure xmlns="http://www.tei-c.org/ns/1.0">
+               <graphic url="{$canvas?images?*?resource?('@id')}">
+                  <desc>Sample image {$p} of {$label}. Disposed one by one.</desc>
+               </graphic>
+            </figure>
+               return 
+                fo:tei2fo($figure)
+                ,
+                'table'
+             (: let $table := 
+              <table xmlns="http://www.tei-c.org/ns/1.0">
+               <row role="label">
+                  <cell/>
+                  <cell/>
+               </row>
+               <row>
+               { for $canvas at $p in subsequence($canvases, 6, 7)
+                 return <cell>
+                <figure >
+               <graphic url="{$canvas?images?*?('@id')}">
+                  <desc>Sample image {$p} of {$label}. Disposed in table.</desc>
+               </graphic>
+            </figure>
+            </cell>}
+            </row>
+            </table>
+            
+               return 
+                fo:tei2fo($table):)
+                )
+                else ()
+                }
         </fo:flow>
     </fo:page-sequence>
 };
@@ -4361,20 +4419,53 @@ declare function fo:catalogue() {
         {
             for $file in $local:entries
             let $dtsCall := (substring-before($local:dtscollprefix, '$') || string($file/@xml:id))
-            let $dtscollectionapi := try{json-doc($dtsCall)
-} catch * {$err:description}            
+            let $dtscollectionapi := try{json-doc($dtsCall) } catch * {
+           map{'info' : 'no depiction'}
+            }            
             let $msmainid := number(substring-after($file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text(), $local:prefix))
                 order by $msmainid
             return
                 (fo:msheader($file//tei:msDesc/tei:msIdentifier),
-                if($dtscollectionapi?*?("dts:extensions")?("foaf:depiction")) 
+                if(not(map:contains($dtscollectionapi, 'info')) and count($dtscollectionapi?("dts:extensions")?("foaf:depiction")) ge 1) 
                 then 
-                let $manifest := $dtscollectionapi?("dts:extensions")?("foaf:depiction")?('svcs:has_service') 
+                let $manifest := $dtscollectionapi?("dts:extensions")?("foaf:depiction")?('svcs:has_service')?('@id') 
                 return 
                 <fo:block>
-                {$manifest}
+               IIIF manifest: {$manifest}
+               <fo:footnote>
+                    <fo:inline
+                        font-size="7pt"
+                        vertical-align="text-top">*</fo:inline>
+                    
+                    <fo:footnote-body
+                        text-align="justify"
+                        text-indent="0">
+                        <fo:list-block>
+                            <fo:list-item>
+                                <fo:list-item-label>
+                                    <fo:block>
+                                        <fo:inline
+                                            vertical-align="text-top"
+                                            font-size="9pt"
+                                        >*</fo:inline>
+                                    </fo:block>
+                                </fo:list-item-label>
+                                <fo:list-item-body>
+                                    <fo:block
+                                        hyphenate="true"
+                                        space-before="0.45cm"
+                                        font-size="9pt"
+                                        line-height="11pt"
+                                        margin-left="0.45cm"
+                                    >{json-doc($manifest)('attribution')}
+                                    </fo:block>
+                                </fo:list-item-body>
+                            </fo:list-item>
+                        </fo:list-block>
+                    </fo:footnote-body>
+                </fo:footnote>
                 </fo:block>
-                else (),
+                else ($dtscollectionapi('info')),
                 <fo:block
                     text-align="center"
                     space-before="2mm"
