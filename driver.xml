@@ -24,7 +24,7 @@
          <titleStmt>
             <title>My mashup Book</title>
             <author>Pietro Liuzzo</author>
-<!--            more authors, editors, contributors can be added here-->
+            <!--            more authors, editors, contributors can be added here-->
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -40,26 +40,21 @@
       </fileDesc>
       <encodingDesc>
          <listPrefixDef xmlns="http://www.tei-c.org/ns/1.0">
-            <prefixDef ident="bmdocdts"
-               matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/$1">
-            </prefixDef>
-            <prefixDef ident="bmcoldts"
-               matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://betamasaheft.eu/api/dts/collections?id=https://betamasaheft.eu/$1">
-            </prefixDef>
-            <prefixDef ident="bmnavdts"
-               matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://betamasaheft.eu/api/dts/navigation?id=https://betamasaheft.eu/$1">
-            </prefixDef>
-            <prefixDef ident="bmiiif"
-               matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://betamasaheft.eu/iiif/$1">
-            </prefixDef>
-            <prefixDef ident="bm"
-               matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm:$1">
-            </prefixDef>
+            <prefixDef ident="bmdocdts" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/$1"> </prefixDef>
+            <prefixDef ident="bmcoldts" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://betamasaheft.eu/api/dts/collections?id=https://betamasaheft.eu/$1"> </prefixDef>
+            <prefixDef ident="bmnavdts" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://betamasaheft.eu/api/dts/navigation?id=https://betamasaheft.eu/$1"> </prefixDef>
+            <prefixDef ident="bmiiif" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://betamasaheft.eu/iiif/$1"> </prefixDef>
+            <prefixDef ident="bm" matchPattern="([a-zA-Z0-9]+)"
+               replacementPattern="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm:$1"> </prefixDef>
+            <prefixDef ident="perseids" matchPattern="([a-zA-Z0-9\.]+)"
+               replacementPattern="https://dts.perseids.org/collections?id=urn:cts:greekLit:$1"> </prefixDef>
+            <prefixDef ident="alpheios" matchPattern="([a-zA-Z0-9\.-]+)"
+               replacementPattern="http://texts.alpheios.net/api/dts/collections?id=urn:cts:greekLit:$1"
+            > </prefixDef>
          </listPrefixDef>
       </encodingDesc>
       <profileDesc>
@@ -77,6 +72,7 @@
                   </persName>
                </person>
             </listPerson>
+
          </particDesc>
          <langUsage>
             <language ident="en">English</language>
@@ -95,24 +91,62 @@
             <head>Aknow</head>
             <p>Aknowledgements text</p>
          </div>
+         <div>
+            <head>Abbreviations</head>
+            <p>In the following list <att>corresp</att> points in an abbreviated form to the selected source text of reference. The shortened reference can be resolved with <gi>prefixDef</gi>. The content of <gi>label</gi> in each item in the list is the value which will be used in <tag>ref @cRef</tag> and eventually specified by additional attributes or structure </p>
+            <list xml:id="abbreviations">
+               <item corresp="perseids:tlg0016.tlg001"><label>Hdt</label> = Herodotus, The
+                  Histories</item>
+               <item corresp="alpheios:tlg0085.tlg003.alpheios-text-grc1"><label>Aesch</label> =
+                  Aeschylus Prometheus Bound</item>
+               <item corresp="bmcoldts:LIT1546Genesi"><label>Gen.</label> = Book of Genesis,
+                  Ethiopian</item>
+               <item corresp="bmcoldts:BMLacq810"><label>BML acq. 810</label> = Biblioteca Medicea
+                  Laurenziana, MS Acquisizioni e Doni 810.</item>
+            </list>
+         </div>
       </front>
       <body>
          <div>
             <head>Intro</head>
-            <p>This sample package uses Zotero API, DTS API, IIIF APIs, XInclude pointing to local and external resources to build with Xquery and FOP a PDF output.
-            The result mixes information retrieved from the APIs. An additional layer of transformation is added to prepare inscriptions before inclusion which uses the EpiDoc example XSLT.</p>
+            <p>This sample package uses Zotero API, DTS API, IIIF APIs, XInclude pointing to local
+               and external resources to build with Xquery and FOP a PDF output. The result mixes
+               information retrieved from the APIs. An additional layer of transformation is added
+               to prepare inscriptions before inclusion which uses the EpiDoc example XSLT.</p>
             <div type="chapter">
                <head>chapter head</head>
-               <p>my text</p>
-               <p> You can use here 
-                  <list>
+               <p>This paragraph of text contains references to texts which assume a resolution
+                  possibility in one existing DTS endpoint. <list>
+                     <item>The following is a ref pointing to the Perseids DTS endpoint to print a
+                        citation only. <ref cRef="Hdt" corresp="7.10" rend="cit">Herodotus book 7,
+                           chapter 10</ref></item>
+                     <item>The following is an empty ref pointing to the Perseids DTS endpoint to print a
+                        citation only. The text of the citation is computed. <ref cRef="Hdt" corresp="7.10" rend="cit"/></item>
+                     <item>The following is a ref pointing to the Perseids DTS endpoint to print a
+                        quote based on that source. <ref cRef="Hdt" corresp="7.10" rend="quote"
+                           >Herodotus book 7, chapter 10</ref></item>
+                     <item>The following is a ref pointing to the Beta Masaheft DTS endpoint to
+                        print a citation only. <ref cRef="Gen." corresp="43.34" rend="quote"
+                           >Genesis:43,34 Ethiopian text</ref></item>
+                     <item>The following is a ref pointing to the Beta Masaheft DTS endpoint to
+                        print a quote based on that source. <ref cRef="BML acq. 810" corresp="12r"
+                           rend="cit">Manuscript BML acq. 810, folio 12 recto</ref></item>
+                     <item><ref cRef="BML acq. 810" corresp="12r" rend="quote">Manuscript BML acq.
+                           810, folio 12 recto</ref></item>
+                     <item>The following is a ref pointing to the Alpheios DTS endpoint to print a
+                        citation only.<ref cRef="Aesch" corresp="221" rend="cit">Aeschilus,
+                           Prometeus Bound, verse 221</ref></item>
+                  </list>
+               </p>
+               <p> You can use here <list>
                      <item><ref target="http://www.thelevantinefoundation.co.uk"/></item>
-                     <item>ref with type figure, internal, manuscript, work with 
-                        respectively the ids of a figure in a figure element, a chapter 
-                        or any other node with a xml:id, a manuscript in BM a work in BM</item>
-                     <item><bibl><ptr target="bm:Meinardus1961Monks"/><citedRange unit="page">117</citedRange></bibl></item>
-                     <item><placeName ref="LOC6126WadinN"></placeName></item>
-                     <item><persName ref="PRS7185Mosesof"></persName></item>
+                     <item>ref with type figure, internal, manuscript, work with respectively the
+                        ids of a figure in a figure element, a chapter or any other node with a
+                        xml:id, a manuscript in BM a work in BM</item>
+                     <item><bibl><ptr target="bm:Meinardus1961Monks"/><citedRange unit="page"
+                              >117</citedRange></bibl></item>
+                     <item><placeName ref="LOC6126WadinN"/></item>
+                     <item><persName ref="PRS7185Mosesof"/></item>
                      <item><note>to make a footnote</note></item>
                      <item>lists like this one</item>
                      <item>cit and quote</item>
@@ -136,56 +170,66 @@
                </row>
                <row>
                   <cell><figure>
-                     <graphic url="images/AP-046_014.jpg">
-                           <desc>Image on the left using a TEI table from a locally stored image</desc>
+                        <graphic url="images/AP-046_014.jpg">
+                           <desc>Image on the left using a TEI table from a locally stored
+                              image</desc>
                         </graphic>
                      </figure></cell>
-                  <cell><figure>
-                     <graphic url="https://betamasaheft.eu/iiif/AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
-                           <desc>Image on the right using a TEI table from a remotely stored image fetched with a IIIF Image API request </desc>
+                  <cell><!--<figure>
+                        <graphic
+                           url="https://betamasaheft.eu/iiif/AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
+                           <desc>Image on the right using a TEI table from a remotely stored image
+                              fetched with a IIIF Image API request </desc>
                         </graphic>
-                     </figure>
+                     </figure>-->
                   </cell>
                </row>
             </table>
-            <figure>
-               <graphic url="https://digi.vatlib.it/pub/digit/MSS_Vat.et.1/thumb/Vat.et.1_0001.tif.jpg">
+            <!-- <figure>
+               <graphic
+                  url="https://digi.vatlib.it/pub/digit/MSS_Vat.et.1/thumb/Vat.et.1_0001.tif.jpg">
                   <desc>Image from a different IIIF API (Vatican Library) added explicitly</desc>
                </graphic>
-            </figure>
+            </figure>-->
          </div>
       </back>
    </text>
-<!--   
+   <!--   
       here you can use xi:include to point to the manuscripts files. 
       You can have as many as you want, here there is one simple example
    -->
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://ilc4clarin.ilc.cnr.it/cretaninscriptions/en/inscriptions/seg_64_798.xml"><xi:fallback>
+    <!--<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="https://ilc4clarin.ilc.cnr.it/cretaninscriptions/en/inscriptions/seg_64_798.xml">
+      <xi:fallback>
          <p>inscription from Cretan Institutional Inscriptions</p>
       </xi:fallback>
-   </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://igcyr.unibo.it/igcyr/gvcyr001.xml">
+   </xi:include>-->
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="https://igcyr.unibo.it/igcyr/gvcyr001.xml">
       <xi:fallback>
          <p>inscription from IGCyr</p>
       </xi:fallback>
-   </xi:include>
-   
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/ESum035">
+   </xi:include>-->
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/ESum035">
       <xi:fallback>
          <p>ES um 35 with images available and linked transkribus-transcription</p>
       </xi:fallback>
-   </xi:include>
+   </xi:include>-->
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
       <xi:fallback>
          <p>(The Psalter)</p>
       </xi:fallback>
    </xi:include>
-  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/BMLacq810">
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/BMLacq810">
       <xi:fallback>
-         <p>Masahfa Genzat Florence (with images available via IIIF at https://betamasaheft.eu/api/iiif/BMLacq810/manifest)</p>
+         <p>Masahfa Genzat Florence (with images available via IIIF at
+            https://betamasaheft.eu/api/iiif/BMLacq810/manifest)</p>
       </xi:fallback>
    </xi:include>-->
-   <!--<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/DW03">
+   <!--<xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/DW03">
       <xi:fallback>
          <p>DW 03 </p>
       </xi:fallback>

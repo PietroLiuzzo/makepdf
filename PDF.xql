@@ -60,14 +60,34 @@ declare variable $local:values as element(value)+ := (
 );
 
 declare variable $local:catalogue := doc('driver.xml')/tei:teiCorpus;
+declare variable $local:listPrefixDef := $local:catalogue//tei:listPrefixDef;
 declare variable $local:entries := $local:catalogue//tei:TEI;
 declare variable $local:settings := doc('settings.xml')/s:settings;
-declare variable $local:dtscollprefix := $local:catalogue//tei:prefixDef[@ident='bmcoldts']/@replacementPattern ;
+declare variable $local:dtscollprefix := $local:catalogue//tei:prefixDef[@ident = 'bmcoldts']/@replacementPattern;
 declare variable $local:title := fo:tei2fo($local:catalogue/tei:teiHeader//tei:titleStmt/tei:title);
 
 (:DS Ethiop. Addis Ababa the string part prefix to a structured signature consistent through the text:)
 declare variable $local:prefix := $local:settings//s:localPrefix;
+(:
+declare variable $local:citsandquotes :=
 
+for $ref in $local:catalogue//tei:ref[@cRef]
+
+let $c := string($ref/@cRef)
+    group by $cit := $c
+let $endpoint := $local:catalogue//tei:list[@xml:id = 'abbreviations']/tei:item[tei:label = $cit]/@corresp
+let $ident := substring-before($endpoint, ':')
+let $prefix := $local:listPrefixDef//tei:prefixDef[@ident = $ident]
+let $endpointurl := replace(substring-after($endpoint, ':'), $prefix/@matchPattern, $prefix/@replacementPattern)
+return
+    <cit>{
+            for $r in $c
+            let $id := generate-id($ref)
+            return
+                <node><id>{$id}</id>{$r}</node>
+        }<endpoint>{$endpointurl}</endpoint></cit>
+
+;:)
 
 (:return the concatenation of strings by continuous reduction:)
 declare function local:n2roman($num as xs:integer) as xs:string
@@ -118,11 +138,19 @@ declare function functx:capitalize-first($arg as xs:string?) as xs:string? {
 };
 
 declare function fo:printTitleID($ref as xs:string?) as xs:string? {
-    try{ json-doc(replace(concat($local:BMappUrl, 'api/', replace($ref, ':', '_'), '/title/json'), '\s', ''))?title } catch * {$err:description}
+    try {
+        json-doc(replace(concat($local:BMappUrl, 'api/', replace($ref, ':', '_'), '/title/json'), '\s', ''))?title
+    } catch * {
+        $err:description
+    }
 };
 
 declare function fo:getFile($id) {
-    try{doc(concat($local:BMappUrl, $id, '.xml')) } catch * {$err:description}
+    try {
+        doc(concat($local:BMappUrl, $id, '.xml'))
+    } catch * {
+        $err:description
+    }
 };
 
 declare function fo:lang($lang as xs:string) {
@@ -798,13 +826,80 @@ if it does not fit to the page set the width attribute in the source file, as th
             else
                 ()
             return
-                <fo:list-block
-                    provisional-distance-between-starts="6mm"
-                    provisional-label-separation="6mm"
-                >
-                    {attribute start-indent {((0.43 * (1 + count($node/ancestor::tei:list))) + $par) || "cm"}}
-                    {fo:tei2fo($node/node())}
-                </fo:list-block>
+                if ($node/@xml:id = 'abbreviations')
+                then
+                    <fo:list-block
+                        provisional-distance-between-starts="12mm"
+                        provisional-label-separation="12mm"
+                    >{attribute start-indent {((0.43 * (1 + count($node/ancestor::tei:list))) + $par) || "cm"}}
+                        {
+                            
+                            for $endpoint in $node/tei:item
+                            let $ident := substring-before($endpoint/@corresp, ':')
+                            let $prefix := $local:listPrefixDef/tei:prefixDef[@ident = $ident]
+                            let $endpointurl := replace(substring-after($endpoint/@corresp, ':'), string($prefix/@matchPattern), string($prefix/@replacementPattern))
+                            let $dts := json-doc($endpointurl)
+                            return
+                                <fo:list-item>
+                                    <fo:list-item-label
+                                        end-indent="label-end()">
+                                        <fo:block>
+                                            {
+                                                <fo:inline>
+                                                    {
+                                                        if ($endpoint/tei:label)
+                                                        then
+                                                            fo:tei2fo($endpoint/tei:label/node())
+                                                        else
+                                                            string($endpoint/@corresp)
+                                                    }
+                                                </fo:inline>
+                                            }
+                                        </fo:block>
+                                    </fo:list-item-label>
+                                    <fo:list-item-body
+                                        start-indent="body-start()">
+                                        <fo:block
+                                            hyphenate="true">
+                                            <fo:block
+                                                hyphenate="true"> content of this list item: {fo:tei2fo($endpoint/text())}</fo:block>
+                                            <fo:block
+                                                hyphenate="true">title from dts endpoint: {$dts?title}</fo:block>
+                                            <fo:block
+                                                hyphenate="true">{
+                                                    if (string-length($dts?description) gt 0) then
+                                                        'description from dts endpoint:' || $dts?description
+                                                    else
+                                                        ()
+                                                }</fo:block>
+                                            <fo:block
+                                                hyphenate="true">Text for this resource from {$endpointurl}. </fo:block>
+                                            <fo:block
+                                                hyphenate="true">{
+                                                    if (string-length($dts?('dts:download')) gt 0) then
+                                                        'XML TEI source available at ' || $dts?('dts:download')
+                                                    else
+                                                        ()
+                                                }</fo:block>
+                                        </fo:block>
+                                        <fo:block>dublin core available: {
+                                                for $dc in $dts?('dts:dublincore')
+                                                return
+                                                    string-join(map:keys($dc), ', ')
+                                            }</fo:block>
+                                    </fo:list-item-body>
+                                </fo:list-item>
+                        }
+                    
+                    </fo:list-block>
+                else
+                    <fo:list-block
+                        provisional-distance-between-starts="6mm"
+                        provisional-label-separation="6mm"
+                    >
+                        {attribute start-indent {((0.43 * (1 + count($node/ancestor::tei:list))) + $par) || "cm"}}
+                        {fo:tei2fo($node/node())}
+                    </fo:list-block>
     
     
     case element(tei:item)
@@ -814,9 +909,9 @@ if it does not fit to the page set the width attribute in the source file, as th
                     end-indent="label-end()">
                     <fo:block>
                         {
-                        <fo:inline>
+                            <fo:inline>
                                 {
-                                if ($node/tei:label)
+                                    if ($node/tei:label)
                                     then
                                         fo:tei2fo($node/tei:label/node())
                                     else
@@ -1012,7 +1107,10 @@ case element(tei:listBibl)
                 if ($node/tei:bibl) then
                     let $file := $node/ancestor::tei:TEI
                     for $b in $node/tei:bibl
-                    let $z := if(starts-with($b/tei:ptr/@target, 'bm:')) then fo:Zotero($b/tei:ptr/@target) else string($b/tei:ptr/@target)
+                    let $z := if (starts-with($b/tei:ptr/@target, 'bm:')) then
+                        fo:Zotero($b/tei:ptr/@target)
+                    else
+                        string($b/tei:ptr/@target)
                     let $zt := substring(string-join($z), 1, 10)
                         order by $zt
                     return
@@ -1088,10 +1186,13 @@ case element(tei:bibl)
                 internal-destination="{replace($bibid, ':', '_')}"><fo:inline
                     id="{$rootid}{generate-id($node/tei:ptr)}{replace($bibid, ':', '_')}">
                     {
-                        if(starts-with($node/tei:ptr/@target, 'bm:')) then fo:zoteroCit($node/tei:ptr/@target) else string($node/tei:ptr/@target)
+                        if (starts-with($node/tei:ptr/@target, 'bm:')) then
+                            fo:zoteroCit($node/tei:ptr/@target)
+                        else
+                            string($node/tei:ptr/@target)
                     }
                     {
-                    if ($node/tei:citedRange) then
+                        if ($node/tei:citedRange) then
                             ', ' || (let $citRanges := for $cR in $node/tei:citedRange
                             let $unit := switch ($cR/@unit)
                                 case 'paragraph'
@@ -1657,97 +1758,146 @@ case element(tei:ref)
             if ($node[text()]) then
                 fo:tei2fo($node/node())
             else
-                if ($node[not(@type)]/@cRef) then
-                    if ($node/parent::tei:cit) then
-                        let $wordcount := count(tokenize(string-join($node/parent::tei:cit/tei:quote[1]//text(), ' '), '\s+'))
-                        return
-                            if ($wordcount lt 50) then
-                                <fo:inline
-                                    id="{$refid}">({$node/text()})</fo:inline>
+                if ($node[@cRef][@corresp][@rend]) then
+                    let $label := $node/@cRef
+                    let $passage := $node/@corresp
+                    return
+                        try {
+                            let $abbreviation := $local:catalogue//tei:list[@xml:id = 'abbreviations']
+                            let $refabbr := $abbreviation/tei:item[tei:label = $label]
+                            let $endpoint := $refabbr/@corresp
+                            let $ident := substring-before($endpoint, ':')
+                            let $prefix := $local:listPrefixDef//tei:prefixDef[@ident = $ident]
+                            let $endpointurl := replace(substring-after($endpoint, ':'), $prefix/@matchPattern, $prefix/@replacementPattern)
+                            let $collections := json-doc($endpointurl)
+                            let $navigation := if (string-length($collections?('dts:references')) gt 0) then
+                                $collections?('dts:references')
                             else
-                                <fo:block
-                                    page-break-after="avoid"
-                                    id="{$refid}"
-                                    text-align="right"
-                                    hyphenate="true">{$node/text()}</fo:block>
-                    else
-                        <fo:inline
-                            id="{$refid}">{$node/text()}</fo:inline>
-                else
-                    if ($node/@type) then
-                        <fo:inline>{
-                                switch ($node/@type)
-                                    case 'internal'
-                                        return
-                                            (
-                                            let $pointer := substring-after($node/@target, '#')
-                                            let $nodePointer := fo:getFile($pointer)
-                                            let $pointerid := string(root($nodePointer)/tei:TEI/@xml:id) || string($node/@target)
+                                'no navigation api available'
+                            let $passages := if (string-length($collections?('dts:passage')) gt 0) then
+                                $collections?('dts:passage')
+                            else
+                                'no passage api available'
+                            return
+                                (:            try and handle that using DTS:)
+                                if ($node/@rend = 'quote') then
+                                    <fo:block
+                                        page-break-after="avoid"
+                                        id="{$refid}"
+                                        text-align="right"
+                                        hyphenate="true">{
+                                            let $dtsdoc := try {
+                                                doc(concat($passage, '&amp;ref=', $passage))
+                                            } catch * {
+                                                <p>{$err:description}</p>
+                                            }
                                             return
-                                                ('p. ',
-                                                <fo:basic-link
-                                                    internal-destination="{$pointerid}"><fo:page-number-citation
-                                                        ref-id="{$pointerid}"/></fo:basic-link>)
-                                            )
-                                    case 'ins'
+                                                fo:tei2fo($dtsdoc)
+                                        } 'navigation at: ' {$navigation}</fo:block>
+                                else
+                                    (:            rend as citation:)
+                                    if (starts-with($navigation, 'no')) then
+                                        $navigation
+                                    else
+                                        let $dtsnavigationcall := json-doc($navigation)
+                                        let $ref := $dtsnavigationcall?member?*[?('dts:ref') = $passage]
                                         return
-                                            <fo:basic-link
-                                                external-destination="https://betamasaheft.eu/{$node/@cRef}"><fo:inline
-                                                    id="{string(root($node)/tei:TEI/@xml:id)}{generate-id($node)}ins">{$node/text()}</fo:inline></fo:basic-link>
-                                    case 'BM'
-                                        return
-                                            <fo:basic-link
-                                                external-destination="https://betamasaheft.eu/{$node/@target}">CAe {substring($node/text(), 4, 4)}, ID: {$node/text()}</fo:basic-link>
-                                    case 'manuscript'
-                                        return
-                                            let $chid := substring-after($node/@target, '#')
-                                            let $chapter := collection('/db/apps/BetMasData/manuscripts')//id($chid)
-                                            return
-                                                (<fo:basic-link
-                                                    internal-destination="{$chid}">
-                                                    <fo:inline>{'Ms. ' || $chapter//tei:msIdentifier/tei:idno[not(@xml:lang)]/text()}</fo:inline>,
-                                                    p.</fo:basic-link>,
-                                                <fo:page-number-citation
-                                                    ref-id="{$chid}"/>)
-                                    case 'figure'
-                                        return
-                                            (let $corresp := substring-after($node/@target, '#')
-                                            let $figure := root($node)//tei:*[@xml:id = $corresp]
-                                            return
-                                                ('Fig. ' || (count($figure/preceding::tei:graphic) + 1)))
-                                    case 'work'
-                                        return
-                                            <fo:basic-link
-                                                external-destination="https://betamasaheft.eu/{$node/@corresp}">{fo:titleSelector($node/@corresp)}</fo:basic-link>
-                                    default return
-                                        string($node/@target)
+                                            <fo:inline>{$ref?('dts:citeType') || ' ' || $ref?('dts:ref')}</fo:inline>
+                        } catch * {
+                            $err:description
                         }
-                    </fo:inline>
                 else
-                    if ($node/name() = 'persName' or $node/name() = 'placeName') then
-                        (if ($node/parent::tei:titleStmt) then
-                            fo:tei2fo($node/node())
+                    if ($node[not(@type)]/@cRef) then
+                        if ($node/parent::tei:cit) then
+                            let $wordcount := count(tokenize(string-join($node/parent::tei:cit/tei:quote[1]//text(), ' '), '\s+'))
+                            return
+                                if ($wordcount lt 50) then
+                                    <fo:inline
+                                        id="{$refid}">({$node/text()})</fo:inline>
+                                else
+                                    <fo:block
+                                        page-break-after="avoid"
+                                        id="{$refid}"
+                                        text-align="right"
+                                        hyphenate="true">{$node/text()}</fo:block>
                         else
-                            fo:entitiesWithRef($node))
+                            <fo:inline
+                                id="{$refid}">{$node/text()}</fo:inline>
                     else
-                        if ($node[starts-with(@target, '#h')]) then
-                            'hand ' || substring-after($node/@target, '#h')
-                        else
-                            if ($node[starts-with(@target, '#')]) then
-                                let $root := $node/ancestor::tei:TEI
-                                let $target := substring-after($node/@target, '#')
-                                return
-                                    replace($target, '\s\([a-zA-Z0-9\-_\.\s]+\)', '')
-                            else
-                                (:     if the url is too long, add here and there              &#x200b;   and it will break there if needed  :)
-                                <fo:basic-link
-                                    external-destination="{string($node/@target)}"
-                                    hyphenate="false">&lt;{
-                                        if ($node/text()) then
-                                            $node/text()
-                                        else
+                        if ($node/@type) then
+                            <fo:inline>{
+                                    switch ($node/@type)
+                                        case 'internal'
+                                            return
+                                                (
+                                                let $pointer := substring-after($node/@target, '#')
+                                                let $nodePointer := fo:getFile($pointer)
+                                                let $pointerid := string(root($nodePointer)/tei:TEI/@xml:id) || string($node/@target)
+                                                return
+                                                    ('p. ',
+                                                    <fo:basic-link
+                                                        internal-destination="{$pointerid}"><fo:page-number-citation
+                                                            ref-id="{$pointerid}"/></fo:basic-link>)
+                                                )
+                                        case 'ins'
+                                            return
+                                                <fo:basic-link
+                                                    external-destination="https://betamasaheft.eu/{$node/@cRef}"><fo:inline
+                                                        id="{string(root($node)/tei:TEI/@xml:id)}{generate-id($node)}ins">{$node/text()}</fo:inline></fo:basic-link>
+                                        case 'BM'
+                                            return
+                                                <fo:basic-link
+                                                    external-destination="https://betamasaheft.eu/{$node/@target}">CAe {substring($node/text(), 4, 4)}, ID: {$node/text()}</fo:basic-link>
+                                        case 'manuscript'
+                                            return
+                                                let $chid := substring-after($node/@target, '#')
+                                                let $chapter := collection('/db/apps/BetMasData/manuscripts')//id($chid)
+                                                return
+                                                    (<fo:basic-link
+                                                        internal-destination="{$chid}">
+                                                        <fo:inline>{'Ms. ' || $chapter//tei:msIdentifier/tei:idno[not(@xml:lang)]/text()}</fo:inline>,
+                                                        p.</fo:basic-link>,
+                                                    <fo:page-number-citation
+                                                        ref-id="{$chid}"/>)
+                                        case 'figure'
+                                            return
+                                                (let $corresp := substring-after($node/@target, '#')
+                                                let $figure := root($node)//tei:*[@xml:id = $corresp]
+                                                return
+                                                    ('Fig. ' || (count($figure/preceding::tei:graphic) + 1)))
+                                        case 'work'
+                                            return
+                                                <fo:basic-link
+                                                    external-destination="https://betamasaheft.eu/{$node/@corresp}">{fo:titleSelector($node/@corresp)}</fo:basic-link>
+                                        default return
                                             string($node/@target)
-                                    }&gt;</fo:basic-link>
+                            }
+                        </fo:inline>
+                    else
+                        if ($node/name() = 'persName' or $node/name() = 'placeName') then
+                            (if ($node/parent::tei:titleStmt) then
+                                fo:tei2fo($node/node())
+                            else
+                                fo:entitiesWithRef($node))
+                        else
+                            if ($node[starts-with(@target, '#h')]) then
+                                'hand ' || substring-after($node/@target, '#h')
+                            else
+                                if ($node[starts-with(@target, '#')]) then
+                                    let $root := $node/ancestor::tei:TEI
+                                    let $target := substring-after($node/@target, '#')
+                                    return
+                                        replace($target, '\s\([a-zA-Z0-9\-_\.\s]+\)', '')
+                                else
+                                    (:     if the url is too long, add here and there              &#x200b;   and it will break there if needed  :)
+                                    <fo:basic-link
+                                        external-destination="{string($node/@target)}"
+                                        hyphenate="false">&lt;{
+                                            if ($node/text()) then
+                                                $node/text()
+                                            else
+                                                string($node/@target)
+                                        }&gt;</fo:basic-link>
 
 
 
@@ -2052,7 +2202,7 @@ declare function fo:table-of-contents() {
                 display-align="center">Table of Contents</fo:block>
             
             {
-        for $settingsValue in $local:settings/s:orderOfParts/element()
+                for $settingsValue in $local:settings/s:orderOfParts/element()
                 return
                     if ($settingsValue = 'yes') then
                         switch ($settingsValue/name())
@@ -2145,7 +2295,10 @@ declare function fo:table-of-contents() {
                                     let $msID := string($r/@xml:id)
                                     let $signature := $r//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]
                                     let $msmainid := number(substring-after(normalize-space($signature/text()), $local:prefix))
-                                        let $pointer := if($r/@xml:id) then string($r/@xml:id) else $r//tei:idno[@type='filename']/text()
+                                    let $pointer := if ($r/@xml:id) then
+                                        string($r/@xml:id)
+                                    else
+                                        $r//tei:idno[@type = 'filename']/text()
                                         order by $msmainid
                                     return
                                         <fo:block
@@ -3162,7 +3315,7 @@ if the element is not present nothing is done:)
                     fo:collation($element)
             case 'objectDesc'
                 return
-                    fo:tei2fo($element/tei:physDesc/tei:objectDesc/node()[not(self::tei:*/name()='collation')])
+                    fo:tei2fo($element/tei:physDesc/tei:objectDesc/node()[not(self::tei:*/name() = 'collation')])
             default return
                 fo:tei2fo($element/node())
 else
@@ -3327,7 +3480,10 @@ declare function fo:bookmarks() {
     <fo:bookmark-tree>
         {
             for $file in $local:entries
-            let $ID := if($file/@xml:id) then string($file/@xml:id) else $file//tei:idno[@type='filename']/text()
+            let $ID := if ($file/@xml:id) then
+                string($file/@xml:id)
+            else
+                $file//tei:idno[@type = 'filename']/text()
             let $shelf := $file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text()
             let $num := number(substring-after($shelf, $local:prefix))
                 order by $num
@@ -3367,7 +3523,7 @@ declare function fo:indexes() {
             text-align="justify"
             hyphenate="true">
             {
-            for $index in $local:settings/s:indexes/element()
+                for $index in $local:settings/s:indexes/element()
                 return
                     if ($index = 'yes') then
                         switch ($index/name())
@@ -3611,31 +3767,34 @@ declare function fo:indexes() {
                                             let $label := fo:printTitleID($r)
                                                 order by $label
                                             return
-                                                if(not(matches($r,'\w+'))) then () else <fo:block
-                                                    start-indent="5mm"
-                                                    text-indent="-5mm"
-                                                    margin-bottom="1mm">
-                                                    <fo:basic-link
-                                                        external-destination="{string($r)}"><fo:inline>{string($label)}</fo:inline></fo:basic-link>: {$local:prefix}
-                                                    {
-                                                        let $nodes := for $att in $sub
-                                                        let $root := $att/ancestor::tei:TEI
-                                                            group by $FILE := $root
-                                                        let $n := string($root/@xml:id)
-                                                            order by $n
-                                                        return
-                                                            $n
-                                                        for $n at $p in $nodes
-                                                        return
-                                                            ($n,
-                                                            if (($p = 1) and (count($sub) gt 1)) then
-                                                                ', '
-                                                            else
-                                                                if ($p = count($sub)) then
-                                                                    ()
+                                                if (not(matches($r, '\w+'))) then
+                                                    ()
+                                                else
+                                                    <fo:block
+                                                        start-indent="5mm"
+                                                        text-indent="-5mm"
+                                                        margin-bottom="1mm">
+                                                        <fo:basic-link
+                                                            external-destination="{string($r)}"><fo:inline>{string($label)}</fo:inline></fo:basic-link>: {$local:prefix}
+                                                        {
+                                                            let $nodes := for $att in $sub
+                                                            let $root := $att/ancestor::tei:TEI
+                                                                group by $FILE := $root
+                                                            let $n := string($root/@xml:id)
+                                                                order by $n
+                                                            return
+                                                                $n
+                                                            for $n at $p in $nodes
+                                                            return
+                                                                ($n,
+                                                                if (($p = 1) and (count($sub) gt 1)) then
+                                                                    ', '
                                                                 else
-                                                                    ', ')
-                                                    }</fo:block>
+                                                                    if ($p = count($sub)) then
+                                                                        ()
+                                                                    else
+                                                                        ', ')
+                                                        }</fo:block>
                                         }
                                     </fo:block-container>
                             
@@ -3707,31 +3866,34 @@ declare function fo:indexes() {
                                                 group by $r := $ref
                                                 order by $r
                                             return
-                                                if(not(matches($r,'\w+'))) then () else   <fo:block
-                                                    start-indent="5mm"
-                                                    text-indent="-5mm"
-                                                    margin-bottom="1mm">
-                                                    <fo:basic-link
-                                                        external-destination="{string($r)}"><fo:inline>{string($r)}</fo:inline></fo:basic-link>: {$local:prefix}
-                                                    {
-                                                        let $nodes := for $att in $sub
-                                                        let $root := $att/ancestor::tei:TEI
-                                                        let $n := string($root/@xml:id)
-                                                            group by $n
-                                                            order by $n
-                                                        return
-                                                            $n
-                                                        for $n at $p in $nodes
-                                                        return
-                                                            ($n,
-                                                            if (($p = 1) and (count($sub) gt 1)) then
-                                                                ', '
-                                                            else
-                                                                if ($p = count($sub)) then
-                                                                    ()
+                                                if (not(matches($r, '\w+'))) then
+                                                    ()
+                                                else
+                                                    <fo:block
+                                                        start-indent="5mm"
+                                                        text-indent="-5mm"
+                                                        margin-bottom="1mm">
+                                                        <fo:basic-link
+                                                            external-destination="{string($r)}"><fo:inline>{string($r)}</fo:inline></fo:basic-link>: {$local:prefix}
+                                                        {
+                                                            let $nodes := for $att in $sub
+                                                            let $root := $att/ancestor::tei:TEI
+                                                            let $n := string($root/@xml:id)
+                                                                group by $n
+                                                                order by $n
+                                                            return
+                                                                $n
+                                                            for $n at $p in $nodes
+                                                            return
+                                                                ($n,
+                                                                if (($p = 1) and (count($sub) gt 1)) then
+                                                                    ', '
                                                                 else
-                                                                    ', ')
-                                                    }</fo:block>
+                                                                    if ($p = count($sub)) then
+                                                                        ()
+                                                                    else
+                                                                        ', ')
+                                                        }</fo:block>
                                         }
                                     </fo:block-container>
                             default return
@@ -3788,7 +3950,7 @@ declare function fo:back($back) {
                 text-align="center"
                 display-align="center">Plates</fo:block>
             {fo:tei2fo($back)}
-             <fo:block
+            <fo:block
                 id="standardplates"
                 font-size="12pt"
                 space-before="25.2pt"
@@ -3797,54 +3959,66 @@ declare function fo:back($back) {
                 font-weight="700"
                 text-align="center"
                 display-align="center">Standardized print out of the first 5 images of each set of available images for a listed manuscript</fo:block>
-            {for $file in $local:entries
-            let $dtsCall := (substring-before($local:dtscollprefix, '$') || string($file/@xml:id))
-            let $dtscollectionapi := try{json-doc($dtsCall) } catch * {
-           map{'info' : 'no depiction'}
-            }            
-            let $msmainid := number(substring-after($file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text(), $local:prefix))
-                order by $msmainid
-            return
-                if(count($dtscollectionapi?("dts:extensions")?("foaf:depiction")) ge 1) 
-                then 
-                let $manifest := $dtscollectionapi?("dts:extensions")?("foaf:depiction")?('svcs:has_service')?('@id') 
-            let $iiif := json-doc($manifest)
-            let $label:=$iiif?label
-            let $canvases := $iiif?sequences?*?canvases?*
-            return
-             (  for $canvas at $p in subsequence($canvases, 1, 5)
-              let $figure := 
-                <figure xmlns="http://www.tei-c.org/ns/1.0">
-               <graphic url="{$canvas?images?*?resource?('@id')}">
-                  <desc>Sample image {$p} of {$label}. Disposed one by one.</desc>
-               </graphic>
-            </figure>
-               return 
-                fo:tei2fo($figure)
-                ,
-                let $table := 
-             <table xmlns="http://www.tei-c.org/ns/1.0">
-               <row role="label">
-                  <cell/>
-                  <cell/>
-               </row>
-               <row>
-               { for $canvas at $p in subsequence($canvases, 6, 7)            
-                 return <cell>
-                <figure >
-               <graphic url="{$canvas?images?*?resource?('@id')}">
-                  <desc>Sample image {$p} of {$label}. Disposed in table.</desc>
-               </graphic>
-            </figure>
-            </cell>}
-            </row>
-            </table>
-                
-               return 
-                fo:tei2fo($table)
-                )
-                else ()
+            {
+                for $file in $local:entries
+                let $dtsCall := (substring-before($local:dtscollprefix, '$') || string($file/@xml:id))
+                let $dtscollectionapi := try {
+                    json-doc($dtsCall)
+                } catch * {
+                    map {'info': 'no depiction'}
                 }
+                let $msmainid := number(substring-after($file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text(), $local:prefix))
+                    order by $msmainid
+                return
+                    if (count($dtscollectionapi?("dts:extensions")?("foaf:depiction")) ge 1)
+                    then
+                        let $manifest := $dtscollectionapi?("dts:extensions")?("foaf:depiction")?('svcs:has_service')?('@id')
+                        let $iiif := json-doc($manifest)
+                        let $label := $iiif?label
+                        let $canvases := $iiif?sequences?*?canvases?*
+                        return
+                            (for $canvas at $p in subsequence($canvases, 1, 5)
+                            let $figure :=
+                            <figure
+                                xmlns="http://www.tei-c.org/ns/1.0">
+                                <graphic
+                                    url="{$canvas?images?*?resource?('@id')}">
+                                    <desc>Sample image {$p} of {$label}. Disposed one by one.</desc>
+                                </graphic>
+                            </figure>
+                            return
+                                fo:tei2fo($figure)
+                            ,
+                            let $table :=
+                            <table
+                                xmlns="http://www.tei-c.org/ns/1.0">
+                                <row
+                                    role="label">
+                                    <cell/>
+                                    <cell/>
+                                </row>
+                                <row>
+                                    {
+                                        for $canvas at $p in subsequence($canvases, 6, 7)
+                                        return
+                                            <cell>
+                                                <figure>
+                                                    <graphic
+                                                        url="{$canvas?images?*?resource?('@id')}">
+                                                        <desc>Sample image {$p} of {$label}. Disposed in table.</desc>
+                                                    </graphic>
+                                                </figure>
+                                            </cell>
+                                    }
+                                </row>
+                            </table>
+                            
+                            return
+                                fo:tei2fo($table)
+                            )
+                    else
+                        ()
+            }
         </fo:flow>
     </fo:page-sequence>
 };
@@ -4149,6 +4323,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
             
@@ -4163,6 +4338,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
             
@@ -4177,6 +4353,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"
                     column-count="2"
@@ -4198,6 +4375,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"
                     column-count="2"
@@ -4219,6 +4397,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"
                     column-count="2"
@@ -4237,6 +4416,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"
                     column-count="2"
@@ -4258,6 +4438,7 @@ declare function fo:layoutmaster($type) {
                 margin-right="45mm">
                 <fo:region-body
                     
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
                 <fo:region-before
@@ -4276,6 +4457,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
                 <fo:region-after
@@ -4290,6 +4472,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
                 <fo:region-before
@@ -4308,6 +4491,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
                 <fo:region-before
@@ -4353,6 +4537,7 @@ declare function fo:layoutmaster($type) {
                 margin-right="45mm">
                 <fo:region-body
                     
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
                 <fo:region-after
@@ -4369,6 +4554,8 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
                 <fo:region-after
@@ -4384,6 +4571,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
                 <fo:region-before
@@ -4403,6 +4591,7 @@ declare function fo:layoutmaster($type) {
                 margin-left="45mm"
                 margin-right="45mm">
                 <fo:region-body
+                    background-image="sample.png"
                     margin-top="37.5pt"
                     margin-bottom="37.5pt"/>
                 <fo:region-before
@@ -4422,65 +4611,71 @@ declare function fo:catalogue() {
         {
             for $file in $local:entries
             let $dtsCall := (substring-before($local:dtscollprefix, '$') || string($file/@xml:id))
-            let $dtscollectionapi := try{json-doc($dtsCall) } catch * {
-           map{'info' : 'no depiction'}
-            }            
+            let $dtscollectionapi := try {
+                json-doc($dtsCall)
+            } catch * {
+                map {'info': 'no depiction'}
+            }
             let $msmainid := number(substring-after($file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text(), $local:prefix))
                 order by $msmainid
             return
                 (fo:msheader($file//tei:msDesc/tei:msIdentifier),
-                if(not(map:contains($dtscollectionapi, 'info')) and count($dtscollectionapi?("dts:extensions")?("foaf:depiction")) ge 1) 
-                then 
-                let $manifest := $dtscollectionapi?("dts:extensions")?("foaf:depiction")?('svcs:has_service')?('@id') 
-                return 
-                <fo:block>
-               IIIF manifest: {$manifest}
-               <fo:footnote>
-                    <fo:inline
-                        font-size="7pt"
-                        vertical-align="text-top">*</fo:inline>
-                    
-                    <fo:footnote-body
-                        text-align="justify"
-                        text-indent="0">
-                        <fo:list-block>
-                            <fo:list-item>
-                                <fo:list-item-label>
-                                    <fo:block>
-                                        <fo:inline
-                                            vertical-align="text-top"
-                                            font-size="9pt"
-                                        >*</fo:inline>
-                                    </fo:block>
-                                </fo:list-item-label>
-                                <fo:list-item-body>
-                                    <fo:block
-                                        hyphenate="true"
-                                        space-before="0.45cm"
-                                        font-size="9pt"
-                                        line-height="11pt"
-                                        margin-left="0.45cm"
-                                    >{json-doc($manifest)?('attribution')}
-                                    </fo:block>
-                                </fo:list-item-body>
-                            </fo:list-item>
-                        </fo:list-block>
-                    </fo:footnote-body>
-                </fo:footnote>
-                </fo:block>
-                else ($dtscollectionapi('info')),
+                if (not(map:contains($dtscollectionapi, 'info')) and count($dtscollectionapi?("dts:extensions")?("foaf:depiction")) ge 1)
+                then
+                    let $manifest := $dtscollectionapi?("dts:extensions")?("foaf:depiction")?('svcs:has_service')?('@id')
+                    return
+                        <fo:block>
+                            IIIF manifest: {$manifest}
+                            <fo:footnote>
+                                <fo:inline
+                                    font-size="7pt"
+                                    vertical-align="text-top">*</fo:inline>
+                                
+                                <fo:footnote-body
+                                    text-align="justify"
+                                    text-indent="0">
+                                    <fo:list-block>
+                                        <fo:list-item>
+                                            <fo:list-item-label>
+                                                <fo:block>
+                                                    <fo:inline
+                                                        vertical-align="text-top"
+                                                        font-size="9pt"
+                                                    >*</fo:inline>
+                                                </fo:block>
+                                            </fo:list-item-label>
+                                            <fo:list-item-body>
+                                                <fo:block
+                                                    hyphenate="true"
+                                                    space-before="0.45cm"
+                                                    font-size="9pt"
+                                                    line-height="11pt"
+                                                    margin-left="0.45cm"
+                                                >{json-doc($manifest)?('attribution')}
+                                                </fo:block>
+                                            </fo:list-item-body>
+                                        </fo:list-item>
+                                    </fo:list-block>
+                                </fo:footnote-body>
+                            </fo:footnote>
+                        </fo:block>
+                else
+                    ($dtscollectionapi('info')),
                 <fo:block
                     text-align="center"
                     space-before="2mm"
                     space-after="3mm">{$file//tei:titleStmt/tei:title[not(@xml:lang)]/text()}</fo:block>,
-                if($file/@type) then fo:SimpleMsStructure($file)
-                else let $filename := $file//tei:idno[@type='filename']/text() 
-                let $f := translate($filename, ' .', '__') 
-                return 
-                <fo:block id="{$f}">{ 
-                doc(concat('inscriptions/',$f,'.xml'))/fo:*  
-                }</fo:block>
-        )
+                if ($file/@type) then
+                    fo:SimpleMsStructure($file)
+                else
+                    let $filename := $file//tei:idno[@type = 'filename']/text()
+                    let $f := translate($filename, ' .', '__')
+                    return
+                        <fo:block
+                            id="{$f}">{
+                                doc(concat('inscriptions/', $f, '.xml'))/fo:*
+                            }</fo:block>
+                )
         }
     </fo:block-container>
 };
@@ -4511,7 +4706,12 @@ declare function fo:bibliography($r) {
                         margin-bottom="2pt"
                         start-indent="0.5cm"
                         text-indent="-0.5cm">
-                        {if(starts-with($ptr, 'bm:')) then fo:Zotero($ptr) else string($ptr)}
+                        {
+                            if (starts-with($ptr, 'bm:')) then
+                                fo:Zotero($ptr)
+                            else
+                                string($ptr)
+                        }
                         {
                             for $bib in $r//tei:bibl[tei:ptr/@target = $ptr]
                             return
@@ -4631,7 +4831,7 @@ declare function fo:main() {
                     fo:layoutmaster('article')
             }
             {
-            for $settingsValue in $local:settings/s:orderOfParts/element()
+                for $settingsValue in $local:settings/s:orderOfParts/element()
                 return
                     if ($settingsValue = 'yes') then
                         switch ($settingsValue/name())

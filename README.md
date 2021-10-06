@@ -1,11 +1,34 @@
 # Make PDF package
 
-This package produces a PDF output from TEI files including Manuscripts 
+This version of the package produces a PDF output from TEI files including Manuscripts 
 encoded following the [Beta maṣāḥǝft Guidelines](https://betamasaheft.eu/Guidelines/) 
-which follows most of the layout requirements of [Aethiopica](https://doaj.org/toc/2194-4024) and the Supplements to Aethiopica.
-It is mainly intended for those users who, abiding to the copyright of the data available would want to 
-produce a contribution for Aethiopica starting from existing XML data, or curate 
-a catalogue to be submitted as article or as a book to the Journal Aethiopica.
+and inscriptions encoded following the [EpiDoc guidelines](https://epidoc.stoa.org/gl/latest/). While it is recommended that the input is uniform the package demonstrate both types of input usage together. Non relevant parts / steps can be omitted accordingly. 
+
+ATTENTION!! RENDERING OF ATTRIBUTION OF SOURCES, which is available in the data IS currently INSUFFICIENT. This is not implemented in this demo application because it is easy enough to do for anyone.
+
+The output produced follows most of the layout requirements of [Aethiopica](https://doaj.org/toc/2194-4024) and the Supplements to Aethiopica. Changing this settings is easy in the relevant `fo:` elements into the PDF.xql script.
+
+This version produced for the [DTS Hackathon ](https://distributed-text-services.github.io/workshops/events/2021-hackathon/) demonstrates some basic functionalities using DTS APIs.
+
+Some of the data listed in the catalogue of written artefacts is fetch from the Beta Masaheft DTS API declaratively. The Xquery switches from document to collection endpoint to find out if there is a IIIF manifest. If so it prints a footnote with the attribution from the Manifest and prints at the end of the booklet the first 5 images available.
+
+Other APIs, like the Zotero API for the Beta Masaheft bibliography are used to populate information accordingly so that the result is a mash up of sources from diverse remote locations.
+
+Inscriptions are preprocessed using the FO variant of the Example Stylesheets from the EpiDoc repository.
+
+The example output is thus inconsistent as it is inconsistent the data used for the example. Use only manuscripts or only from one source and select one or the other way of disposing images to have a better starting point.
+
+The results of calls to the Collection and Navigation Api are parsed as json as per the support offered in XQuery 3.1 for maps and arrays.
+
+An additional use of the DTS API is demonstrated with regard to references contained in the text. 
+
+A local list of abbreviations aligned to selected available source texts is added in the driver as a common "list of abbreviations". This maps the content of a `@cRef` to a specific identifier and a DTS endpoint, abbreviated using the `<prefixDef>` element. This allows to define the endpoints once and select the texts only one time, then go with the citations as text and rely on that mapping. Based on the rend attribute if a quote is required this is built into the output calling the document API. This guarantees that citations are consistent to their citation reference system and source.
+Information about the source text is printed alongside relevant pointers in the "list of abbreviations". 
+`<ref>` elements pointing to the list of abbreviations link to that list into the PDF output.
+
+- find canonical references (@cref) and parse for navigation API to 
+     - fetch text and to 
+     - build index of cited passages  
 
 This is similar to the PDF print functionality
 available on the Beta maṣāḥǝft website. This package will allow you to compile a PDF  with basic customizable parts. You
@@ -68,6 +91,8 @@ this process and how you can adapt it follow. Anything can be adapted and is lik
 to need adaptation to meet your encoding choices and desired output in the limits of
 authorial decisions.
 The produced PDF will open in your preferred system application for that.
+
+If you have inscriptions in EpiDoc, before clicking the red play button, run the epidocFO transformation scenario which is preset for the project. This will create parts of the File Object using the EpiDoc stylesheets which will then be used by the PDF.xql to include the information.
 
 ## driver.xml
 This package was designed for catalogues, although it can be 
@@ -177,7 +202,9 @@ You can work with this also if your encoding is not very detailed (see example f
 #### Bibliography
 
 The bibliography is compiled from the Zotero EthioStudies Group using both for citations and references the HLZ styles.
-This does not guarantee the correctness of it, please see the relative documentation linked above.
+This does not guarantee the correctness of it, please see the relative documentation linked above. 
+
+Other bibliography encoding methods are currently not supported.
 
 #### Identifies entities (persons, places, works)
 If you use `persName` and `placeName`, these will be made into links and if they do not contain text, they will print out the 
@@ -262,4 +289,5 @@ Exceptions are the rule and there are several you can set for contents, addition
 If you set indexes to be part of your publication, in `<indexes>` you can decide which indexes to print
     there can be more, and they can be better specified for selection and rendering, 
     
-
+### EpiDoc parameters
+If runnign the epidocFO transformation scenario, you can benefit from all parameters supported by the EpiDoc example Stylesheet library, including its Zotero lookup functionality, setting the parameters accordingly. You may have to edit the `inscriptions2fo.xslt` or edit the transformation scenario to pass on the parameters.
