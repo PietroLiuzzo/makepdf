@@ -22,8 +22,8 @@
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>Title of your contribution</title>
-            <author>Author Name</author>
+            <title>My mashup Book</title>
+            <author>Pietro Liuzzo</author>
 <!--            more authors, editors, contributors can be added here-->
          </titleStmt>
          <publicationStmt>
@@ -99,7 +99,8 @@
       <body>
          <div>
             <head>Intro</head>
-            <p> your introduction!</p>
+            <p>This sample package uses Zotero API, DTS API, IIIF APIs, XInclude pointing to local and external resources to build with Xquery and FOP a PDF output.
+            The result mixes information retrieved from the APIs. An additional layer of transformation is added to prepare inscriptions before inclusion which uses the EpiDoc example XSLT.</p>
             <div type="chapter">
                <head>chapter head</head>
                <p>my text</p>
@@ -140,7 +141,7 @@
                         </graphic>
                      </figure></cell>
                   <cell><figure>
-                     <graphic url="bmiiif:AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
+                     <graphic url="https://betamasaheft.eu/iiif/AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
                            <desc>Image on the right using a TEI table from a remotely stored image fetched with a IIIF Image API request </desc>
                         </graphic>
                      </figure>
@@ -159,25 +160,34 @@
       here you can use xi:include to point to the manuscripts files. 
       You can have as many as you want, here there is one simple example
    -->
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://ilc4clarin.ilc.cnr.it/cretaninscriptions/en/inscriptions/seg_64_798.xml"><xi:fallback>
+         <p>inscription from Cretan Institutional Inscriptions</p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://igcyr.unibo.it/igcyr/gvcyr001.xml">
+      <xi:fallback>
+         <p>inscription from IGCyr</p>
+      </xi:fallback>
+   </xi:include>
+   
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/ESum035">
       <xi:fallback>
          <p>ES um 35 with images available and linked transkribus-transcription</p>
       </xi:fallback>
    </xi:include>
-  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
       <xi:fallback>
          <p>(The Psalter)</p>
       </xi:fallback>
    </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/BMLacq810">
+  <!-- <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/BMLacq810">
       <xi:fallback>
          <p>Masahfa Genzat Florence (with images available via IIIF at https://betamasaheft.eu/api/iiif/BMLacq810/manifest)</p>
       </xi:fallback>
-   </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/DW03">
+   </xi:include>-->
+   <!--<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/DW03">
       <xi:fallback>
          <p>DW 03 </p>
       </xi:fallback>
    </xi:include>-->
-   
 </teiCorpus>

@@ -14,14 +14,7 @@ declare namespace functx = "http://www.functx.com";
 declare namespace s = "local.print";
 declare namespace map = "http://www.w3.org/2005/xpath-functions/map";
 
-declare variable $local:settings := doc('settings.xml')/s:settings;
-declare variable $local:catalogue := doc('driver.xml')/tei:teiCorpus;
-declare variable $local:entries := $local:catalogue//tei:TEI;
-declare variable $local:dtscollprefix := $local:catalogue//tei:prefixDef[@ident='bmcoldts']/@replacementPattern ;
-declare variable $local:title := fo:tei2fo($local:catalogue/tei:teiHeader//tei:titleStmt/tei:title);
 declare variable $local:BMappUrl := 'https://betamasaheft.eu/';
-(:DS Ethiop. Addis Ababa the string part prefix to a structured signature consistent through the text:)
-declare variable $local:prefix := $local:settings//s:localPrefix;
 
 (:the basis of transformation is a series of strings for components:)
 declare variable $local:values as element(value)+ := (
@@ -65,6 +58,16 @@ declare variable $local:values as element(value)+ := (
     num="1000"
     char="M"/>
 );
+
+declare variable $local:catalogue := doc('driver.xml')/tei:teiCorpus;
+declare variable $local:entries := $local:catalogue//tei:TEI;
+declare variable $local:settings := doc('settings.xml')/s:settings;
+declare variable $local:dtscollprefix := $local:catalogue//tei:prefixDef[@ident='bmcoldts']/@replacementPattern ;
+declare variable $local:title := fo:tei2fo($local:catalogue/tei:teiHeader//tei:titleStmt/tei:title);
+
+(:DS Ethiop. Addis Ababa the string part prefix to a structured signature consistent through the text:)
+declare variable $local:prefix := $local:settings//s:localPrefix;
+
 
 (:return the concatenation of strings by continuous reduction:)
 declare function local:n2roman($num as xs:integer) as xs:string
@@ -115,11 +118,11 @@ declare function functx:capitalize-first($arg as xs:string?) as xs:string? {
 };
 
 declare function fo:printTitleID($ref as xs:string?) as xs:string? {
-    json-doc(replace(concat($local:BMappUrl, 'api/', replace($ref, ':', '_'), '/title/json'), '\s', ''))?title
+    try{ json-doc(replace(concat($local:BMappUrl, 'api/', replace($ref, ':', '_'), '/title/json'), '\s', ''))?title } catch * {$err:description}
 };
 
 declare function fo:getFile($id) {
-    doc(concat($local:BMappUrl, $id, '.xml'))
+    try{doc(concat($local:BMappUrl, $id, '.xml')) } catch * {$err:description}
 };
 
 declare function fo:lang($lang as xs:string) {
@@ -1009,7 +1012,7 @@ case element(tei:listBibl)
                 if ($node/tei:bibl) then
                     let $file := $node/ancestor::tei:TEI
                     for $b in $node/tei:bibl
-                    let $z := fo:Zotero($b/tei:ptr/@target)
+                    let $z := if(starts-with($b/tei:ptr/@target, 'bm:')) then fo:Zotero($b/tei:ptr/@target) else string($b/tei:ptr/@target)
                     let $zt := substring(string-join($z), 1, 10)
                         order by $zt
                     return
@@ -1085,7 +1088,7 @@ case element(tei:bibl)
                 internal-destination="{replace($bibid, ':', '_')}"><fo:inline
                     id="{$rootid}{generate-id($node/tei:ptr)}{replace($bibid, ':', '_')}">
                     {
-                        fo:zoteroCit($node/tei:ptr/@target)
+                        if(starts-with($node/tei:ptr/@target, 'bm:')) then fo:zoteroCit($node/tei:ptr/@target) else string($node/tei:ptr/@target)
                     }
                     {
                     if ($node/tei:citedRange) then
@@ -2142,6 +2145,7 @@ declare function fo:table-of-contents() {
                                     let $msID := string($r/@xml:id)
                                     let $signature := $r//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]
                                     let $msmainid := number(substring-after(normalize-space($signature/text()), $local:prefix))
+                                        let $pointer := if($r/@xml:id) then string($r/@xml:id) else $r//tei:idno[@type='filename']/text()
                                         order by $msmainid
                                     return
                                         <fo:block
@@ -2155,9 +2159,9 @@ declare function fo:table-of-contents() {
                                             <fo:leader
                                                 leader-pattern="dots"/>
                                             <fo:basic-link
-                                                internal-destination="{string($r/@xml:id)}">
+                                                internal-destination="{$pointer}">
                                                 <fo:page-number-citation
-                                                    ref-id="{string($r/@xml:id)}"/>
+                                                    ref-id="{$pointer}"/>
                                             </fo:basic-link>
                                         
                                         </fo:block>
@@ -3158,7 +3162,7 @@ if the element is not present nothing is done:)
                     fo:collation($element)
             case 'objectDesc'
                 return
-                    fo:tei2fo($element/tei:physDesc/tei:objectDesc/node()[not(self::tei:collation)])
+                    fo:tei2fo($element/tei:physDesc/tei:objectDesc/node()[not(self::tei:*/name()='collation')])
             default return
                 fo:tei2fo($element/node())
 else
@@ -3215,7 +3219,7 @@ declare function fo:SimpleMsStructure($file) {
     <fo:block
         space-before="2mm"
         space-after="3mm">
-        {fo:tei2fo($file/tei:sourceDesc/node()[not(self::tei:msDesc)])}
+        {fo:tei2fo($file/tei:sourceDesc/node()[not(self::tei:*/name() = 'msDesc')])}
     </fo:block>,
     let $msDesc := $file//tei:msDesc
     return
@@ -3323,7 +3327,7 @@ declare function fo:bookmarks() {
     <fo:bookmark-tree>
         {
             for $file in $local:entries
-            let $ID := string($file/@xml:id)
+            let $ID := if($file/@xml:id) then string($file/@xml:id) else $file//tei:idno[@type='filename']/text()
             let $shelf := $file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text()
             let $num := number(substring-after($shelf, $local:prefix))
                 order by $num
@@ -3607,7 +3611,7 @@ declare function fo:indexes() {
                                             let $label := fo:printTitleID($r)
                                                 order by $label
                                             return
-                                                <fo:block
+                                                if(not(matches($r,'\w+'))) then () else <fo:block
                                                     start-indent="5mm"
                                                     text-indent="-5mm"
                                                     margin-bottom="1mm">
@@ -3703,7 +3707,7 @@ declare function fo:indexes() {
                                                 group by $r := $ref
                                                 order by $r
                                             return
-                                                <fo:block
+                                                if(not(matches($r,'\w+'))) then () else   <fo:block
                                                     start-indent="5mm"
                                                     text-indent="-5mm"
                                                     margin-bottom="1mm">
@@ -3785,7 +3789,7 @@ declare function fo:back($back) {
                 display-align="center">Plates</fo:block>
             {fo:tei2fo($back)}
              <fo:block
-                id="Appendix"
+                id="standardplates"
                 font-size="12pt"
                 space-before="25.2pt"
                 space-after="12.24pt"
@@ -3818,27 +3822,26 @@ declare function fo:back($back) {
                return 
                 fo:tei2fo($figure)
                 ,
-                'table'
-             (: let $table := 
-              <table xmlns="http://www.tei-c.org/ns/1.0">
+                let $table := 
+             <table xmlns="http://www.tei-c.org/ns/1.0">
                <row role="label">
                   <cell/>
                   <cell/>
                </row>
                <row>
-               { for $canvas at $p in subsequence($canvases, 6, 7)
+               { for $canvas at $p in subsequence($canvases, 6, 7)            
                  return <cell>
                 <figure >
-               <graphic url="{$canvas?images?*?('@id')}">
+               <graphic url="{$canvas?images?*?resource?('@id')}">
                   <desc>Sample image {$p} of {$label}. Disposed in table.</desc>
                </graphic>
             </figure>
             </cell>}
             </row>
             </table>
-            
+                
                return 
-                fo:tei2fo($table):)
+                fo:tei2fo($table)
                 )
                 else ()
                 }
@@ -4457,7 +4460,7 @@ declare function fo:catalogue() {
                                         font-size="9pt"
                                         line-height="11pt"
                                         margin-left="0.45cm"
-                                    >{json-doc($manifest)('attribution')}
+                                    >{json-doc($manifest)?('attribution')}
                                     </fo:block>
                                 </fo:list-item-body>
                             </fo:list-item>
@@ -4470,8 +4473,14 @@ declare function fo:catalogue() {
                     text-align="center"
                     space-before="2mm"
                     space-after="3mm">{$file//tei:titleStmt/tei:title[not(@xml:lang)]/text()}</fo:block>,
-                fo:SimpleMsStructure($file)
-                )
+                if($file/@type) then fo:SimpleMsStructure($file)
+                else let $filename := $file//tei:idno[@type='filename']/text() 
+                let $f := translate($filename, ' .', '__') 
+                return 
+                <fo:block id="{$f}">{ 
+                doc(concat('inscriptions/',$f,'.xml'))/fo:*  
+                }</fo:block>
+        )
         }
     </fo:block-container>
 };
@@ -4502,7 +4511,7 @@ declare function fo:bibliography($r) {
                         margin-bottom="2pt"
                         start-indent="0.5cm"
                         text-indent="-0.5cm">
-                        {fo:Zotero($ptr)}
+                        {if(starts-with($ptr, 'bm:')) then fo:Zotero($ptr) else string($ptr)}
                         {
                             for $bib in $r//tei:bibl[tei:ptr/@target = $ptr]
                             return
