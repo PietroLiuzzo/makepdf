@@ -74,7 +74,7 @@ Once you open the project, allow it to set up your software and make sure you ca
 use xi:include in the preferences. This should be set by the project itself for you.
 ![img/XInclude.png](img/XInclude.png)
 
-You will need to create a directory called fonts and store in it the fonts listed in `fopconfig.xml`.
+You will need to create a directory called fonts and store in it the fonts listed in `fopconfig.xml`. My [collection is linked in this presentation](https://docs.google.com/presentation/d/e/2PACX-1vSe763ALF1tB4B3Jwuf9YVwoN1aB67Cu6eZJJTGq7WU06ikWdQzRSTbm_ScZIwKcPrTEVGOCl2icHI-/pub?start=false&loop=false&delayms=3000&slide=id.gde2f7d93e5_0_0).
 
 ## Make the PDF
 To make the PDF, with the project open, select driver.xml and click the small red play button at the top in your Oxygen editor. 
