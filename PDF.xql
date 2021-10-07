@@ -831,7 +831,8 @@ if it does not fit to the page set the width attribute in the source file, as th
                     <fo:list-block
                         provisional-distance-between-starts="12mm"
                         provisional-label-separation="12mm"
-                    >{attribute start-indent {((0.43 * (1 + count($node/ancestor::tei:list))) + $par) || "cm"}}
+                        start-indent="1cm"
+                    >
                         {
                             
                             for $endpoint in $node/tei:item
@@ -897,7 +898,8 @@ if it does not fit to the page set the width attribute in the source file, as th
                         provisional-distance-between-starts="6mm"
                         provisional-label-separation="6mm"
                     >
-                        {attribute start-indent {((0.43 * (1 + count($node/ancestor::tei:list))) + $par) || "cm"}}
+                        {attribute start-indent {let $val := ((0.43 * (1 + count($node/ancestor::tei:list))) + $par) || "cm"
+                        return if ($val = 'cm') then '1cm' else $val}}
                         {fo:tei2fo($node/node())}
                     </fo:list-block>
     
@@ -1755,58 +1757,13 @@ case element(tei:ref)
     return
         let $refid := string(root($node)/tei:TEI/@xml:id) || generate-id($node) || 'ref'
         return
-            if ($node[text()]) then
+           if ($node[@cRef][@corresp][@rend]) 
+                then
+              fo:dtsref($node, $refid)
+             else  if ($node[text()]) then
                 fo:tei2fo($node/node())
-            else
-                if ($node[@cRef][@corresp][@rend]) then
-                    let $label := $node/@cRef
-                    let $passage := $node/@corresp
-                    return
-                        try {
-                            let $abbreviation := $local:catalogue//tei:list[@xml:id = 'abbreviations']
-                            let $refabbr := $abbreviation/tei:item[tei:label = $label]
-                            let $endpoint := $refabbr/@corresp
-                            let $ident := substring-before($endpoint, ':')
-                            let $prefix := $local:listPrefixDef//tei:prefixDef[@ident = $ident]
-                            let $endpointurl := replace(substring-after($endpoint, ':'), $prefix/@matchPattern, $prefix/@replacementPattern)
-                            let $collections := json-doc($endpointurl)
-                            let $navigation := if (string-length($collections?('dts:references')) gt 0) then
-                                $collections?('dts:references')
-                            else
-                                'no navigation api available'
-                            let $passages := if (string-length($collections?('dts:passage')) gt 0) then
-                                $collections?('dts:passage')
-                            else
-                                'no passage api available'
-                            return
-                                (:            try and handle that using DTS:)
-                                if ($node/@rend = 'quote') then
-                                    <fo:block
-                                        page-break-after="avoid"
-                                        id="{$refid}"
-                                        text-align="right"
-                                        hyphenate="true">{
-                                            let $dtsdoc := try {
-                                                doc(concat($passage, '&amp;ref=', $passage))
-                                            } catch * {
-                                                <p>{$err:description}</p>
-                                            }
-                                            return
-                                                fo:tei2fo($dtsdoc)
-                                        } 'navigation at: ' {$navigation}</fo:block>
-                                else
-                                    (:            rend as citation:)
-                                    if (starts-with($navigation, 'no')) then
-                                        $navigation
-                                    else
-                                        let $dtsnavigationcall := json-doc($navigation)
-                                        let $ref := $dtsnavigationcall?member?*[?('dts:ref') = $passage]
-                                        return
-                                            <fo:inline>{$ref?('dts:citeType') || ' ' || $ref?('dts:ref')}</fo:inline>
-                        } catch * {
-                            $err:description
-                        }
-                else
+            
+                  else
                     if ($node[not(@type)]/@cRef) then
                         if ($node/parent::tei:cit) then
                             let $wordcount := count(tokenize(string-join($node/parent::tei:cit/tei:quote[1]//text(), ' '), '\s+'))
@@ -1977,6 +1934,90 @@ default
         $node
 };
 
+
+declare function fo:dtsref($node, $refid){
+let $label := $node/@cRef
+let $passage := $node/@corresp
+let $abbreviation := $local:catalogue//tei:list[@xml:id = 'abbreviations']
+let $refabbr := $abbreviation/tei:item[tei:label = $label]
+let $endpoint := $refabbr/@corresp
+let $ident := substring-before($endpoint, ':')
+let $prefix := $local:listPrefixDef//tei:prefixDef[@ident = $ident]
+let $endpointurl := replace(substring-after($endpoint, ':'), $prefix/@matchPattern, $prefix/@replacementPattern)
+let $collections := try{ json-doc($endpointurl) } catch * {map{'error':$err:description}}
+let $navigation := if (string-length($collections?('dts:references')) gt 0) then
+    $collections?('dts:references')
+else
+    'no navigation api available'
+let $passages := if (string-length($collections?('dts:passage')) gt 0) then
+    $collections?('dts:passage')
+else
+    'no passage api available'
+
+
+return
+    (:            try and handle that using DTS:)
+    (
+    
+    (if ($node/@rend = 'quote') then
+        (<fo:block id="{$refid}"
+            page-break-after="avoid"
+            text-align="right"
+            hyphenate="true">{
+                let $dtsdoc := if (starts-with($passages, 'no')) then
+                    $passages
+                else
+                    let $passagescall := if (starts-with($passages, '/')) then
+                        replace($endpointurl, 'collections', 'document')
+                    else
+                        $passages
+                    let $dtsfragment := try{doc(concat($passagescall, '&amp;ref=', $passage))} catch * {<p>not found {$err:description}</p>}
+                    return
+                        try {
+                             $dtsfragment//text()
+                        } catch * {
+                            <p>{$err:description}</p>
+                        }
+                return
+                    $dtsdoc
+            }<fo:block>({fo:tei2fo($node/node())})</fo:block>
+        </fo:block>
+        )
+    else
+        (:            rend as citation:)
+        (if (starts-with($navigation, 'no')) then
+            ()
+        else
+            let $navigationcall := if (starts-with($navigation, '/')) then
+                replace($endpointurl, 'collections', 'navigation')
+            else
+                $navigation
+            let $dtsnavigationcall := json-doc($navigationcall)
+            let $member := ($dtsnavigationcall?member?*,
+            $dtsnavigationcall?('hydra:member')?*)
+            let $ref := ($member[?('dts:ref') = $passage] , $member[?ref = $passage])
+            return
+           (    <fo:block>{'ref text: ',  fo:tei2fo($node/node())}</fo:block>,
+                <fo:inline>{($ref?('dts:citeType'), $dtsnavigationcall?citeType) || ' ' || ($ref?('dts:ref'),$ref?ref)} 
+                </fo:inline>, 
+                if(count($ref?('dts:dublincore')?('dc:source')) gt 0) then 
+                       for $canvas in $ref?('dts:dublincore')?('dc:source')?* 
+                       let $iiif := json-doc($canvas?('@id'))
+                       return 
+                       
+                       <fo:external-graphic
+                                    src="{$iiif?images?*?resource?('@id')}"
+                                    content-width="scale-down-to-fit"
+                                    width="90%"
+                                    scaling="uniform"
+                                    display-align="center"
+                                />
+                       else ()
+                
+                ))
+        ))
+
+                                            };
 
 declare function fo:titlepage() {
     <fo:page-sequence
@@ -3999,7 +4040,7 @@ declare function fo:back($back) {
                                 </row>
                                 <row>
                                     {
-                                        for $canvas at $p in subsequence($canvases, 6, 7)
+                                        for $canvas at $p in subsequence($canvases, 6, 2)
                                         return
                                             <cell>
                                                 <figure>

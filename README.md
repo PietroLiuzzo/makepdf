@@ -4,7 +4,7 @@ This version of the package produces a PDF output from TEI files including Manus
 encoded following the [Beta maṣāḥǝft Guidelines](https://betamasaheft.eu/Guidelines/) 
 and inscriptions encoded following the [EpiDoc guidelines](https://epidoc.stoa.org/gl/latest/). While it is recommended that the input is uniform the package demonstrate both types of input usage together. Non relevant parts / steps can be omitted accordingly. 
 
-ATTENTION!! RENDERING OF ATTRIBUTION OF SOURCES, which is available in the data IS currently INSUFFICIENT. This is not implemented in this demo application because it is easy enough to do for anyone.
+ATTENTION!! RENDERING OF ATTRIBUTION OF SOURCES, which is available in the data IS currently INSUFFICIENT. This is not implemented in this demo application because it is easy enough to do for anyone. ***Please see the included files for appropriate attribution of the sources included in the output.***
 
 The output produced follows most of the layout requirements of [Aethiopica](https://doaj.org/toc/2194-4024) and the Supplements to Aethiopica. Changing this settings is easy in the relevant `fo:` elements into the PDF.xql script.
 
@@ -24,16 +24,13 @@ An additional use of the DTS API is demonstrated with regard to references conta
 
 A local list of abbreviations aligned to selected available source texts is added in the driver as a common "list of abbreviations". This maps the content of a `@cRef` to a specific identifier and a DTS endpoint, abbreviated using the `<prefixDef>` element. This allows to define the endpoints once and select the texts only one time, then go with the citations as text and rely on that mapping. Based on the rend attribute if a quote is required this is built into the output calling the document API. This guarantees that citations are consistent to their citation reference system and source.
 Information about the source text is printed alongside relevant pointers in the "list of abbreviations". 
-`<ref>` elements pointing to the list of abbreviations link to that list into the PDF output.
 
-- find canonical references (@cref) and parse for navigation API to 
-     - fetch text and to 
-     - build index of cited passages  
+- The parts of the ouput can be customized in the settings.
+- The layout can be customized in the PDF.xql
+- The XML driver file defines where to look for what and organizes the content (source documents, images, etc.).
+- Many further parameters can be set for the consistent rendering of inscriptions with the EpiDoc Stylesheets parameters.
 
-This is similar to the PDF print functionality
-available on the Beta maṣāḥǝft website. This package will allow you to compile a PDF  with basic customizable parts. You
-can then specify all its features in the script if you want to, or you can ask the maintainer of the package
-to help you with that opening issues or asking in discussions in this repository.
+The resulting XSL-FO can eventually be further fine tuned after beeing produced.
 
 This can eventually be modified for other TEI based projects.
 
@@ -41,17 +38,8 @@ This is part of the efforts to support concrete flexible and multiple user needs
 for the project  Beta maṣāḥǝft: Manuscripts of Ethiopia and 
 Eritrea (Schriftkultur des christlichen Äthiopiens und Eritreas: eine multimediale Forschungsumgebung)
 
-This package will be updated to include a schema to check several of the rules of style
-but it does not yet do so.
+This package will be updated to include a schema to check several of the rules of style but it does not yet do so.
 
-This package is based on requirements and feedback from publication projects 
-by Dorothea Reule, Denis Nosnitsin and Pietro Liuzzo and was intended 
-initially for a new publication project by Mersha Alehegne. 
-It has been generalized and made a bit more flexible and usable without a browser and only on a local machine 
-to meet the requirements of other projects at the HLCEES. This means it
-is simpler than previous projects, but tries to deal with more options and 
-allow more settings, so that people can have a start playing around and figuring out 
-their requirements.
 
 ## Setup
 You need [OxygenXML Editor](http://www.oxygenxml.com/) to run this package. The package relies
@@ -66,10 +54,16 @@ Your main file here is `driver.xml`. In here you write your article using TEI el
 or your book, and include manuscripts for your catalogue, 
 and add or include all its parts.
 
+    
+### EpiDoc parameters
+If runnign the epidocFO transformation scenario, you can benefit from all parameters supported by the EpiDoc example Stylesheet library, including its Zotero lookup functionality, setting the parameters accordingly. You may have to edit the `inscriptions2fo.xslt` or edit the transformation scenario to pass on the parameters. If you have inscriptions in EpiDoc included in your driver, before clicking the red play button, open the driver.xml and run the `epidocFO` transformation scenario which is preset for the project. This will create parts of the File Object using the EpiDoc stylesheets and store them in a directory which will then be used by the PDF.xql to include the information. This expects the Stylesheets to be stored alongside the makepdf package directory which should be the case if you use the default location for cloning Git repositories. otherways, please update paths in `inscriptions2fo.xslt`.
+
+### Settings
 You have two setting files. 
 1. One is the Apache FOP configuration file. This is needed by the package, but you should not need to edit it unless you actually know that you need to
 2. Your `settings.xml`file allows you to decide on some parts of the output. For example if it is going to be a book or an article, if to include indexes or not, where to put the bibliography, etc.
 
+### Directories
 There are then three directories, 
  - one for the manuscripts TEI files (`mss`), 
  - one for images (`images`), and 
@@ -83,16 +77,16 @@ use xi:include in the preferences. This should be set by the project itself for 
 You will need to create a directory called fonts and store in it the fonts listed in `fopconfig.xml`.
 
 ## Make the PDF
-To make the PDF, click the small red play button at the top in your Oxygen editor. 
+To make the PDF, with the project open, select driver.xml and click the small red play button at the top in your Oxygen editor. 
 
-This is already setup to run the `PDF.xql` script, 
-which will take into consideration your settings, as defined in `settings.xql`. Some more details about
+This is already setup to run the `PDF.xql` script, unless you have changed that to produce the EpiDoc parts, in which case, select the catalogue2PDF transformation scenario before clicking play.
+PDF.xql will take into consideration your settings, as defined in `settings.xql`. Some more details about
 this process and how you can adapt it follow. Anything can be adapted and is likely
 to need adaptation to meet your encoding choices and desired output in the limits of
 authorial decisions.
 The produced PDF will open in your preferred system application for that.
 
-If you have inscriptions in EpiDoc, before clicking the red play button, run the epidocFO transformation scenario which is preset for the project. This will create parts of the File Object using the EpiDoc stylesheets which will then be used by the PDF.xql to include the information.
+
 
 ## driver.xml
 This package was designed for catalogues, although it can be 
@@ -139,13 +133,12 @@ of the (Dayr as-Suryān Collection)[https://betamasaheft.eu/DSintro.html].
 
 The Package uses
 - the [EthioStudies Library](https://www.zotero.org/groups/358366/ethiostudies/items) and the [HLZ CSL Style](https://betamasaheft.github.io/bibliography/) to print citations and bibliography
-- the [Beta maṣāḥǝft API](https://betamasaheft.eu/apidoc.html) to print standard names of persons, places and manuscripts, as well as the standard title of literary works including their Clavis Aethiopica number (CAe)
+- the [DTS APIs listed in the DTS aggregator](https://dts-browser.herokuapp.com/) to resolve refs.
 
 If these resources happen to be unavailable or you have 
 no internet connection to let Oxygen access them, this will not work.
 This also means that there is a certain amount of dependency on 
-the Beta maṣāḥǝft research environment and Zotero API.
-
+the Beta maṣāḥǝft research environment and Zotero API, all of which can be updated by changing the relevant parts, no setting facility has been provided for this.
 
 Validation with a specific style schema is on the way and will be included in driver.xml, so that it does not affect the included TEI files and their schema association.
 
@@ -187,6 +180,12 @@ footnotes
 <note>to make a footnote</note>
 ```
 
+citations/quotes of sources
+```xml
+<ref cRef="Aesch" corresp="221" rend="cit">Aeschilus, Prometeus Bound, verse 221</ref>
+```
+
+
 For lists, quotes and tables, standard TEI can be used. These are formatted according to Aethiopica Supplements requirements (2018).
 
 #### TEI elements used in Manuscripts (mss/)
@@ -197,6 +196,11 @@ Please see
 Everything which is documented there is ok, but may not be printed out. 
 Please ask if something is missing, either opening an issue or using the discussion feature.
 You can work with this also if your encoding is not very detailed (see example files).
+
+#### TEI elements used in Inscriptions 
+
+Please see 
+[EpiDoc guidelines](https://epidoc.stoa.org/gl/latest/) and relevant project guidelines.
 
 
 #### Bibliography
@@ -288,6 +292,4 @@ In `<orderOfParts>` you can set the order and existence of parts of your catalog
 Exceptions are the rule and there are several you can set for contents, additions, keywords.
 If you set indexes to be part of your publication, in `<indexes>` you can decide which indexes to print
     there can be more, and they can be better specified for selection and rendering, 
-    
-### EpiDoc parameters
-If runnign the epidocFO transformation scenario, you can benefit from all parameters supported by the EpiDoc example Stylesheet library, including its Zotero lookup functionality, setting the parameters accordingly. You may have to edit the `inscriptions2fo.xslt` or edit the transformation scenario to pass on the parameters.
+
