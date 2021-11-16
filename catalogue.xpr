@@ -953,7 +953,9 @@
             <file name="driver.xml"/>
         </folder>
         <folder path="."/>
+        <folder path="../Manuscripts/ES/"/>
         <folder path="../output/"/>
         <folder path="../Stylesheets/"/>
+        <folder path="../Works/4001-5000/"/>
     </projectTree>
 </project>

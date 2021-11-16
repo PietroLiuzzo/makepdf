@@ -22,7 +22,7 @@
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>My mashup Book</title>
+            <title>Test Edition</title>
             <author>Pietro Liuzzo</author>
             <!--            more authors, editors, contributors can be added here-->
          </titleStmt>
@@ -38,147 +38,32 @@
             <p/>
          </sourceDesc>
       </fileDesc>
-      <encodingDesc>
-         <listPrefixDef xmlns="http://www.tei-c.org/ns/1.0">
-            <prefixDef ident="bmdocdts" matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/$1"> </prefixDef>
-            <prefixDef ident="bmcoldts" matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://betamasaheft.eu/api/dts/collections?id=https://betamasaheft.eu/$1"> </prefixDef>
-            <prefixDef ident="bmnavdts" matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://betamasaheft.eu/api/dts/navigation?id=https://betamasaheft.eu/$1"> </prefixDef>
-            <prefixDef ident="bmiiif" matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://betamasaheft.eu/iiif/$1"> </prefixDef>
-            <prefixDef ident="bm" matchPattern="([a-zA-Z0-9]+)"
-               replacementPattern="https://www.zotero.org/groups/358366/ethiostudies/items/tag/bm:$1"> </prefixDef>
-            <prefixDef ident="perseids" matchPattern="([a-zA-Z0-9\.]+)"
-               replacementPattern="https://dts.perseids.org/collections?id=urn:cts:greekLit:$1"> </prefixDef>
-            <prefixDef ident="alpheios" matchPattern="([a-zA-Z0-9\.-]+)"
-               replacementPattern="http://texts.alpheios.net/api/dts/collections?id=urn:cts:greekLit:$1"
-            > </prefixDef>
-            <prefixDef ident="enc" matchPattern="([a-zA-Z0-9\.-]+)"
-               replacementPattern="http://dev.chartes.psl.eu/api/nautilus/dts/navigation?id=urn:cts:frenchLit:$1"
-               > </prefixDef>
-         </listPrefixDef>
-      </encodingDesc>
+      
       <profileDesc>
-         <particDesc>
-            <!--            Person names and place names for the indexes are taken from Beta Masahft.
-            you may define here a local list in listPerson or listPlaces to use in your introduction-->
-            <listPerson>
-               <person xml:id="p1">
-                  <persName><name>Joliet</name></persName>
-               </person>
-               <person xml:id="p2">
-                  <persName>
-                     <forename>Elwood</forename>
-                     <surname>Blues</surname>
-                  </persName>
-               </person>
-            </listPerson>
-
-         </particDesc>
+         
          <langUsage>
             <language ident="en">English</language>
-            <language ident="am">Amharic</language>
             <language ident="gez">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change>Information on revisions of the work</change>
-         <!--         <change who="MA" when="2020-12-08+01:00">transformed from Word to teiCorpus file for print</change>-->
+         <change who="PL" when="2021-11-16">branched from personal fork of repository to implement support for edition and document workflow.</change>
+        
       </revisionDesc>
    </teiHeader>
    <text>
       <front>
-         <div>
-            <head>Aknow</head>
-            <p>Aknowledgements text</p>
-         </div>
-         <div>
-            <head>Abbreviations</head>
-            <p>In the following list <att>corresp</att> points in an abbreviated form to the selected source text of reference. The shortened reference can be resolved with <gi>prefixDef</gi>. The content of <gi>label</gi> in each item in the list is the value which will be used in <tag>ref @cRef</tag> and eventually specified by additional attributes or structure </p>
-            <list xml:id="abbreviations">
-               <item corresp="perseids:tlg0016.tlg001"><label>Hdt</label> = Herodotus, The
-                  Histories</item>
-               <item corresp="alpheios:tlg0085.tlg003.alpheios-text-grc1"><label>Aesch</label> =
-                  Aeschylus Prometheus Bound</item>
-               <item corresp="bmcoldts:LIT1546Genesi"><label>Gen.</label> = Book of Genesis,
-                  Ethiopian</item>
-               <item corresp="bmcoldts:BMLacq810"><label>BML acq. 810</label> = Biblioteca Medicea
-                  Laurenziana, MS Acquisizioni e Doni 810.</item>
-               <item corresp="bmcoldts:BLorient718"><label>BL orient 718</label> = London, British Library, BL Oriental 718.</item>
-               <item corresp="enc:pos2012.pos201218.positionThese-fr1"><label>Mon tres cher pere</label> = Étude et édition critique de la correspondance de Gabriel François de Brueys d’Aigalliers avec son père (1755-1782).</item>
-            </list>
-         </div>
+         <p>front</p>
       </front>
       <body>
          <div>
             <head>Intro</head>
-            <p>This sample package uses Zotero API, DTS API, IIIF APIs, XInclude pointing to local
-               and external resources to build with Xquery and FOP a PDF output. The result mixes
-               information retrieved from the APIs. An additional layer of transformation is added
-               to prepare inscriptions before inclusion which uses the EpiDoc example XSLT.</p>
-            <div type="chapter">
-               <head>chapter head</head>
-               <p>This paragraph of text contains references to texts which assume a resolution
-                  possibility in one existing DTS endpoint. <list>
-                     <item>The following is a <gi>ref</gi> pointing to the Perseids DTS endpoint to print a
-                        citation only. <ref cRef="Hdt" corresp="7.10" rend="cit">Herodotus book 7,
-                           chapter 10</ref></item>
-                     <item>The following is an empty <gi>ref</gi> pointing to the Perseids DTS endpoint to print a
-                        citation only. The text of the citation is computed. <ref cRef="Hdt" corresp="7.10" rend="cit"/></item>
-                     <item>The following is a ref pointing to the Perseids DTS endpoint to print a
-                        quote based on that source. <ref cRef="Hdt" corresp="7.10" rend="quote"
-                           >Herodotus book 7, chapter 10</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a citation only. <ref cRef="Gen." corresp="43.34" rend="cit"
-                           >Genesis:43,34 Ethiopian text</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a quote. <ref cRef="Gen." corresp="43.34" rend="quote"
-                           >Genesis:43,34 Ethiopian text</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a citation based on that source printing images if available for the passage. <ref cRef="BML acq. 810" corresp="12"
-                           rend="cit">Manuscript BML acq. 810, folio 12</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a quote based on that source printing images if available for the passage. <ref cRef="BL orient 718" corresp="1.1ra1" rend="quote">Manuscript BL orient 718, folio 11 recto column a line 1</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Alpheios DTS endpoint to print a
-                        citation only.<ref cRef="Aesch" corresp="221" rend="cit">Aeschilus,
-                           Prometeus Bound, verse 221</ref></item>
-                     <item></item>
-                     <item>The following is a <gi>ref</gi> pointing to the ENC demo endpoint to print a
-                        citation only.<ref cRef="Mon tres cher pere" corresp="1" rend="cit">Introduction</ref></item>
-                     <item></item>
-                  </list>
-               </p>
-               
-            </div>
-            <div>
-               <head>Other things you can do in your encoding</head>
-               <p> You can use here <list>
-                     <item><ref target="http://www.thelevantinefoundation.co.uk"/></item>
-                     <item>ref with type figure, internal, manuscript, work with respectively the
-                        ids of a figure in a figure element, a chapter or any other node with a
-                        xml:id, a manuscript in BM a work in BM</item>
-                     <item><bibl><ptr target="bm:Meinardus1961Monks"/><citedRange unit="page"
-                              >117</citedRange></bibl></item>
-                     <item><placeName ref="LOC6126WadinN"/></item>
-                     <item><persName ref="PRS7185Mosesof"/></item>
-                     <item><note>to make a footnote</note></item>
-                     <item>lists like this one</item>
-                     <item>cit and quote</item>
-                  </list>
-               </p>
-               <div type="section">
-                  <head>section head</head>
-                  <p>my section text</p>
-               </div>
-            </div>
+           <p>This is a mini edition to demonstrate the editorial workflow described in the Guidelines.</p>
          </div>
       </body>
       <back>
          <div>
             <head>Plates</head>
-            <p>examples of mixing and matching different images from different sources.</p>
             <table>
                <row role="label">
                   <cell/>
@@ -186,62 +71,41 @@
                </row>
                <row>
                   <cell><figure>
-                        <graphic url="images/AP-046_014.jpg">
-                           <desc>Image on the left using a TEI table from a locally stored
-                              image</desc>
+                        <graphic url="edition/images/AMM-007_006.jpeg">
+                           <desc>AMM-007, Witness 1</desc>
                         </graphic>
                      </figure></cell>
                   <cell><figure>
                         <graphic
-                           url="https://betamasaheft.eu/iiif/AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
-                           <desc>Image on the right using a TEI table from a remotely stored image
-                              fetched with a IIIF Image API request </desc>
+                           url="edition/images/MR-001_093.jpeg">
+                           <desc>MR-001, Witness 2</desc>
                         </graphic>
                      </figure>
                   </cell>
                </row>
+               <row>
+                  <cell><figure>
+                     <graphic url="edition/images/QS-014_008.jpeg">
+                        <desc>QS-014, Witness 3</desc>
+                     </graphic>
+                  </figure></cell>
+                  <cell><figure>
+                     <graphic
+                        url="edition/images/UM-014_093.jpeg">
+                        <desc>UM-014, Witness 4</desc>
+                     </graphic>
+                  </figure>
+                  </cell>
+               </row>
             </table>
-             <figure>
-               <graphic
-                  url="https://digi.vatlib.it/pub/digit/MSS_Vat.et.1/thumb/Vat.et.1_0001.tif.jpg">
-                  <desc>Image from a different IIIF API (Vatican Library) added explicitly</desc>
-               </graphic>
-            </figure>
-         </div>
+           </div>
       </back>
    </text>
-   <!--   
-      here you can use xi:include to point to the manuscripts files. 
-      You can have as many as you want, here there is one simple example
-   -->
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="https://ilc4clarin.ilc.cnr.it/cretaninscriptions/en/inscriptions/seg_64_798.xml">
+   
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../Works/4001-5000/LIT4714Salamlaki.xml">
       <xi:fallback>
-         <p>inscription from Cretan Institutional Inscriptions</p>
+         <p>Text of the Edition</p>
       </xi:fallback>
    </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="https://igcyr.unibo.it/igcyr/gvcyr001.xml">
-      <xi:fallback>
-         <p>inscription from IGCyr</p>
-      </xi:fallback>
-   </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/ESum035">
-      <xi:fallback>
-         <p>ES um 35 with images available and linked transkribus-transcription</p>
-      </xi:fallback>
-   </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
-      <xi:fallback>
-         <p>(The Psalter)</p>
-      </xi:fallback>
-   </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/BMLacq810">
-      <xi:fallback>
-         <p>Masahfa Genzat Florence (with images available via IIIF at
-            https://betamasaheft.eu/api/iiif/BMLacq810/manifest)</p>
-      </xi:fallback>
-   </xi:include>
+   
 </teiCorpus>

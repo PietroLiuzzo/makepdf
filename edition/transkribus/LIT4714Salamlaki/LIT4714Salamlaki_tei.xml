@@ -1,0 +1,1794 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">LIT4714Salamlaki</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>tranScriptorium</publisher>
+			</publicationStmt>
+			<sourceDesc>
+				<bibl><publisher>TRP document creator: pietro.liuzzo@gmail.com</publisher></bibl>
+				<listWit>
+
+					<witness xml:id="W1" corresp="https://betamasaheft/ESamm007"
+							><idno>ESamm007</idno><locus xmlns="http://www.tei-c.org/ns/1.0"
+							from="5va" to="5vb"/></witness>
+					<witness xml:id="W2" corresp="https://betamasaheft/ESamq014"
+							><idno>ESamq014</idno><locus xmlns="http://www.tei-c.org/ns/1.0"
+							from="5va" to="5vb"/></witness>
+					<witness xml:id="W3" corresp="https://betamasaheft/ESmr001"
+							><idno>ESmr001</idno><locus xmlns="http://www.tei-c.org/ns/1.0"
+							from="93rb" to="94rb"/></witness>
+					<witness xml:id="W4" corresp="https://betamasaheft/ESqs014"
+							><idno>ESqs014</idno><locus xmlns="http://www.tei-c.org/ns/1.0"
+							from="7vc" to="8ra">7vc-8ra</locus></witness>
+					<witness xml:id="W5" corresp="https://betamasaheft/ESum014"
+							><idno>ESum014</idno><locus xmlns="http://www.tei-c.org/ns/1.0"
+							from="9ra" to="9rb"/></witness>
+				</listWit>
+			</sourceDesc>
+		</fileDesc>
+
+	</teiHeader>
+	<facsimile xml:id="facs_1">
+		<surface ulx="0" uly="0" lrx="2500" lry="1660" corresp="AMM-007_006.jpeg">
+			<graphic url="AMM-007_006.jpeg" width="2500px" height="1660px"/>
+			<zone ulx="492" uly="317" lrx="839" lry="1237" rendition="TextRegion" xml:id="facs_1_r1">
+				<zone ulx="497" uly="317" lrx="818" lry="351" rendition="Line" xml:id="facs_1_r1l1"/>
+				<zone ulx="495" uly="366" lrx="813" lry="400" rendition="Line" xml:id="facs_1_r1l2"/>
+				<zone ulx="495" uly="413" lrx="812" lry="448" rendition="Line" xml:id="facs_1_r1l3"/>
+				<zone ulx="492" uly="458" lrx="809" lry="495" rendition="Line" xml:id="facs_1_r1l4"/>
+				<zone ulx="506" uly="506" lrx="812" lry="541" rendition="Line" xml:id="facs_1_r1l5"/>
+				<zone ulx="500" uly="552" lrx="816" lry="589" rendition="Line" xml:id="facs_1_r1l6"/>
+				<zone ulx="510" uly="602" lrx="819" lry="637" rendition="Line" xml:id="facs_1_r1l7"/>
+				<zone ulx="501" uly="648" lrx="819" lry="682" rendition="Line" xml:id="facs_1_r1l8"/>
+				<zone ulx="504" uly="690" lrx="807" lry="727" rendition="Line" xml:id="facs_1_r1l9"/>
+				<zone ulx="500" uly="738" lrx="812" lry="772" rendition="Line" xml:id="facs_1_r1l10"/>
+				<zone ulx="509" uly="780" lrx="833" lry="817" rendition="Line" xml:id="facs_1_r1l11"/>
+				<zone ulx="501" uly="827" lrx="828" lry="862" rendition="Line" xml:id="facs_1_r1l12"/>
+				<zone ulx="503" uly="872" lrx="824" lry="907" rendition="Line" xml:id="facs_1_r1l13"/>
+				<zone ulx="507" uly="920" lrx="822" lry="955" rendition="Line" xml:id="facs_1_r1l14"/>
+				<zone ulx="501" uly="965" lrx="827" lry="1006" rendition="Line"
+					xml:id="facs_1_r1l15"/>
+				<zone ulx="512" uly="1014" lrx="825" lry="1053" rendition="Line"
+					xml:id="facs_1_r1l16"/>
+				<zone ulx="516" uly="1055" lrx="839" lry="1096" rendition="Line"
+					xml:id="facs_1_r1l17"/>
+				<zone ulx="516" uly="1106" lrx="824" lry="1147" rendition="Line"
+					xml:id="facs_1_r1l18"/>
+				<zone ulx="509" uly="1149" lrx="831" lry="1191" rendition="Line"
+					xml:id="facs_1_r1l19"/>
+				<zone ulx="509" uly="1199" lrx="821" lry="1237" rendition="Line"
+					xml:id="facs_1_r1l20"/>
+			</zone>
+			<zone ulx="882" uly="310" lrx="1217" lry="1229" rendition="TextRegion"
+				xml:id="facs_1_r2">
+				<zone ulx="894" uly="310" lrx="1184" lry="353" rendition="Line" xml:id="facs_1_r2l1"/>
+				<zone ulx="882" uly="360" lrx="1197" lry="398" rendition="Line" xml:id="facs_1_r2l2"/>
+				<zone ulx="893" uly="412" lrx="1187" lry="445" rendition="Line" xml:id="facs_1_r2l3"/>
+				<zone ulx="885" uly="456" lrx="1185" lry="490" rendition="Line" xml:id="facs_1_r2l4"/>
+				<zone ulx="888" uly="502" lrx="1200" lry="541" rendition="Line" xml:id="facs_1_r2l5"/>
+				<zone ulx="890" uly="549" lrx="1193" lry="585" rendition="Line" xml:id="facs_1_r2l6"/>
+				<zone ulx="887" uly="595" lrx="1197" lry="632" rendition="Line" xml:id="facs_1_r2l7"/>
+				<zone ulx="890" uly="642" lrx="1199" lry="675" rendition="Line" xml:id="facs_1_r2l8"/>
+				<zone ulx="897" uly="685" lrx="1200" lry="718" rendition="Line" xml:id="facs_1_r2l9"/>
+				<zone ulx="893" uly="727" lrx="1209" lry="762" rendition="Line"
+					xml:id="facs_1_r2l10"/>
+				<zone ulx="885" uly="774" lrx="1202" lry="811" rendition="Line"
+					xml:id="facs_1_r2l11"/>
+				<zone ulx="897" uly="816" lrx="1193" lry="850" rendition="Line"
+					xml:id="facs_1_r2l12"/>
+				<zone ulx="894" uly="860" lrx="1194" lry="902" rendition="Line"
+					xml:id="facs_1_r2l13"/>
+				<zone ulx="903" uly="911" lrx="1196" lry="946" rendition="Line"
+					xml:id="facs_1_r2l14"/>
+				<zone ulx="891" uly="954" lrx="1194" lry="994" rendition="Line"
+					xml:id="facs_1_r2l15"/>
+				<zone ulx="891" uly="1004" lrx="1205" lry="1045" rendition="Line"
+					xml:id="facs_1_r2l16"/>
+				<zone ulx="900" uly="1046" lrx="1217" lry="1087" rendition="Line"
+					xml:id="facs_1_r2l17"/>
+				<zone ulx="900" uly="1093" lrx="1205" lry="1133" rendition="Line"
+					xml:id="facs_1_r2l18"/>
+				<zone ulx="896" uly="1138" lrx="1196" lry="1180" rendition="Line"
+					xml:id="facs_1_r2l19"/>
+				<zone ulx="891" uly="1184" lrx="1206" lry="1229" rendition="Line"
+					xml:id="facs_1_r2l20"/>
+			</zone>
+			<zone ulx="1310" uly="302" lrx="1641" lry="1552" rendition="TextRegion"
+				xml:id="facs_1_r3">
+				<zone ulx="1311" uly="302" lrx="1616" lry="340" rendition="Line"
+					xml:id="facs_1_r3l1"/>
+				<zone ulx="1326" uly="350" lrx="1623" lry="388" rendition="Line"
+					xml:id="facs_1_r3l2"/>
+				<zone ulx="1323" uly="401" lrx="1622" lry="439" rendition="Line"
+					xml:id="facs_1_r3l3"/>
+				<zone ulx="1319" uly="446" lrx="1625" lry="486" rendition="Line"
+					xml:id="facs_1_r3l4"/>
+				<zone ulx="1323" uly="494" lrx="1614" lry="532" rendition="Line"
+					xml:id="facs_1_r3l5"/>
+				<zone ulx="1310" uly="539" lrx="1641" lry="576" rendition="Line"
+					xml:id="facs_1_r3l6"/>
+				<zone ulx="1329" uly="588" lrx="1620" lry="625" rendition="Line"
+					xml:id="facs_1_r3l7"/>
+				<zone ulx="1314" uly="630" lrx="1613" lry="667" rendition="Line"
+					xml:id="facs_1_r3l8"/>
+				<zone ulx="1311" uly="677" lrx="1620" lry="714" rendition="Line"
+					xml:id="facs_1_r3l9"/>
+				<zone ulx="1316" uly="722" lrx="1626" lry="757" rendition="Line"
+					xml:id="facs_1_r3l10"/>
+				<zone ulx="1326" uly="768" lrx="1631" lry="805" rendition="Line"
+					xml:id="facs_1_r3l11"/>
+				<zone ulx="1326" uly="813" lrx="1631" lry="847" rendition="Line"
+					xml:id="facs_1_r3l12"/>
+				<zone ulx="1325" uly="860" lrx="1629" lry="895" rendition="Line"
+					xml:id="facs_1_r3l13"/>
+				<zone ulx="1322" uly="906" lrx="1623" lry="942" rendition="Line"
+					xml:id="facs_1_r3l14"/>
+				<zone ulx="1326" uly="954" lrx="1635" lry="985" rendition="Line"
+					xml:id="facs_1_r3l15"/>
+				<zone ulx="1316" uly="996" lrx="1620" lry="1033" rendition="Line"
+					xml:id="facs_1_r3l16"/>
+				<zone ulx="1322" uly="1043" lrx="1634" lry="1078" rendition="Line"
+					xml:id="facs_1_r3l17"/>
+				<zone ulx="1319" uly="1089" lrx="1634" lry="1123" rendition="Line"
+					xml:id="facs_1_r3l18"/>
+				<zone ulx="1328" uly="1137" lrx="1628" lry="1171" rendition="Line"
+					xml:id="facs_1_r3l19"/>
+				<zone ulx="1323" uly="1181" lrx="1632" lry="1218" rendition="Line"
+					xml:id="facs_1_r3l20"/>
+			</zone>
+			<zone ulx="1689" uly="303" lrx="2019" lry="1216" rendition="TextRegion"
+				xml:id="facs_1_r4">
+				<zone ulx="1697" uly="303" lrx="2003" lry="337" rendition="Line"
+					xml:id="facs_1_r4l1"/>
+				<zone ulx="1704" uly="353" lrx="2009" lry="387" rendition="Line"
+					xml:id="facs_1_r4l2"/>
+				<zone ulx="1689" uly="401" lrx="2003" lry="436" rendition="Line"
+					xml:id="facs_1_r4l3"/>
+				<zone ulx="1698" uly="449" lrx="2010" lry="483" rendition="Line"
+					xml:id="facs_1_r4l4"/>
+				<zone ulx="1694" uly="495" lrx="2007" lry="528" rendition="Line"
+					xml:id="facs_1_r4l5"/>
+				<zone ulx="1700" uly="537" lrx="2015" lry="573" rendition="Line"
+					xml:id="facs_1_r4l6"/>
+				<zone ulx="1695" uly="586" lrx="2010" lry="622" rendition="Line"
+					xml:id="facs_1_r4l7"/>
+				<zone ulx="1713" uly="630" lrx="2001" lry="664" rendition="Line"
+					xml:id="facs_1_r4l8"/>
+				<zone ulx="1691" uly="675" lrx="2009" lry="708" rendition="Line"
+					xml:id="facs_1_r4l9"/>
+				<zone ulx="1698" uly="719" lrx="1998" lry="750" rendition="Line"
+					xml:id="facs_1_r4l10"/>
+				<zone ulx="1710" uly="763" lrx="2013" lry="799" rendition="Line"
+					xml:id="facs_1_r4l11"/>
+				<zone ulx="1700" uly="807" lrx="1997" lry="841" rendition="Line"
+					xml:id="facs_1_r4l12"/>
+				<zone ulx="1703" uly="854" lrx="2013" lry="889" rendition="Line"
+					xml:id="facs_1_r4l13"/>
+				<zone ulx="1710" uly="903" lrx="2007" lry="940" rendition="Line"
+					xml:id="facs_1_r4l14"/>
+				<zone ulx="1704" uly="951" lrx="2004" lry="982" rendition="Line"
+					xml:id="facs_1_r4l15"/>
+				<zone ulx="1700" uly="996" lrx="2013" lry="1032" rendition="Line"
+					xml:id="facs_1_r4l16"/>
+				<zone ulx="1709" uly="1041" lrx="2013" lry="1077" rendition="Line"
+					xml:id="facs_1_r4l17"/>
+				<zone ulx="1715" uly="1089" lrx="2009" lry="1120" rendition="Line"
+					xml:id="facs_1_r4l18"/>
+				<zone ulx="1710" uly="1133" lrx="2019" lry="1167" rendition="Line"
+					xml:id="facs_1_r4l19"/>
+				<zone ulx="1706" uly="1181" lrx="2015" lry="1216" rendition="Line"
+					xml:id="facs_1_r4l20"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id="facs_2">
+		<surface ulx="0" uly="0" lrx="2500" lry="1660" corresp="AMQ-014__006.jpeg">
+			<graphic url="AMQ-014__006.jpeg" width="2500px" height="1660px"/>
+			<zone ulx="339" uly="343" lrx="740" lry="1161" rendition="TextRegion" xml:id="facs_2_r1">
+				<zone ulx="339" uly="343" lrx="683" lry="388" rendition="Line" xml:id="facs_2_r1l1"/>
+				<zone ulx="339" uly="390" lrx="680" lry="436" rendition="Line" xml:id="facs_2_r1l2"/>
+				<zone ulx="348" uly="429" lrx="695" lry="475" rendition="Line" xml:id="facs_2_r1l3"/>
+				<zone ulx="342" uly="480" lrx="693" lry="520" rendition="Line" xml:id="facs_2_r1l4"/>
+				<zone ulx="342" uly="522" lrx="687" lry="567" rendition="Line" xml:id="facs_2_r1l5"/>
+				<zone ulx="345" uly="570" lrx="686" lry="622" rendition="Line" xml:id="facs_2_r1l6"/>
+				<zone ulx="345" uly="618" lrx="662" lry="670" rendition="Line" xml:id="facs_2_r1l7"/>
+				<zone ulx="350" uly="657" lrx="701" lry="714" rendition="Line" xml:id="facs_2_r1l8"/>
+				<zone ulx="347" uly="703" lrx="714" lry="756" rendition="Line" xml:id="facs_2_r1l9"/>
+				<zone ulx="351" uly="750" lrx="698" lry="799" rendition="Line" xml:id="facs_2_r1l10"/>
+				<zone ulx="356" uly="786" lrx="701" lry="843" rendition="Line" xml:id="facs_2_r1l11"/>
+				<zone ulx="362" uly="835" lrx="723" lry="891" rendition="Line" xml:id="facs_2_r1l12"/>
+				<zone ulx="357" uly="885" lrx="729" lry="939" rendition="Line" xml:id="facs_2_r1l13"/>
+				<zone ulx="360" uly="925" lrx="729" lry="981" rendition="Line" xml:id="facs_2_r1l14"/>
+				<zone ulx="362" uly="969" lrx="729" lry="1020" rendition="Line"
+					xml:id="facs_2_r1l15"/>
+				<zone ulx="360" uly="1014" lrx="723" lry="1063" rendition="Line"
+					xml:id="facs_2_r1l16"/>
+				<zone ulx="363" uly="1059" lrx="714" lry="1108" rendition="Line"
+					xml:id="facs_2_r1l17"/>
+				<zone ulx="368" uly="1107" lrx="740" lry="1161" rendition="Line"
+					xml:id="facs_2_r1l18"/>
+			</zone>
+			<zone ulx="782" uly="318" lrx="1224" lry="1135" rendition="TextRegion"
+				xml:id="facs_2_r2">
+				<zone ulx="782" uly="318" lrx="1154" lry="367" rendition="Line" xml:id="facs_2_r2l1"/>
+				<zone ulx="912" uly="379" lrx="1167" lry="418" rendition="Line" xml:id="facs_2_r2l2"/>
+				<zone ulx="794" uly="414" lrx="1181" lry="454" rendition="Line" xml:id="facs_2_r2l3"/>
+				<zone ulx="789" uly="472" lrx="1178" lry="508" rendition="Line" xml:id="facs_2_r2l4"/>
+				<zone ulx="786" uly="510" lrx="1181" lry="549" rendition="Line" xml:id="facs_2_r2l5"/>
+				<zone ulx="797" uly="561" lrx="1190" lry="598" rendition="Line" xml:id="facs_2_r2l6"/>
+				<zone ulx="797" uly="604" lrx="1152" lry="648" rendition="Line" xml:id="facs_2_r2l7"/>
+				<zone ulx="1121" uly="618" lrx="1184" lry="663" rendition="Line"
+					xml:id="facs_2_r2l8"/>
+				<zone ulx="801" uly="655" lrx="1194" lry="691" rendition="Line" xml:id="facs_2_r2l9"/>
+				<zone ulx="798" uly="691" lrx="1164" lry="730" rendition="Line"
+					xml:id="facs_2_r2l10"/>
+				<zone ulx="809" uly="732" lrx="1202" lry="771" rendition="Line"
+					xml:id="facs_2_r2l11"/>
+				<zone ulx="800" uly="777" lrx="1190" lry="822" rendition="Line"
+					xml:id="facs_2_r2l12"/>
+				<zone ulx="798" uly="822" lrx="1193" lry="871" rendition="Line"
+					xml:id="facs_2_r2l13"/>
+				<zone ulx="810" uly="867" lrx="1203" lry="919" rendition="Line"
+					xml:id="facs_2_r2l14"/>
+				<zone ulx="813" uly="915" lrx="1202" lry="955" rendition="Line"
+					xml:id="facs_2_r2l15"/>
+				<zone ulx="822" uly="954" lrx="1211" lry="997" rendition="Line"
+					xml:id="facs_2_r2l16"/>
+				<zone ulx="819" uly="994" lrx="1203" lry="1038" rendition="Line"
+					xml:id="facs_2_r2l17"/>
+				<zone ulx="816" uly="1045" lrx="1224" lry="1084" rendition="Line"
+					xml:id="facs_2_r2l18"/>
+				<zone ulx="828" uly="1081" lrx="1206" lry="1135" rendition="Line"
+					xml:id="facs_2_r2l19"/>
+			</zone>
+			<zone ulx="1283" uly="310" lrx="1701" lry="1540" rendition="TextRegion"
+				xml:id="facs_2_r3">
+				<zone ulx="1283" uly="310" lrx="1661" lry="354" rendition="Line"
+					xml:id="facs_2_r3l1"/>
+				<zone ulx="1287" uly="361" lrx="1677" lry="412" rendition="Line"
+					xml:id="facs_2_r3l2"/>
+				<zone ulx="1290" uly="402" lrx="1668" lry="451" rendition="Line"
+					xml:id="facs_2_r3l3"/>
+				<zone ulx="1293" uly="450" lrx="1676" lry="501" rendition="Line"
+					xml:id="facs_2_r3l4"/>
+				<zone ulx="1293" uly="486" lrx="1667" lry="541" rendition="Line"
+					xml:id="facs_2_r3l5"/>
+				<zone ulx="1290" uly="538" lrx="1692" lry="589" rendition="Line"
+					xml:id="facs_2_r3l6"/>
+				<zone ulx="1289" uly="588" lrx="1670" lry="636" rendition="Line"
+					xml:id="facs_2_r3l7"/>
+				<zone ulx="1293" uly="634" lrx="1679" lry="685" rendition="Line"
+					xml:id="facs_2_r3l8"/>
+				<zone ulx="1290" uly="678" lrx="1685" lry="730" rendition="Line"
+					xml:id="facs_2_r3l9"/>
+				<zone ulx="1284" uly="721" lrx="1668" lry="769" rendition="Line"
+					xml:id="facs_2_r3l10"/>
+				<zone ulx="1292" uly="771" lrx="1667" lry="813" rendition="Line"
+					xml:id="facs_2_r3l11"/>
+				<zone ulx="1284" uly="813" lrx="1677" lry="856" rendition="Line"
+					xml:id="facs_2_r3l12"/>
+				<zone ulx="1296" uly="859" lrx="1686" lry="904" rendition="Line"
+					xml:id="facs_2_r3l13"/>
+				<zone ulx="1296" uly="898" lrx="1682" lry="946" rendition="Line"
+					xml:id="facs_2_r3l14"/>
+				<zone ulx="1299" uly="939" lrx="1673" lry="993" rendition="Line"
+					xml:id="facs_2_r3l15"/>
+				<zone ulx="1293" uly="984" lrx="1688" lry="1032" rendition="Line"
+					xml:id="facs_2_r3l16"/>
+				<zone ulx="1299" uly="1036" lrx="1701" lry="1078" rendition="Line"
+					xml:id="facs_2_r3l17"/>
+				<zone ulx="1304" uly="1081" lrx="1685" lry="1128" rendition="Line"
+					xml:id="facs_2_r3l18"/>
+			</zone>
+			<zone ulx="1754" uly="306" lrx="2150" lry="1107" rendition="TextRegion"
+				xml:id="facs_2_r4">
+				<zone ulx="1809" uly="306" lrx="2094" lry="345" rendition="Line"
+					xml:id="facs_2_r4l1"/>
+				<zone ulx="1754" uly="358" lrx="2094" lry="396" rendition="Line"
+					xml:id="facs_2_r4l2"/>
+				<zone ulx="1769" uly="397" lrx="2093" lry="429" rendition="Line"
+					xml:id="facs_2_r4l3"/>
+				<zone ulx="1766" uly="445" lrx="2106" lry="477" rendition="Line"
+					xml:id="facs_2_r4l4"/>
+				<zone ulx="1764" uly="486" lrx="2115" lry="522" rendition="Line"
+					xml:id="facs_2_r4l5"/>
+				<zone ulx="1770" uly="534" lrx="2106" lry="570" rendition="Line"
+					xml:id="facs_2_r4l6"/>
+				<zone ulx="1761" uly="582" lrx="2096" lry="622" rendition="Line"
+					xml:id="facs_2_r4l7"/>
+				<zone ulx="1764" uly="628" lrx="2109" lry="663" rendition="Line"
+					xml:id="facs_2_r4l8"/>
+				<zone ulx="1761" uly="669" lrx="2121" lry="706" rendition="Line"
+					xml:id="facs_2_r4l9"/>
+				<zone ulx="1766" uly="711" lrx="2096" lry="747" rendition="Line"
+					xml:id="facs_2_r4l10"/>
+				<zone ulx="1776" uly="753" lrx="2114" lry="790" rendition="Line"
+					xml:id="facs_2_r4l11"/>
+				<zone ulx="1770" uly="804" lrx="2099" lry="844" rendition="Line"
+					xml:id="facs_2_r4l12"/>
+				<zone ulx="1770" uly="844" lrx="2132" lry="886" rendition="Line"
+					xml:id="facs_2_r4l13"/>
+				<zone ulx="1766" uly="891" lrx="2132" lry="927" rendition="Line"
+					xml:id="facs_2_r4l14"/>
+				<zone ulx="1773" uly="933" lrx="2130" lry="973" rendition="Line"
+					xml:id="facs_2_r4l15"/>
+				<zone ulx="1779" uly="972" lrx="2138" lry="1012" rendition="Line"
+					xml:id="facs_2_r4l16"/>
+				<zone ulx="1766" uly="1017" lrx="2114" lry="1053" rendition="Line"
+					xml:id="facs_2_r4l17"/>
+				<zone ulx="1770" uly="1068" lrx="2150" lry="1107" rendition="Line"
+					xml:id="facs_2_r4l18"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id="facs_3">
+		<surface ulx="0" uly="0" lrx="2500" lry="1660" corresp="MR-001_093.jpeg">
+			<graphic url="MR-001_093.jpeg" width="2500px" height="1660px"/>
+			<zone ulx="369" uly="379" lrx="746" lry="1269" rendition="TextRegion" xml:id="facs_3_r1">
+				<zone ulx="387" uly="379" lrx="708" lry="421" rendition="Line" xml:id="facs_3_r1l1"/>
+				<zone ulx="378" uly="420" lrx="713" lry="463" rendition="Line" xml:id="facs_3_r1l2"/>
+				<zone ulx="374" uly="459" lrx="714" lry="504" rendition="Line" xml:id="facs_3_r1l3"/>
+				<zone ulx="375" uly="498" lrx="731" lry="550" rendition="Line" xml:id="facs_3_r1l4"/>
+				<zone ulx="375" uly="549" lrx="731" lry="592" rendition="Line" xml:id="facs_3_r1l5"/>
+				<zone ulx="380" uly="589" lrx="720" lry="636" rendition="Line" xml:id="facs_3_r1l6"/>
+				<zone ulx="374" uly="631" lrx="713" lry="675" rendition="Line" xml:id="facs_3_r1l7"/>
+				<zone ulx="375" uly="678" lrx="704" lry="724" rendition="Line" xml:id="facs_3_r1l8"/>
+				<zone ulx="375" uly="711" lrx="728" lry="754" rendition="Line" xml:id="facs_3_r1l9"/>
+				<zone ulx="369" uly="748" lrx="717" lry="793" rendition="Line" xml:id="facs_3_r1l10"/>
+				<zone ulx="384" uly="793" lrx="711" lry="841" rendition="Line" xml:id="facs_3_r1l11"/>
+				<zone ulx="381" uly="840" lrx="731" lry="886" rendition="Line" xml:id="facs_3_r1l12"/>
+				<zone ulx="378" uly="886" lrx="732" lry="931" rendition="Line" xml:id="facs_3_r1l13"/>
+				<zone ulx="384" uly="930" lrx="732" lry="967" rendition="Line" xml:id="facs_3_r1l14"/>
+				<zone ulx="378" uly="970" lrx="738" lry="1005" rendition="Line"
+					xml:id="facs_3_r1l15"/>
+				<zone ulx="371" uly="1015" lrx="734" lry="1050" rendition="Line"
+					xml:id="facs_3_r1l16"/>
+				<zone ulx="383" uly="1053" lrx="728" lry="1086" rendition="Line"
+					xml:id="facs_3_r1l17"/>
+				<zone ulx="377" uly="1093" lrx="738" lry="1125" rendition="Line"
+					xml:id="facs_3_r1l18"/>
+				<zone ulx="384" uly="1140" lrx="746" lry="1177" rendition="Line"
+					xml:id="facs_3_r1l19"/>
+				<zone ulx="378" uly="1182" lrx="740" lry="1219" rendition="Line"
+					xml:id="facs_3_r1l20"/>
+				<zone ulx="383" uly="1225" lrx="743" lry="1269" rendition="Line"
+					xml:id="facs_3_r1l21"/>
+			</zone>
+			<zone ulx="801" uly="364" lrx="1241" lry="1566" rendition="TextRegion"
+				xml:id="facs_3_r2">
+				<zone ulx="810" uly="364" lrx="1221" lry="406" rendition="Line" xml:id="facs_3_r2l1"/>
+				<zone ulx="803" uly="406" lrx="1208" lry="447" rendition="Line" xml:id="facs_3_r2l2"/>
+				<zone ulx="801" uly="444" lrx="1211" lry="489" rendition="Line" xml:id="facs_3_r2l3"/>
+				<zone ulx="809" uly="486" lrx="1196" lry="529" rendition="Line" xml:id="facs_3_r2l4"/>
+				<zone ulx="807" uly="526" lrx="1211" lry="574" rendition="Line" xml:id="facs_3_r2l5"/>
+				<zone ulx="825" uly="573" lrx="1197" lry="616" rendition="Line" xml:id="facs_3_r2l6"/>
+				<zone ulx="827" uly="618" lrx="1218" lry="654" rendition="Line" xml:id="facs_3_r2l7"/>
+				<zone ulx="833" uly="657" lrx="1211" lry="699" rendition="Line" xml:id="facs_3_r2l8"/>
+				<zone ulx="828" uly="699" lrx="1229" lry="739" rendition="Line" xml:id="facs_3_r2l9"/>
+				<zone ulx="876" uly="730" lrx="1224" lry="771" rendition="Line"
+					xml:id="facs_3_r2l10"/>
+				<zone ulx="831" uly="767" lrx="1230" lry="813" rendition="Line"
+					xml:id="facs_3_r2l11"/>
+				<zone ulx="822" uly="811" lrx="1230" lry="861" rendition="Line"
+					xml:id="facs_3_r2l12"/>
+				<zone ulx="828" uly="870" lrx="1221" lry="909" rendition="Line"
+					xml:id="facs_3_r2l13"/>
+				<zone ulx="821" uly="913" lrx="1227" lry="957" rendition="Line"
+					xml:id="facs_3_r2l14"/>
+				<zone ulx="819" uly="963" lrx="1241" lry="997" rendition="Line"
+					xml:id="facs_3_r2l15"/>
+				<zone ulx="822" uly="1005" lrx="1232" lry="1045" rendition="Line"
+					xml:id="facs_3_r2l16"/>
+				<zone ulx="821" uly="1050" lrx="1230" lry="1083" rendition="Line"
+					xml:id="facs_3_r2l17"/>
+				<zone ulx="818" uly="1092" lrx="1221" lry="1126" rendition="Line"
+					xml:id="facs_3_r2l18"/>
+				<zone ulx="834" uly="1137" lrx="1226" lry="1174" rendition="Line"
+					xml:id="facs_3_r2l19"/>
+				<zone ulx="840" uly="1188" lrx="1226" lry="1222" rendition="Line"
+					xml:id="facs_3_r2l20"/>
+				<zone ulx="828" uly="1233" lrx="1229" lry="1269" rendition="Line"
+					xml:id="facs_3_r2l21"/>
+			</zone>
+			<zone ulx="1326" uly="360" lrx="1754" lry="1564" rendition="TextRegion"
+				xml:id="facs_3_r3">
+				<zone ulx="1334" uly="360" lrx="1754" lry="399" rendition="Line"
+					xml:id="facs_3_r3l1"/>
+				<zone ulx="1326" uly="402" lrx="1740" lry="439" rendition="Line"
+					xml:id="facs_3_r3l2"/>
+				<zone ulx="1343" uly="441" lrx="1721" lry="480" rendition="Line"
+					xml:id="facs_3_r3l3"/>
+				<zone ulx="1338" uly="480" lrx="1737" lry="517" rendition="Line"
+					xml:id="facs_3_r3l4"/>
+				<zone ulx="1326" uly="520" lrx="1749" lry="559" rendition="Line"
+					xml:id="facs_3_r3l5"/>
+				<zone ulx="1332" uly="561" lrx="1739" lry="601" rendition="Line"
+					xml:id="facs_3_r3l6"/>
+				<zone ulx="1337" uly="606" lrx="1751" lry="642" rendition="Line"
+					xml:id="facs_3_r3l7"/>
+				<zone ulx="1329" uly="648" lrx="1733" lry="685" rendition="Line"
+					xml:id="facs_3_r3l8"/>
+				<zone ulx="1335" uly="684" lrx="1742" lry="724" rendition="Line"
+					xml:id="facs_3_r3l9"/>
+				<zone ulx="1335" uly="726" lrx="1733" lry="766" rendition="Line"
+					xml:id="facs_3_r3l10"/>
+				<zone ulx="1335" uly="769" lrx="1748" lry="808" rendition="Line"
+					xml:id="facs_3_r3l11"/>
+				<zone ulx="1334" uly="813" lrx="1730" lry="849" rendition="Line"
+					xml:id="facs_3_r3l12"/>
+				<zone ulx="1338" uly="847" lrx="1743" lry="889" rendition="Line"
+					xml:id="facs_3_r3l13"/>
+				<zone ulx="1335" uly="894" lrx="1736" lry="934" rendition="Line"
+					xml:id="facs_3_r3l14"/>
+				<zone ulx="1349" uly="930" lrx="1745" lry="969" rendition="Line"
+					xml:id="facs_3_r3l15"/>
+				<zone ulx="1341" uly="970" lrx="1737" lry="1009" rendition="Line"
+					xml:id="facs_3_r3l16"/>
+				<zone ulx="1344" uly="1012" lrx="1716" lry="1050" rendition="Line"
+					xml:id="facs_3_r3l17"/>
+				<zone ulx="1340" uly="1053" lrx="1728" lry="1093" rendition="Line"
+					xml:id="facs_3_r3l18"/>
+				<zone ulx="1340" uly="1092" lrx="1730" lry="1137" rendition="Line"
+					xml:id="facs_3_r3l19"/>
+				<zone ulx="1340" uly="1126" lrx="1716" lry="1173" rendition="Line"
+					xml:id="facs_3_r3l20"/>
+				<zone ulx="1346" uly="1168" lrx="1731" lry="1209" rendition="Line"
+					xml:id="facs_3_r3l21"/>
+				<zone ulx="1337" uly="1209" lrx="1733" lry="1245" rendition="Line"
+					xml:id="facs_3_r3l22"/>
+			</zone>
+			<zone ulx="1802" uly="322" lrx="2165" lry="1233" rendition="TextRegion"
+				xml:id="facs_3_r4">
+				<zone ulx="1835" uly="322" lrx="2136" lry="360" rendition="Line"
+					xml:id="facs_3_r4l1"/>
+				<zone ulx="1842" uly="360" lrx="2133" lry="391" rendition="Line"
+					xml:id="facs_3_r4l2"/>
+				<zone ulx="1826" uly="396" lrx="2156" lry="430" rendition="Line"
+					xml:id="facs_3_r4l3"/>
+				<zone ulx="1830" uly="432" lrx="2135" lry="469" rendition="Line"
+					xml:id="facs_3_r4l4"/>
+				<zone ulx="1829" uly="471" lrx="2147" lry="505" rendition="Line"
+					xml:id="facs_3_r4l5"/>
+				<zone ulx="1827" uly="513" lrx="2133" lry="544" rendition="Line"
+					xml:id="facs_3_r4l6"/>
+				<zone ulx="1836" uly="555" lrx="2136" lry="589" rendition="Line"
+					xml:id="facs_3_r4l7"/>
+				<zone ulx="1835" uly="597" lrx="2141" lry="639" rendition="Line"
+					xml:id="facs_3_r4l8"/>
+				<zone ulx="1826" uly="639" lrx="2165" lry="675" rendition="Line"
+					xml:id="facs_3_r4l9"/>
+				<zone ulx="1830" uly="678" lrx="2159" lry="715" rendition="Line"
+					xml:id="facs_3_r4l10"/>
+				<zone ulx="1814" uly="723" lrx="2156" lry="756" rendition="Line"
+					xml:id="facs_3_r4l11"/>
+				<zone ulx="1820" uly="763" lrx="2145" lry="796" rendition="Line"
+					xml:id="facs_3_r4l12"/>
+				<zone ulx="1818" uly="801" lrx="2160" lry="838" rendition="Line"
+					xml:id="facs_3_r4l13"/>
+				<zone ulx="1818" uly="841" lrx="2157" lry="876" rendition="Line"
+					xml:id="facs_3_r4l14"/>
+				<zone ulx="1817" uly="877" lrx="2133" lry="915" rendition="Line"
+					xml:id="facs_3_r4l15"/>
+				<zone ulx="1817" uly="915" lrx="2153" lry="952" rendition="Line"
+					xml:id="facs_3_r4l16"/>
+				<zone ulx="1814" uly="954" lrx="2141" lry="993" rendition="Line"
+					xml:id="facs_3_r4l17"/>
+				<zone ulx="1815" uly="997" lrx="2142" lry="1032" rendition="Line"
+					xml:id="facs_3_r4l18"/>
+				<zone ulx="1802" uly="1039" lrx="2135" lry="1075" rendition="Line"
+					xml:id="facs_3_r4l19"/>
+				<zone ulx="1812" uly="1080" lrx="2157" lry="1116" rendition="Line"
+					xml:id="facs_3_r4l20"/>
+				<zone ulx="1811" uly="1117" lrx="2138" lry="1155" rendition="Line"
+					xml:id="facs_3_r4l21"/>
+				<zone ulx="1808" uly="1155" lrx="2160" lry="1189" rendition="Line"
+					xml:id="facs_3_r4l22"/>
+				<zone ulx="1856" uly="1200" lrx="2156" lry="1233" rendition="Line"
+					xml:id="facs_3_r4l23"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id="facs_4">
+		<surface ulx="0" uly="0" lrx="2500" lry="1365" corresp="QS-014_008.jpeg">
+			<graphic url="QS-014_008.jpeg" width="2500px" height="1365px"/>
+			<zone ulx="521" uly="231" lrx="740" lry="1015" rendition="TextRegion" xml:id="facs_4_r2">
+				<zone ulx="530" uly="231" lrx="740" lry="262" rendition="Line" xml:id="facs_4_r2l1"/>
+				<zone ulx="524" uly="265" lrx="722" lry="298" rendition="Line" xml:id="facs_4_r2l2"/>
+				<zone ulx="528" uly="304" lrx="729" lry="337" rendition="Line" xml:id="facs_4_r2l3"/>
+				<zone ulx="531" uly="345" lrx="740" lry="379" rendition="Line" xml:id="facs_4_r2l4"/>
+				<zone ulx="536" uly="384" lrx="719" lry="415" rendition="Line" xml:id="facs_4_r2l5"/>
+				<zone ulx="543" uly="423" lrx="723" lry="456" rendition="Line" xml:id="facs_4_r2l6"/>
+				<zone ulx="540" uly="466" lrx="726" lry="499" rendition="Line" xml:id="facs_4_r2l7"/>
+				<zone ulx="539" uly="507" lrx="732" lry="541" rendition="Line" xml:id="facs_4_r2l8"/>
+				<zone ulx="536" uly="546" lrx="725" lry="579" rendition="Line" xml:id="facs_4_r2l9"/>
+				<zone ulx="530" uly="582" lrx="722" lry="619" rendition="Line" xml:id="facs_4_r2l10"/>
+				<zone ulx="539" uly="625" lrx="729" lry="658" rendition="Line" xml:id="facs_4_r2l11"/>
+				<zone ulx="530" uly="664" lrx="722" lry="700" rendition="Line" xml:id="facs_4_r2l12"/>
+				<zone ulx="531" uly="702" lrx="734" lry="739" rendition="Line" xml:id="facs_4_r2l13"/>
+				<zone ulx="537" uly="747" lrx="732" lry="780" rendition="Line" xml:id="facs_4_r2l14"/>
+				<zone ulx="539" uly="786" lrx="713" lry="820" rendition="Line" xml:id="facs_4_r2l15"/>
+				<zone ulx="525" uly="822" lrx="723" lry="858" rendition="Line" xml:id="facs_4_r2l16"/>
+				<zone ulx="524" uly="862" lrx="707" lry="895" rendition="Line" xml:id="facs_4_r2l17"/>
+				<zone ulx="530" uly="898" lrx="725" lry="937" rendition="Line" xml:id="facs_4_r2l18"/>
+				<zone ulx="527" uly="937" lrx="728" lry="972" rendition="Line" xml:id="facs_4_r2l19"/>
+				<zone ulx="521" uly="979" lrx="719" lry="1015" rendition="Line"
+					xml:id="facs_4_r2l20"/>
+			</zone>
+			<zone ulx="782" uly="228" lrx="1016" lry="1018" rendition="TextRegion"
+				xml:id="facs_4_r3">
+				<zone ulx="792" uly="228" lrx="984" lry="262" rendition="Line" xml:id="facs_4_r3l1"/>
+				<zone ulx="798" uly="265" lrx="1011" lry="298" rendition="Line" xml:id="facs_4_r3l2"/>
+				<zone ulx="797" uly="301" lrx="989" lry="337" rendition="Line" xml:id="facs_4_r3l3"/>
+				<zone ulx="794" uly="343" lrx="993" lry="376" rendition="Line" xml:id="facs_4_r3l4"/>
+				<zone ulx="798" uly="384" lrx="983" lry="418" rendition="Line" xml:id="facs_4_r3l5"/>
+				<zone ulx="792" uly="423" lrx="995" lry="457" rendition="Line" xml:id="facs_4_r3l6"/>
+				<zone ulx="788" uly="463" lrx="983" lry="499" rendition="Line" xml:id="facs_4_r3l7"/>
+				<zone ulx="794" uly="505" lrx="989" lry="541" rendition="Line" xml:id="facs_4_r3l8"/>
+				<zone ulx="798" uly="546" lrx="996" lry="579" rendition="Line" xml:id="facs_4_r3l9"/>
+				<zone ulx="788" uly="585" lrx="1016" lry="619" rendition="Line"
+					xml:id="facs_4_r3l10"/>
+				<zone ulx="794" uly="625" lrx="989" lry="663" rendition="Line" xml:id="facs_4_r3l11"/>
+				<zone ulx="797" uly="666" lrx="990" lry="699" rendition="Line" xml:id="facs_4_r3l12"/>
+				<zone ulx="798" uly="705" lrx="989" lry="742" rendition="Line" xml:id="facs_4_r3l13"/>
+				<zone ulx="791" uly="750" lrx="1008" lry="787" rendition="Line"
+					xml:id="facs_4_r3l14"/>
+				<zone ulx="794" uly="787" lrx="983" lry="825" rendition="Line" xml:id="facs_4_r3l15"/>
+				<zone ulx="789" uly="822" lrx="984" lry="862" rendition="Line" xml:id="facs_4_r3l16"/>
+				<zone ulx="791" uly="865" lrx="989" lry="904" rendition="Line" xml:id="facs_4_r3l17"/>
+				<zone ulx="782" uly="904" lrx="995" lry="940" rendition="Line" xml:id="facs_4_r3l18"/>
+				<zone ulx="785" uly="943" lrx="974" lry="982" rendition="Line" xml:id="facs_4_r3l19"/>
+				<zone ulx="785" uly="982" lrx="974" lry="1018" rendition="Line"
+					xml:id="facs_4_r3l20"/>
+			</zone>
+			<zone ulx="1052" uly="231" lrx="1287" lry="1021" rendition="TextRegion"
+				xml:id="facs_4_r4">
+				<zone ulx="1067" uly="231" lrx="1268" lry="268" rendition="Line"
+					xml:id="facs_4_r4l1"/>
+				<zone ulx="1058" uly="267" lrx="1280" lry="307" rendition="Line"
+					xml:id="facs_4_r4l2"/>
+				<zone ulx="1067" uly="306" lrx="1277" lry="340" rendition="Line"
+					xml:id="facs_4_r4l3"/>
+				<zone ulx="1062" uly="343" lrx="1278" lry="379" rendition="Line"
+					xml:id="facs_4_r4l4"/>
+				<zone ulx="1061" uly="382" lrx="1278" lry="417" rendition="Line"
+					xml:id="facs_4_r4l5"/>
+				<zone ulx="1067" uly="423" lrx="1280" lry="460" rendition="Line"
+					xml:id="facs_4_r4l6"/>
+				<zone ulx="1058" uly="468" lrx="1274" lry="505" rendition="Line"
+					xml:id="facs_4_r4l7"/>
+				<zone ulx="1068" uly="507" lrx="1286" lry="544" rendition="Line"
+					xml:id="facs_4_r4l8"/>
+				<zone ulx="1058" uly="547" lrx="1287" lry="585" rendition="Line"
+					xml:id="facs_4_r4l9"/>
+				<zone ulx="1058" uly="586" lrx="1287" lry="624" rendition="Line"
+					xml:id="facs_4_r4l10"/>
+				<zone ulx="1067" uly="630" lrx="1278" lry="666" rendition="Line"
+					xml:id="facs_4_r4l11"/>
+				<zone ulx="1056" uly="669" lrx="1278" lry="706" rendition="Line"
+					xml:id="facs_4_r4l12"/>
+				<zone ulx="1068" uly="708" lrx="1272" lry="742" rendition="Line"
+					xml:id="facs_4_r4l13"/>
+				<zone ulx="1071" uly="753" lrx="1266" lry="787" rendition="Line"
+					xml:id="facs_4_r4l14"/>
+				<zone ulx="1052" uly="796" lrx="1278" lry="828" rendition="Line"
+					xml:id="facs_4_r4l15"/>
+				<zone ulx="1058" uly="832" lrx="1274" lry="865" rendition="Line"
+					xml:id="facs_4_r4l16"/>
+				<zone ulx="1052" uly="871" lrx="1274" lry="906" rendition="Line"
+					xml:id="facs_4_r4l17"/>
+				<zone ulx="1058" uly="907" lrx="1277" lry="943" rendition="Line"
+					xml:id="facs_4_r4l18"/>
+				<zone ulx="1064" uly="946" lrx="1284" lry="982" rendition="Line"
+					xml:id="facs_4_r4l19"/>
+				<zone ulx="1052" uly="987" lrx="1271" lry="1021" rendition="Line"
+					xml:id="facs_4_r4l20"/>
+			</zone>
+			<zone ulx="1412" uly="246" lrx="1647" lry="1011" rendition="TextRegion"
+				xml:id="facs_4_r5">
+				<zone ulx="1430" uly="246" lrx="1625" lry="283" rendition="Line"
+					xml:id="facs_4_r5l1"/>
+				<zone ulx="1428" uly="282" lrx="1625" lry="322" rendition="Line"
+					xml:id="facs_4_r5l2"/>
+				<zone ulx="1436" uly="316" lrx="1634" lry="355" rendition="Line"
+					xml:id="facs_4_r5l3"/>
+				<zone ulx="1425" uly="357" lrx="1635" lry="393" rendition="Line"
+					xml:id="facs_4_r5l4"/>
+				<zone ulx="1424" uly="397" lrx="1632" lry="432" rendition="Line"
+					xml:id="facs_4_r5l5"/>
+				<zone ulx="1434" uly="432" lrx="1622" lry="469" rendition="Line"
+					xml:id="facs_4_r5l6"/>
+				<zone ulx="1434" uly="471" lrx="1620" lry="504" rendition="Line"
+					xml:id="facs_4_r5l7"/>
+				<zone ulx="1430" uly="504" lrx="1634" lry="537" rendition="Line"
+					xml:id="facs_4_r5l8"/>
+				<zone ulx="1431" uly="547" lrx="1614" lry="580" rendition="Line"
+					xml:id="facs_4_r5l9"/>
+				<zone ulx="1418" uly="586" lrx="1628" lry="619" rendition="Line"
+					xml:id="facs_4_r5l10"/>
+				<zone ulx="1421" uly="625" lrx="1631" lry="661" rendition="Line"
+					xml:id="facs_4_r5l11"/>
+				<zone ulx="1422" uly="666" lrx="1623" lry="699" rendition="Line"
+					xml:id="facs_4_r5l12"/>
+				<zone ulx="1431" uly="703" lrx="1638" lry="736" rendition="Line"
+					xml:id="facs_4_r5l13"/>
+				<zone ulx="1431" uly="744" lrx="1632" lry="778" rendition="Line"
+					xml:id="facs_4_r5l14"/>
+				<zone ulx="1419" uly="783" lrx="1647" lry="817" rendition="Line"
+					xml:id="facs_4_r5l15"/>
+				<zone ulx="1412" uly="823" lrx="1634" lry="856" rendition="Line"
+					xml:id="facs_4_r5l16"/>
+				<zone ulx="1412" uly="859" lrx="1610" lry="894" rendition="Line"
+					xml:id="facs_4_r5l17"/>
+				<zone ulx="1425" uly="900" lrx="1619" lry="934" rendition="Line"
+					xml:id="facs_4_r5l18"/>
+				<zone ulx="1421" uly="937" lrx="1620" lry="970" rendition="Line"
+					xml:id="facs_4_r5l19"/>
+				<zone ulx="1418" uly="976" lrx="1619" lry="1011" rendition="Line"
+					xml:id="facs_4_r5l20"/>
+			</zone>
+			<zone ulx="1691" uly="246" lrx="1908" lry="1012" rendition="TextRegion"
+				xml:id="facs_4_r6">
+				<zone ulx="1698" uly="246" lrx="1893" lry="282" rendition="Line"
+					xml:id="facs_4_r6l1"/>
+				<zone ulx="1700" uly="280" lrx="1895" lry="319" rendition="Line"
+					xml:id="facs_4_r6l2"/>
+				<zone ulx="1697" uly="315" lrx="1895" lry="352" rendition="Line"
+					xml:id="facs_4_r6l3"/>
+				<zone ulx="1694" uly="357" lrx="1890" lry="391" rendition="Line"
+					xml:id="facs_4_r6l4"/>
+				<zone ulx="1706" uly="393" lrx="1878" lry="427" rendition="Line"
+					xml:id="facs_4_r6l5"/>
+				<zone ulx="1698" uly="432" lrx="1887" lry="465" rendition="Line"
+					xml:id="facs_4_r6l6"/>
+				<zone ulx="1691" uly="469" lrx="1875" lry="505" rendition="Line"
+					xml:id="facs_4_r6l7"/>
+				<zone ulx="1712" uly="510" lrx="1890" lry="544" rendition="Line"
+					xml:id="facs_4_r6l8"/>
+				<zone ulx="1706" uly="546" lrx="1886" lry="580" rendition="Line"
+					xml:id="facs_4_r6l9"/>
+				<zone ulx="1703" uly="588" lrx="1896" lry="622" rendition="Line"
+					xml:id="facs_4_r6l10"/>
+				<zone ulx="1694" uly="627" lrx="1890" lry="661" rendition="Line"
+					xml:id="facs_4_r6l11"/>
+				<zone ulx="1694" uly="667" lrx="1896" lry="702" rendition="Line"
+					xml:id="facs_4_r6l12"/>
+				<zone ulx="1694" uly="706" lrx="1880" lry="742" rendition="Line"
+					xml:id="facs_4_r6l13"/>
+				<zone ulx="1701" uly="745" lrx="1890" lry="777" rendition="Line"
+					xml:id="facs_4_r6l14"/>
+				<zone ulx="1704" uly="783" lrx="1908" lry="816" rendition="Line"
+					xml:id="facs_4_r6l15"/>
+				<zone ulx="1703" uly="825" lrx="1886" lry="859" rendition="Line"
+					xml:id="facs_4_r6l16"/>
+				<zone ulx="1703" uly="864" lrx="1892" lry="897" rendition="Line"
+					xml:id="facs_4_r6l17"/>
+				<zone ulx="1701" uly="907" lrx="1893" lry="937" rendition="Line"
+					xml:id="facs_4_r6l18"/>
+				<zone ulx="1701" uly="940" lrx="1893" lry="973" rendition="Line"
+					xml:id="facs_4_r6l19"/>
+				<zone ulx="1700" uly="979" lrx="1886" lry="1012" rendition="Line"
+					xml:id="facs_4_r6l20"/>
+			</zone>
+			<zone ulx="1943" uly="255" lrx="2151" lry="1018" rendition="TextRegion"
+				xml:id="facs_4_r7">
+				<zone ulx="1958" uly="255" lrx="2144" lry="289" rendition="Line"
+					xml:id="facs_4_r7l1"/>
+				<zone ulx="1959" uly="288" lrx="2115" lry="322" rendition="Line"
+					xml:id="facs_4_r7l2"/>
+				<zone ulx="1950" uly="325" lrx="2148" lry="358" rendition="Line"
+					xml:id="facs_4_r7l3"/>
+				<zone ulx="1959" uly="357" lrx="2145" lry="397" rendition="Line"
+					xml:id="facs_4_r7l4"/>
+				<zone ulx="1955" uly="400" lrx="2129" lry="436" rendition="Line"
+					xml:id="facs_4_r7l5"/>
+				<zone ulx="1953" uly="438" lrx="2084" lry="472" rendition="Line"
+					xml:id="facs_4_r7l6"/>
+				<zone ulx="1946" uly="478" lrx="2138" lry="513" rendition="Line"
+					xml:id="facs_4_r7l7"/>
+				<zone ulx="1958" uly="516" lrx="2138" lry="550" rendition="Line"
+					xml:id="facs_4_r7l8"/>
+				<zone ulx="1961" uly="558" lrx="2121" lry="591" rendition="Line"
+					xml:id="facs_4_r7l9"/>
+				<zone ulx="1947" uly="591" lrx="2139" lry="625" rendition="Line"
+					xml:id="facs_4_r7l10"/>
+				<zone ulx="1947" uly="633" lrx="2133" lry="667" rendition="Line"
+					xml:id="facs_4_r7l11"/>
+				<zone ulx="1952" uly="667" lrx="2117" lry="709" rendition="Line"
+					xml:id="facs_4_r7l12"/>
+				<zone ulx="1946" uly="709" lrx="2136" lry="745" rendition="Line"
+					xml:id="facs_4_r7l13"/>
+				<zone ulx="1943" uly="745" lrx="2147" lry="781" rendition="Line"
+					xml:id="facs_4_r7l14"/>
+				<zone ulx="1943" uly="786" lrx="2138" lry="820" rendition="Line"
+					xml:id="facs_4_r7l15"/>
+				<zone ulx="1949" uly="828" lrx="2133" lry="862" rendition="Line"
+					xml:id="facs_4_r7l16"/>
+				<zone ulx="1958" uly="870" lrx="2121" lry="901" rendition="Line"
+					xml:id="facs_4_r7l17"/>
+				<zone ulx="1946" uly="904" lrx="2151" lry="939" rendition="Line"
+					xml:id="facs_4_r7l18"/>
+				<zone ulx="1953" uly="943" lrx="2148" lry="976" rendition="Line"
+					xml:id="facs_4_r7l19"/>
+				<zone ulx="1959" uly="984" lrx="2135" lry="1018" rendition="Line"
+					xml:id="facs_4_r7l20"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<facsimile xml:id="facs_5">
+		<surface ulx="0" uly="0" lrx="2500" lry="1660" corresp="UM-014_009.jpeg">
+			<graphic url="UM-014_009.jpeg" width="2500px" height="1660px"/>
+			<zone ulx="525" uly="381" lrx="903" lry="1156" rendition="TextRegion" xml:id="facs_5_r1">
+				<zone ulx="530" uly="381" lrx="827" lry="439" rendition="Line" xml:id="facs_5_r1l1"/>
+				<zone ulx="542" uly="408" lrx="833" lry="474" rendition="Line" xml:id="facs_5_r1l2"/>
+				<zone ulx="534" uly="438" lrx="839" lry="505" rendition="Line" xml:id="facs_5_r1l3"/>
+				<zone ulx="540" uly="465" lrx="869" lry="538" rendition="Line" xml:id="facs_5_r1l4"/>
+				<zone ulx="540" uly="505" lrx="828" lry="568" rendition="Line" xml:id="facs_5_r1l5"/>
+				<zone ulx="525" uly="541" lrx="834" lry="600" rendition="Line" xml:id="facs_5_r1l6"/>
+				<zone ulx="534" uly="574" lrx="837" lry="634" rendition="Line" xml:id="facs_5_r1l7"/>
+				<zone ulx="525" uly="604" lrx="837" lry="670" rendition="Line" xml:id="facs_5_r1l8"/>
+				<zone ulx="540" uly="639" lrx="848" lry="703" rendition="Line" xml:id="facs_5_r1l9"/>
+				<zone ulx="536" uly="675" lrx="848" lry="735" rendition="Line" xml:id="facs_5_r1l10"/>
+				<zone ulx="537" uly="705" lrx="848" lry="772" rendition="Line" xml:id="facs_5_r1l11"/>
+				<zone ulx="534" uly="741" lrx="851" lry="805" rendition="Line" xml:id="facs_5_r1l12"/>
+				<zone ulx="537" uly="775" lrx="870" lry="841" rendition="Line" xml:id="facs_5_r1l13"/>
+				<zone ulx="543" uly="810" lrx="860" lry="871" rendition="Line" xml:id="facs_5_r1l14"/>
+				<zone ulx="539" uly="846" lrx="869" lry="912" rendition="Line" xml:id="facs_5_r1l15"/>
+				<zone ulx="552" uly="880" lrx="882" lry="949" rendition="Line" xml:id="facs_5_r1l16"/>
+				<zone ulx="546" uly="918" lrx="872" lry="985" rendition="Line" xml:id="facs_5_r1l17"/>
+				<zone ulx="557" uly="951" lrx="875" lry="1020" rendition="Line"
+					xml:id="facs_5_r1l18"/>
+				<zone ulx="552" uly="987" lrx="887" lry="1056" rendition="Line"
+					xml:id="facs_5_r1l19"/>
+				<zone ulx="549" uly="1020" lrx="894" lry="1089" rendition="Line"
+					xml:id="facs_5_r1l20"/>
+				<zone ulx="563" uly="1054" lrx="885" lry="1119" rendition="Line"
+					xml:id="facs_5_r1l21"/>
+				<zone ulx="567" uly="1086" lrx="903" lry="1156" rendition="Line"
+					xml:id="facs_5_r1l22"/>
+			</zone>
+			<zone ulx="903" uly="340" lrx="1269" lry="1114" rendition="TextRegion"
+				xml:id="facs_5_r2">
+				<zone ulx="903" uly="340" lrx="1197" lry="396" rendition="Line" xml:id="facs_5_r2l1"/>
+				<zone ulx="911" uly="369" lrx="1212" lry="426" rendition="Line" xml:id="facs_5_r2l2"/>
+				<zone ulx="918" uly="402" lrx="1209" lry="457" rendition="Line" xml:id="facs_5_r2l3"/>
+				<zone ulx="929" uly="430" lrx="1227" lry="489" rendition="Line" xml:id="facs_5_r2l4"/>
+				<zone ulx="915" uly="460" lrx="1227" lry="520" rendition="Line" xml:id="facs_5_r2l5"/>
+				<zone ulx="918" uly="490" lrx="1233" lry="552" rendition="Line" xml:id="facs_5_r2l6"/>
+				<zone ulx="932" uly="522" lrx="1233" lry="582" rendition="Line" xml:id="facs_5_r2l7"/>
+				<zone ulx="927" uly="555" lrx="1233" lry="610" rendition="Line" xml:id="facs_5_r2l8"/>
+				<zone ulx="941" uly="585" lrx="1235" lry="642" rendition="Line" xml:id="facs_5_r2l9"/>
+				<zone ulx="941" uly="618" lrx="1241" lry="681" rendition="Line"
+					xml:id="facs_5_r2l10"/>
+				<zone ulx="939" uly="649" lrx="1235" lry="715" rendition="Line"
+					xml:id="facs_5_r2l11"/>
+				<zone ulx="935" uly="688" lrx="1239" lry="747" rendition="Line"
+					xml:id="facs_5_r2l12"/>
+				<zone ulx="935" uly="723" lrx="1242" lry="780" rendition="Line"
+					xml:id="facs_5_r2l13"/>
+				<zone ulx="939" uly="754" lrx="1248" lry="814" rendition="Line"
+					xml:id="facs_5_r2l14"/>
+				<zone ulx="927" uly="790" lrx="1236" lry="853" rendition="Line"
+					xml:id="facs_5_r2l15"/>
+				<zone ulx="942" uly="825" lrx="1253" lry="889" rendition="Line"
+					xml:id="facs_5_r2l16"/>
+				<zone ulx="942" uly="856" lrx="1251" lry="925" rendition="Line"
+					xml:id="facs_5_r2l17"/>
+				<zone ulx="942" uly="892" lrx="1247" lry="961" rendition="Line"
+					xml:id="facs_5_r2l18"/>
+				<zone ulx="960" uly="930" lrx="1253" lry="991" rendition="Line"
+					xml:id="facs_5_r2l19"/>
+				<zone ulx="945" uly="966" lrx="1259" lry="1027" rendition="Line"
+					xml:id="facs_5_r2l20"/>
+				<zone ulx="957" uly="994" lrx="1269" lry="1060" rendition="Line"
+					xml:id="facs_5_r2l21"/>
+				<zone ulx="954" uly="1023" lrx="1265" lry="1087" rendition="Line"
+					xml:id="facs_5_r2l22"/>
+				<zone ulx="951" uly="1062" lrx="1247" lry="1114" rendition="Line"
+					xml:id="facs_5_r2l23"/>
+			</zone>
+			<zone ulx="1266" uly="306" lrx="1689" lry="1110" rendition="TextRegion"
+				xml:id="facs_5_r3">
+				<zone ulx="1266" uly="306" lrx="1559" lry="352" rendition="Line"
+					xml:id="facs_5_r3l1"/>
+				<zone ulx="1269" uly="334" lrx="1578" lry="388" rendition="Line"
+					xml:id="facs_5_r3l2"/>
+				<zone ulx="1283" uly="369" lrx="1586" lry="420" rendition="Line"
+					xml:id="facs_5_r3l3"/>
+				<zone ulx="1275" uly="397" lrx="1593" lry="451" rendition="Line"
+					xml:id="facs_5_r3l4"/>
+				<zone ulx="1281" uly="429" lrx="1620" lry="484" rendition="Line"
+					xml:id="facs_5_r3l5"/>
+				<zone ulx="1284" uly="459" lrx="1616" lry="516" rendition="Line"
+					xml:id="facs_5_r3l6"/>
+				<zone ulx="1290" uly="492" lrx="1610" lry="547" rendition="Line"
+					xml:id="facs_5_r3l7"/>
+				<zone ulx="1293" uly="522" lrx="1613" lry="583" rendition="Line"
+					xml:id="facs_5_r3l8"/>
+				<zone ulx="1298" uly="556" lrx="1629" lry="616" rendition="Line"
+					xml:id="facs_5_r3l9"/>
+				<zone ulx="1290" uly="586" lrx="1623" lry="648" rendition="Line"
+					xml:id="facs_5_r3l10"/>
+				<zone ulx="1311" uly="618" lrx="1635" lry="679" rendition="Line"
+					xml:id="facs_5_r3l11"/>
+				<zone ulx="1316" uly="648" lrx="1646" lry="720" rendition="Line"
+					xml:id="facs_5_r3l12"/>
+				<zone ulx="1503" uly="679" lrx="1665" lry="720" rendition="Line"
+					xml:id="facs_5_r3l13"/>
+				<zone ulx="1310" uly="708" lrx="1385" lry="750" rendition="Line"
+					xml:id="facs_5_r3l14"/>
+				<zone ulx="1314" uly="706" lrx="1689" lry="783" rendition="Line"
+					xml:id="facs_5_r3l15"/>
+				<zone ulx="1317" uly="751" lrx="1635" lry="814" rendition="Line"
+					xml:id="facs_5_r3l16"/>
+				<zone ulx="1328" uly="780" lrx="1634" lry="843" rendition="Line"
+					xml:id="facs_5_r3l17"/>
+				<zone ulx="1328" uly="810" lrx="1643" lry="873" rendition="Line"
+					xml:id="facs_5_r3l18"/>
+				<zone ulx="1338" uly="846" lrx="1646" lry="913" rendition="Line"
+					xml:id="facs_5_r3l19"/>
+				<zone ulx="1335" uly="877" lrx="1653" lry="946" rendition="Line"
+					xml:id="facs_5_r3l20"/>
+				<zone ulx="1337" uly="918" lrx="1662" lry="975" rendition="Line"
+					xml:id="facs_5_r3l21"/>
+				<zone ulx="1335" uly="948" lrx="1659" lry="1012" rendition="Line"
+					xml:id="facs_5_r3l22"/>
+				<zone ulx="1359" uly="981" lrx="1668" lry="1042" rendition="Line"
+					xml:id="facs_5_r3l23"/>
+				<zone ulx="1344" uly="1014" lrx="1662" lry="1078" rendition="Line"
+					xml:id="facs_5_r3l24"/>
+				<zone ulx="1349" uly="1045" lrx="1665" lry="1110" rendition="Line"
+					xml:id="facs_5_r3l25"/>
+			</zone>
+			<zone ulx="1656" uly="297" lrx="2096" lry="1057" rendition="TextRegion"
+				xml:id="facs_5_r4">
+				<zone ulx="1656" uly="297" lrx="2000" lry="334" rendition="Line"
+					xml:id="facs_5_r4l1"/>
+				<zone ulx="1661" uly="331" lrx="2001" lry="364" rendition="Line"
+					xml:id="facs_5_r4l2"/>
+				<zone ulx="1680" uly="355" lrx="1905" lry="388" rendition="Line"
+					xml:id="facs_5_r4l3"/>
+				<zone ulx="1680" uly="378" lrx="2000" lry="418" rendition="Line"
+					xml:id="facs_5_r4l4"/>
+				<zone ulx="1680" uly="409" lrx="1995" lry="451" rendition="Line"
+					xml:id="facs_5_r4l5"/>
+				<zone ulx="1685" uly="435" lrx="1997" lry="483" rendition="Line"
+					xml:id="facs_5_r4l6"/>
+				<zone ulx="1682" uly="468" lrx="1997" lry="516" rendition="Line"
+					xml:id="facs_5_r4l7"/>
+				<zone ulx="1686" uly="499" lrx="1998" lry="543" rendition="Line"
+					xml:id="facs_5_r4l8"/>
+				<zone ulx="1701" uly="522" lrx="2000" lry="571" rendition="Line"
+					xml:id="facs_5_r4l9"/>
+				<zone ulx="1695" uly="547" lrx="2025" lry="604" rendition="Line"
+					xml:id="facs_5_r4l10"/>
+				<zone ulx="1701" uly="576" lrx="2024" lry="631" rendition="Line"
+					xml:id="facs_5_r4l11"/>
+				<zone ulx="1707" uly="610" lrx="2031" lry="663" rendition="Line"
+					xml:id="facs_5_r4l12"/>
+				<zone ulx="1724" uly="639" lrx="2036" lry="696" rendition="Line"
+					xml:id="facs_5_r4l13"/>
+				<zone ulx="1718" uly="669" lrx="2042" lry="732" rendition="Line"
+					xml:id="facs_5_r4l14"/>
+				<zone ulx="1728" uly="702" lrx="2042" lry="760" rendition="Line"
+					xml:id="facs_5_r4l15"/>
+				<zone ulx="1731" uly="732" lrx="2052" lry="793" rendition="Line"
+					xml:id="facs_5_r4l16"/>
+				<zone ulx="1730" uly="760" lrx="2052" lry="825" rendition="Line"
+					xml:id="facs_5_r4l17"/>
+				<zone ulx="1733" uly="792" lrx="2039" lry="855" rendition="Line"
+					xml:id="facs_5_r4l18"/>
+				<zone ulx="1740" uly="828" lrx="2036" lry="886" rendition="Line"
+					xml:id="facs_5_r4l19"/>
+				<zone ulx="1739" uly="861" lrx="2045" lry="918" rendition="Line"
+					xml:id="facs_5_r4l20"/>
+				<zone ulx="1742" uly="891" lrx="2069" lry="949" rendition="Line"
+					xml:id="facs_5_r4l21"/>
+				<zone ulx="1746" uly="922" lrx="2079" lry="982" rendition="Line"
+					xml:id="facs_5_r4l22"/>
+				<zone ulx="1757" uly="957" lrx="2078" lry="1011" rendition="Line"
+					xml:id="facs_5_r4l23"/>
+				<zone ulx="1749" uly="988" lrx="2076" lry="1048" rendition="Line"
+					xml:id="facs_5_r4l24"/>
+				<zone ulx="1946" uly="1021" lrx="2096" lry="1057" rendition="Line"
+					xml:id="facs_5_r4l25"/>
+			</zone>
+		</surface>
+	</facsimile>
+	<text>
+		<body>
+			<pb facs="#facs_1" xml:id="AMM-007_006.jpeg" n="1"/>
+			<p facs="#facs_1_r1">
+				<lb facs="#facs_1_r1l1" n="N001"/>ያዕቆብ፡ ወዮሐንሰ፡ ወእንድ <lb facs="#facs_1_r1l2" n="N002"
+				/>ርያስ፨ ማቴዎስ፡ ወፊልቁሰ፡ <lb facs="#facs_1_r1l3" n="N003"/>ወበርተ፡ ሎሚዎሰ፡ ተማስ፡ ወ <lb
+					facs="#facs_1_r1l4" n="N004"/>ያስቆብ፡ ወልደ፡ እልዱዮስ። <lb facs="#facs_1_r1l5" n="N005"
+				/>ዲኖስ፡ ወናትናኤል፡ ወማት <lb facs="#facs_1_r1l6" n="N006"/>ያስ፡ ሉቃሰ፡ ወማርቶስ፡ ወይ <lb
+					facs="#facs_1_r1l7" n="N007"/>ዕቆብ፡ ኤጲስ፡ ቆጶስ፡ ለደቂ <lb facs="#facs_1_r1l8"
+					n="N008"/>ቅክሙ፡ በርኩነ፡ ሰሐዲስ፡ መ <lb facs="#facs_1_r1l9" n="N009"/>ንፈስ። ሰላም፡ ለኪ፡ ማርያ
+					<lb facs="#facs_1_r1l10" n="N010"/>ም። ኆዓተ፡ ምሥራት፡ ዘወ <lb facs="#facs_1_r1l11"
+					n="N011"/>ልደ፡ ናዊ፡ ሰላም፡ ለኪ፡ ዓበድ፡ <lb facs="#facs_1_r1l12" n="N012"/>ዘእሰ፡ከደሬ፡ ሰላም፡
+				ለኪ፡ ጽ <lb facs="#facs_1_r1l13" n="N013"/>ድልተ፡ ንባሬ፡ ሥርጉት፡ በወ <lb facs="#facs_1_r1l14"
+					n="N014"/>ራውሬ፡ ሰላም፡ ለኪ፡ በቅ <lb facs="#facs_1_r1l15" n="N015"/>ረ፡ አሮን፡ ጸዋሪተ፡ ፍሬ፡
+				ሳላ <lb facs="#facs_1_r1l16" n="N016"/>ም፡ ለኪ። አንተ፡ ወለድኪ፡ ፈ <lb facs="#facs_1_r1l17"
+					n="N017"/>ጣረ፡ ሰላም፡ ለኪ። ዘምስለ፡ <lb facs="#facs_1_r1l18" n="N018"/>ዝግሪ፡ ንሰድ፡ ለኪ፡
+				ሶበ፡ ይ <lb facs="#facs_1_r1l19" n="N019"/>ትነበብ፡ መጽሐፈ፡ ተአም <lb facs="#facs_1_r1l20"
+					n="N020"/>ርኪ። በሰላም፡ ኪያነ፡ በዕ </p>
+			<p facs="#facs_1_r2">
+				<lb facs="#facs_1_r2l1" n="N001"/>ኪ። ወላዲተ፡ አምላክ፡ መ <lb facs="#facs_1_r2l2" n="N002"
+				/>ርያም፡ እንበለ፡ ዕብሳብ፡ ወ <lb facs="#facs_1_r2l3" n="N003"/>ሩካቤ፡ በይነ፡ ዘዓቀሂ፡ ብኩ <lb
+					facs="#facs_1_r2l4" n="N004"/>ለኪ፡ ንስቲተ፡ ቃለ፡ ይባቤ፡ <lb facs="#facs_1_r2l5"
+					n="N005"/>ፈትዊ፡ እሙ፡ በረከተ፡ አፉ <lb facs="#facs_1_r2l6" n="N006"/>ኪ፡ ሙስዘ፡ ከርቤ። ለነዳይ፡
+					<lb facs="#facs_1_r2l7" n="N007"/>ብእሲ፡ ወለዘረከበ፡ ምንደ <lb facs="#facs_1_r2l8"
+					n="N008"/>ቤ፡ ሰብስተከ፡ ፈትት፡ ኢሳዊ <lb facs="#facs_1_r2l9" n="N009"/>ያስ፡ ይቤ። ስብሐት፡ ለኪ፡
+				ማ <lb facs="#facs_1_r2l10" n="N010"/>ርያም፡ በተልቈ፡ መላእክት፡ <lb facs="#facs_1_r2l11"
+					n="N011"/>ዘአርያም። ሰብ፡ ለኪ፡ ማር <lb facs="#facs_1_r2l12" n="N012"/>ያም፡ በጕልቈ፡ ሣዕር፡ ዘገ
+					<lb facs="#facs_1_r2l13" n="N013"/>ዳም። ስብሐት፡ ለኪ፡ ማር <lb facs="#facs_1_r2l14"
+					n="N014"/>ያም፡ በኀልቈ፡ ልደቱ፡ ለ <lb facs="#facs_1_r2l15" n="N015"/>ዝናም። ስብሐት፡ ይጸሱ <lb
+					facs="#facs_1_r2l16" n="N016"/>ለተአምርኪ፡ ዮም። ወበተ <lb facs="#facs_1_r2l17" n="N017"
+				/>እምረ፡ ወልድኪ፡ ተፈሥሐ፡ <lb facs="#facs_1_r2l18" n="N018"/>ኵሉ፡ ዓለም።ኦእግዝእ <lb
+					facs="#facs_1_r2l19" n="N019"/>ትየ፡ ማርያም፡ እሙ፡ ለእ <lb facs="#facs_1_r2l20"
+					n="N020"/>የሱስ፡ ከዓሊ። ኀበ፡ ይትንበ </p>
+			<p facs="#facs_1_r3">
+				<lb facs="#facs_1_r3l1" n="N001"/>ብ፡ መጽሐፈ፡ ተአምርኪ። አ <lb facs="#facs_1_r3l2" n="N002"
+				/>ክናፈኪ፡ ጸልሊ። ወዘሰማዕ <lb facs="#facs_1_r3l3" n="N003"/>ነ፡ ቃላቲሁ፡ በልብነ፡ አብቍለ <lb
+					facs="#facs_1_r3l4" n="N004"/>አዕፁዊሁ፡ አልዕሊ። ወሕንበ <lb facs="#facs_1_r3l5" n="N005"
+				/>ባቲሁ፡ ኦጽድሊ፡ ወህየንተ፡ <lb facs="#facs_1_r3l6" n="N006"/>፲፴ወ፲ወየበላዕሌነ፡ አሰብሲ፡ <lb
+					facs="#facs_1_r3l7" n="N007"/>ወኵሎ፡ አሚረ፡ በእንቲአነ፡ <lb facs="#facs_1_r3l8" n="N008"
+				/>ተንብሊ። በከመ፡ ተበውሐ <lb facs="#facs_1_r3l9" n="N009"/>ለኪ፡ እምአብ፡ ወወልድ፡ ወ <lb
+					facs="#facs_1_r3l10" n="N010"/>መንፈስ፡ ቅዱስ፡ ኃጢአተነ፡ <lb facs="#facs_1_r3l11"
+					n="N011"/>አቅልሲ፡ በዝ፡ ዓለም፡ እምኔነ፡ <lb facs="#facs_1_r3l12" n="N012"/>ኢትሲሰሊ፡
+				ወበዘይመጽእ። <lb facs="#facs_1_r3l13" n="N013"/>ዓለም፡ ወልድኪ፡ ነፍሳነ፡ እ <lb
+					facs="#facs_1_r3l14" n="N014"/>ምነፍሰኪ፡ ኢይሴሊ። በዓበ <lb facs="#facs_1_r3l15"
+					n="N015"/>መ፡ ዓለም፤፡ አሜን። ሰላም፡ <lb facs="#facs_1_r3l16" n="N016"/>ኪ፡ ኦእግዝእየ፡ ማርያም፡
+					<lb facs="#facs_1_r3l17" n="N017"/>እመ፡ መድኅን፡ ወእመ፡ ብር <lb facs="#facs_1_r3l18"
+					n="N018"/>ሃን፤ እመ፡ ቍርባን። ወእመ <lb facs="#facs_1_r3l19" n="N019"/>ዕጣን፡ እመነድ፤ ወእመ፡
+					<lb facs="#facs_1_r3l20" n="N020"/>ዋሐድ። ስመ፡ ሰማያዊ፡ እ </p>
+			<p facs="#facs_1_r4">
+				<lb facs="#facs_1_r4l1" n="N001"/>መ፡ ክርስቶስ፡ አምላክ፡ እመ <lb facs="#facs_1_r4l2"
+					n="N002"/>መሢሕ፡ ወእመ፡ መለኮታዊ፡ <lb facs="#facs_1_r4l3" n="N003"/>መፍርሕ። በማህለ፡ ወልድኪ
+					<lb facs="#facs_1_r4l4" n="N004"/>ኀበ፡ ሰእስትነ፡ ነጽሪ። ወበም <lb facs="#facs_1_r4l5"
+					n="N005"/>ሕረቱ፡ ለወልድኪ፡ ለሐውዖ፡ <lb facs="#facs_1_r4l6" n="N006"/>ትነ፡ ሥመሪ። መዓተ፡ ወልድ
+					<lb facs="#facs_1_r4l7" n="N007"/>ኪ፡ በጸሎትኪ፡ አቅርሪ፡ አሜ <lb facs="#facs_1_r4l8"
+					n="N008"/>ን። አይሁድ፡ ምዝቡራን፡ ሰ <lb facs="#facs_1_r4l9" n="N009"/>መ፡ መሪራን፡ ለኃዲር፡ ይረደ
+					<lb facs="#facs_1_r4l10" n="N010"/>ታሐተ፡ ዕመ፡ ቀ፡ ደይን፡ አሜ <lb facs="#facs_1_r4l11"
+					n="N011"/>ን። አይሁድ፡ እኩያን፡ ዕመ፡ <lb facs="#facs_1_r4l12" n="N012"/>ዚአኬ፡ እላ፡ ይጸልዑ፡
+				ድንግ <lb facs="#facs_1_r4l13" n="N013"/>ልናኪ፡ ይከህሩ፡ በሰይፈ፡ ሚ <lb facs="#facs_1_r4l14"
+					n="N014"/>ካኤል፡ ይትዓፀዱ። ወበሥ <lb facs="#facs_1_r4l15" n="N015"/>ቃየ፡ እሳት፡ ይንድዱ፨ ታሐ
+					<lb facs="#facs_1_r4l16" n="N016"/>ተ፡ ደይን፡ ለኃዲር፡ ይረድ። <lb facs="#facs_1_r4l17"
+					n="N017"/>አሜን፨ አይሁድ፡ ሐበውደ፡ <lb facs="#facs_1_r4l18" n="N018"/>ን፡ ድንግልናኪ፡ እስ፡ ድሰ
+					<lb facs="#facs_1_r4l19" n="N019"/>ቈርሩ፨ በሰናስለ፡ እሳት፡ ያ <lb facs="#facs_1_r4l20"
+					n="N020"/>ትንሠሩ፨ ታሐተ፡ ደደኖ፡ እ </p>
+			<pb facs="#facs_2" xml:id="AMQ-014__006.jpeg" n="2"/>
+			<p facs="#facs_2_r1">
+				<lb facs="#facs_2_r1l1" n="N001"/>መላእክተ፡ ሰማይ። ኵሎ፡ <lb facs="#facs_2_r1l2" n="N002"
+				/>ሙ፡ አሜን። ወአሜን። ኦእ <lb facs="#facs_2_r1l3" n="N003"/>ግዝእትየ፡ ማርያም፡ ወላዲ <lb
+					facs="#facs_2_r1l4" n="N004"/>ተ፡ አምላክ፡ ጸሎትኪ፡ ወ <lb facs="#facs_2_r1l5" n="N005"
+				/>ስእለትኪ፡ ወምሕረ፡ተ፡ ፍ <lb facs="#facs_2_r1l6" n="N006"/>ቁር፡ ወልድኪ። የሀሉ፡ ም <lb
+					facs="#facs_2_r1l7" n="N007"/>ስለ፡ ኵልነ፡ አግብርትኪ፡ <lb facs="#facs_2_r1l8" n="N008"
+				/>ወአእማትኪ። እለ፡ ተጋህ <lb facs="#facs_2_r1l9" n="N009"/>ነ፡ ለአንብቦ፡ ተአምርኪ፡ ወ <lb
+					facs="#facs_2_r1l10" n="N010"/>ለወዳሴ፡ ዚአኬ፡ ክድንነ፡ አ <lb facs="#facs_2_r1l11"
+					n="N011"/>ጽፈ፡ ሣህልኪ፡ ወሠውር <lb facs="#facs_2_r1l12" n="N012"/>ነበአክናፈ፡ ምሕረትኪ፡ ወ <lb
+					facs="#facs_2_r1l13" n="N013"/>በርክነ፡ በድሳት፡ አእዳውኪ፡ <lb facs="#facs_2_r1l14"
+					n="N014"/>ወጸግውነ፡ መክፈልተ፡ ወ <lb facs="#facs_2_r1l15" n="N015"/>ርስተ፡ ውስተ፡ ሰማያዊት <lb
+					facs="#facs_2_r1l16" n="N016"/>ሀገርኪ፡ ምስለ፡ እለኦፍቁ <lb facs="#facs_2_r1l17"
+					n="N017"/>ኪያኪ። ወምስለ፡ እለ፡ <lb facs="#facs_2_r1l18" n="N018"/>አስመርዎ፡ ለወልድኪ </p>
+			<p facs="#facs_2_r2">
+				<lb facs="#facs_2_r2l1" n="N001"/>ለዓለመ፡ ዓለም። አሜን። <lb facs="#facs_2_r2l2" n="N002"
+				/>ዘአትየ፡ ቅድስት፡ <lb facs="#facs_2_r2l3" n="N003"/>ድንግል፡ በ፪ማርያም። ማ <lb
+					facs="#facs_2_r2l4" n="N004"/>አሃማ፡ እሙ፡ ለኢየሱስ፡ ክር <lb facs="#facs_2_r2l5"
+					n="N005"/>ስቶስ፡ ከዓሊ፡ ኀበ፡ ይትነበብ፡ <lb facs="#facs_2_r2l6" n="N006"/>መጽሐፈ፡ ተአምርኪ፡
+				አክና <lb facs="#facs_2_r2l7" n="N007"/>ፍኪ። ጸላሊ፡ ወዘሰማዕነ፡ ቃ <lb facs="#facs_2_r2l8"
+					n="N008"/>፡ ፡ <lb facs="#facs_2_r2l9" n="N009"/>ቲሁ፡ በልብነ፡ አብቍኪ። ወሕ <lb
+					facs="#facs_2_r2l10" n="N010"/>ትባስቲነ፡ እጽድሊ፡ ህየንተ <lb facs="#facs_2_r2l11"
+					n="N011"/>፩፴ወ፡ ወይበላዕሕነ፡ አስብ <lb facs="#facs_2_r2l12" n="N012"/>ቤ፡ ወኵሎ፡ አሚረ፡
+				በእንቲ፡ <lb facs="#facs_2_r2l13" n="N013"/>ነ፡ ተኀብሊ። በከመተበውሐ፡ <lb facs="#facs_2_r2l14"
+					n="N014"/>ለኪ፡ እምአብ፡ ወወልድ፡ ወወ <lb facs="#facs_2_r2l15" n="N015"/>ንፈስ፡ ቅዱስ፡ ኃጢአተነ፡
+				እል <lb facs="#facs_2_r2l16" n="N016"/>ሴ፡ ዘዝ፡ ዓለም፡ እምኔነ፡ ኢትለ <lb facs="#facs_2_r2l17"
+					n="N017"/>ሰሲ፡ ወበዘይመጽእ፡ ዓለም፡ <lb facs="#facs_2_r2l18" n="N018"/>ወልድኪ፡ ነፍስኒ፡
+				እምነፍን፡ <lb facs="#facs_2_r2l19" n="N019"/>ኢይሴሊ፡ ለዓለመ፡ ዓለም። አ </p>
+			<p facs="#facs_2_r3">
+				<lb facs="#facs_2_r3l1" n="N001"/>ኦእግዝእትየ፡ ቅድስት፡ ድን <lb facs="#facs_2_r3l2" n="N002"
+				/>ግል፡ ማርያም፡ እመ፡ መድኀን <lb facs="#facs_2_r3l3" n="N003"/>እመብርሃን፡ እመ፡ ቍርባ <lb
+					facs="#facs_2_r3l4" n="N004"/>ንወእመ፡ ዕጠን፡ እመ፡ ነደ <lb facs="#facs_2_r3l5" n="N005"
+				/>ወእመዋህድ፡ እመ፡ ንገ <lb facs="#facs_2_r3l6" n="N006"/>ሥ፡ ወእመ፡ ክርስቶስ፡ እመ <lb
+					facs="#facs_2_r3l7" n="N007"/>መሲሕ፡ ወእመ፡ መለከታ <lb facs="#facs_2_r3l8" n="N008"
+				/>ዊ፡ መፍርህ፡ በሣህለ፡ ወል <lb facs="#facs_2_r3l9" n="N009"/>ድኪ፡ ስእለተነ፡ ነጽሪ፡ በሞ <lb
+					facs="#facs_2_r3l10" n="N010"/>ሕረተ፡ ወልድኪ፡ ሐውጸ <lb facs="#facs_2_r3l11" n="N011"
+				/>ተነ፡ ሥመሪ፡ እዴሁድ፡ እከ <lb facs="#facs_2_r3l12" n="N012"/>ያን፡ እስመ፡ መሪራን፡ ለኃደ <lb
+					facs="#facs_2_r3l13" n="N013"/>ቲ፡ ይረዱ።፡ ታሕተ፡ ዕመቀ፡ ደ <lb facs="#facs_2_r3l14"
+					n="N014"/>ይን። አሜን። አይሁድ፡ ምዝ <lb facs="#facs_2_r3l15" n="N015"/>ቡራን፡ ስመ፡ ዚአኪ፡ እለይ
+					<lb facs="#facs_2_r3l16" n="N016"/>ጸልሁ፡ ድንግልናኪ፡ እለ፡ ይ <lb facs="#facs_2_r3l17"
+					n="N017"/>ጋዱ፡ በሰይፌ፡ ወኬኤ <lb facs="#facs_2_r3l18" n="N018"/>ል፡ ይትኅበዱ፡ በሥቃየ፡ እኅ </p>
+			<p facs="#facs_2_r4">
+				<lb facs="#facs_2_r4l1" n="N001"/>ይሕመሙ፡ ታሕተ፡ ደ <lb facs="#facs_2_r4l2" n="N002"/>ደን፡
+				ለኃዲር፡ ደረዱ። አሜ <lb facs="#facs_2_r4l3" n="N003"/>አይሁድሐሳውያውን፡ ይ <lb
+					facs="#facs_2_r4l4" n="N004"/>ንግልናኪ፡ እለ፡ ያሰቈርሩ፡ <lb facs="#facs_2_r4l5" n="N005"
+				/>በሰናስለ፡ እሳት፡ ይትዓመራ፡ <lb facs="#facs_2_r4l6" n="N006"/>ታሕት፡ ደይን፡ እንበለ፡ ወፂ <lb
+					facs="#facs_2_r4l7" n="N007"/>እ፡ ይንበሩ። አ። አይሁድ፡ አ <lb facs="#facs_2_r4l8"
+					n="N008"/>ማዕያን፡ ድንግልናኪ፡ እለ <lb facs="#facs_2_r4l9" n="N009"/>ይረግሙ፡ በሰይፌ፡ ሚካኤ <lb
+					facs="#facs_2_r4l10" n="N010"/>ል፡ ይትገዞሙ፡ በሥቃየ <lb facs="#facs_2_r4l11" n="N011"
+				/>እሳተ፡ ይሕመሙ፡ ታሕተ <lb facs="#facs_2_r4l12" n="N012"/>ደደን፡ ዘአልቦ፡ ሙዓሉ፡ ይ <lb
+					facs="#facs_2_r4l13" n="N013"/>ትሐቶሙ አ፡ አደሀር፡ አኩ <lb facs="#facs_2_r4l14"
+					n="N014"/>ያን፡ ወጽድአን፡ ወዝልጉሳ <lb facs="#facs_2_r4l15" n="N015"/>ን፡ ድድንግልናኪ፡ እለ፡ ይፀ
+					<lb facs="#facs_2_r4l16" n="N016"/>ርሩ፡ በእደ፡ ማካኤል፡ ይት <lb facs="#facs_2_r4l17"
+					n="N017"/>ቀሰሩ፡ መታሕተ፡ ታሕቲ <lb facs="#facs_2_r4l18" n="N018"/>ት፡ ይትወረዉ፡ ወይትደፋ፡ </p>
+			<pb facs="#facs_3" xml:id="MR-001_093.jpeg" n="3"/>
+			<p facs="#facs_3_r1">
+				<lb facs="#facs_3_r1l1" n="N001"/>ድንግል፡ ዳ፡ ለዓለመ፡ ዓ <lb facs="#facs_3_r1l2" n="N002"
+				/>ለም፡ አሜን።ተአም <lb facs="#facs_3_r1l3" n="N003"/>ሙ፡ ለአብ፡ ወወልድወ <lb
+					facs="#facs_3_r1l4" n="N004"/>መንፈስ፡ ቅዱስ፡ ኃይለ፡ <lb facs="#facs_3_r1l5" n="N005"
+				/>ረድኤቶሙ፡ ይዕቀበነ፡ ለ <lb facs="#facs_3_r1l6" n="N006"/>ኵልነ፡ ለዓለመ፡ ዓለም፡ <lb
+					facs="#facs_3_r1l7" n="N007"/>አሜን። ወሶበ፡ ኮኖ፡ ለ <lb facs="#facs_3_r1l8" n="N008"
+				/>አዳም፡ ወጽባሕ፡ ነሥን <lb facs="#facs_3_r1l9" n="N009"/>ሦ፡ በሠረገለ፡ መንፈስ፡ <lb
+					facs="#facs_3_r1l10" n="N010"/>ወአብጽሕዎ፡ ገንተ፡ ት <lb facs="#facs_3_r1l11" n="N011"
+				/>ፍሥሕት። ወይቤልዎ፡ <lb facs="#facs_3_r1l12" n="N012"/>ሥላሴ፡ ወሀብናከ፡ ርስቲ <lb
+					facs="#facs_3_r1l13" n="N013"/>ከ፡ ዛቲ፡ ገነት፡ ብላዕ፡ ፍሬ <lb facs="#facs_3_r1l14"
+					n="N014"/>ሃ፡ ቡሩክ፡ ወተገብራ። ወ <lb facs="#facs_3_r1l15" n="N015"/>ዘርሳ፡ ላዕ፡ እንተ፡ ሀለወት
+					<lb facs="#facs_3_r1l16" n="N016"/>ማዕከለ፡ ገንት፡ ኢትብላዕ <lb facs="#facs_3_r1l17"
+					n="N017"/>ወበእለተ፡ ትበልዕ፡ እም <lb facs="#facs_3_r1l18" n="N018"/>ኔሁ፡ ሞተ፡ ትመውት፡ <lb
+					facs="#facs_3_r1l19" n="N019"/>ወትከውን፡ ዕሩቀ፡ ወካ <lb facs="#facs_3_r1l20" n="N020"
+				/>መዝ፡ አእምር። ወእምጽ <lb facs="#facs_3_r1l21" n="N021"/>ኅረዝ፡ ተዘከርኖ፡ ለሐጥ </p>
+			<p facs="#facs_3_r2">
+				<lb facs="#facs_3_r2l1" n="N001"/>ን፡ ወአዕረግዋ፡ ውስተ፡ ገካ <lb facs="#facs_3_r2l2"
+					n="N002"/>በ፪ዕለት። ወሶበ፡ ርእያ፡ አ <lb facs="#facs_3_r2l3" n="N003"/>ዳም፡ ለሔዋን፡ ተእምኃ፡ በ
+					<lb facs="#facs_3_r2l4" n="N004"/>እምኃ፡ መንፈሳዌ፡ ወዜ <lb facs="#facs_3_r2l5"
+					n="N005"/>ዋ፡ ኵሎ፡ ዘአዘዝዎ፡ ሥላ <lb facs="#facs_3_r2l6" n="N006"/>ሲ፡ ወትቤ፡ አሁ፡ ፈቀጸ፡
+					<lb facs="#facs_3_r2l7" n="N007"/>ሥላሴ፡ ለይኩን፡ አሜን፨ <lb facs="#facs_3_r2l8"
+					n="N008"/>ተአምሪሆሙ፡ ለአብ፡ ወ <lb facs="#facs_3_r2l9" n="N009"/>ወልድ፡ ወመንፈስ፡ ቅዱ <lb
+					facs="#facs_3_r2l10" n="N010"/>መሕረድ፡ ፡ <lb facs="#facs_3_r2l11" n="N011"/>ይበቶ፡
+				ምስሌነ፡ ለዓለመ፡ <lb facs="#facs_3_r2l12" n="N012"/>ዓለም፡ አሜን። ወእምዝ <lb
+					facs="#facs_3_r2l13" n="N013"/>ናሁ፡ አዝዝዎሙ፡ ለመላ <lb facs="#facs_3_r2l14" n="N014"
+				/>እክት፤ ወይቤልዎሙ፨ ወ <lb facs="#facs_3_r2l15" n="N015"/>ላሴ፡ ወአገብርኤል፡ ሁሩእ <lb
+					facs="#facs_3_r2l16" n="N016"/>ወአንሥኡአ፡ አልባሰ፡ ዘመ <lb facs="#facs_3_r2l17"
+					n="N017"/>ርዓ። ወኵሎ፡ ዘይትፈቀ <lb facs="#facs_3_r2l18" n="N018"/>ድ፡ ለወርጐ፡ መርዓዊ፡ ወ <lb
+					facs="#facs_3_r2l19" n="N019"/>መርዓቆ፡ ወረዱ፡ ምስለ <lb facs="#facs_3_r2l20" n="N020"
+				/>ሠራዊትክሙ፡ ኀበ፡ እዳ <lb facs="#facs_3_r2l21" n="N021"/>ም፡ ወሔዋን። ወአስተዋ </p>
+			<p facs="#facs_3_r3">
+				<lb facs="#facs_3_r3l1" n="N001"/>ብዎሙ፡ ወግባሩ፡ በዓለ። <lb facs="#facs_3_r3l2" n="N002"
+				/>ወይቤልዎ፡ ለጢካኤል፡ ገ <lb facs="#facs_3_r3l3" n="N003"/>ዱሕ፡ ቀርነ፡ ወሶበ፡ ነፍሐ፡ <lb
+					facs="#facs_3_r3l4" n="N004"/>ሚካኤል፡ ወረዱ፡ መላእ <lb facs="#facs_3_r3l5" n="N005"
+				/>ክት፡ ኀበ፡ አዳም፡ ወሔዋን <lb facs="#facs_3_r3l6" n="N006"/>። ወአስተጥሰብዎሙ፡ ወአ <lb
+					facs="#facs_3_r3l7" n="N007"/>ልበስዎሙ፡ አልባሰ፡ ዘመር <lb facs="#facs_3_r3l8" n="N008"
+				/>ዓ፡ በከመ፡ ሕገ፡ ዘመርዓ። <lb facs="#facs_3_r3l9" n="N009"/>ወአንፈርዓሁ፡ ወገብሩ፡ በዓ <lb
+					facs="#facs_3_r3l10" n="N010"/>ለ፡ ወተፈሥሑ፡ ወአስተነ፡ <lb facs="#facs_3_r3l11"
+					n="N011"/>የድዎሙ፡ በኪደን፡ ጽኑዕ። <lb facs="#facs_3_r3l12" n="N012"/>ወአንበሩ፡ እዴዊሆሙ፡ ዲ
+					<lb facs="#facs_3_r3l13" n="N013"/>በ፡ ርእሶሙ፡ ወባረከዎሙ <lb facs="#facs_3_r3l14"
+					n="N014"/>ወወሀብዎሙ፡ ሰላመ፡ ወዓ <lb facs="#facs_3_r3l15" n="N015"/>ርጉ፡ ውስተ፡ ሰማይ፡ ወከመ
+					<lb facs="#facs_3_r3l16" n="N016"/>ዝ፡ ገብሩ፡ ሥላሴ፡ በኪን፡ <lb facs="#facs_3_r3l17"
+					n="N017"/>ወበጥበበ፡ ከመ፡ ያርእዩ፡ <lb facs="#facs_3_r3l18" n="N018"/>ብእለ፡ እጋ፡ ጥበቦሙ። ወ
+					<lb facs="#facs_3_r3l19" n="N019"/>ሎሙ፡ ስብሐት። በረከቶ <lb facs="#facs_3_r3l20"
+					n="N020"/>ሙ፡ የሀሉ፡ ምስለ፡ ኦመት <lb facs="#facs_3_r3l21" n="N021"/>ሙ፡ ላህየ፡ ድንግል፡ ለዓለ
+					<lb facs="#facs_3_r3l22" n="N022"/>መ፡ ዓለም፡ አሜን።። </p>
+			<p facs="#facs_3_r4">
+				<lb facs="#facs_3_r4l1" n="N001"/>ስላም፡ ለኪ፡ ምኅተ፡ ም <lb facs="#facs_3_r4l2" n="N002"
+				/>ሥራቅ፡ በወልዳ፡ ኖሬ፡ ሰላ <lb facs="#facs_3_r4l3" n="N003"/>ም፡ ለኪ፡ ጽጽልት፡ በወራው <lb
+					facs="#facs_3_r4l4" n="N004"/>ራ፡ ሰላም፡ ለኪ፡ ወጽዕደ <lb facs="#facs_3_r4l5" n="N005"
+				/>ውት፡ ዘምስለ፡ ንዳል፡ ሳላ <lb facs="#facs_3_r4l6" n="N006"/>ም፡ ለኪ። በትረ፡ አፎን፡ ነ <lb
+					facs="#facs_3_r4l7" n="N007"/>ዋፊተ፡ ፍሬ፡ ሰላምኪ፡ <lb facs="#facs_3_r4l8" n="N008"
+				/>አንተ፡ ወለጽኪ፡ ፈብል፡ <lb facs="#facs_3_r4l9" n="N009"/>ዘምስለ፡ ዝማሬ፡ እስግድ <lb
+					facs="#facs_3_r4l10" n="N010"/>ለኪ። መጽሐፈ፡ ተአምና <lb facs="#facs_3_r4l11" n="N011"
+				/>ኪ፡ ይትነበብ፡ እለወትረ፡ <lb facs="#facs_3_r4l12" n="N012"/>ኪያነ፡ ባርኪ፡ ሰላመ፡ ባር <lb
+					facs="#facs_3_r4l13" n="N013"/>ኪ፡ ኪያነ፡ ኅቡረ። ከተ፡ <lb facs="#facs_3_r4l14"
+					n="N014"/>ነ፡ እምኃዘን፡ ወኀይለ፡ ው <lb facs="#facs_3_r4l15" n="N015"/>ርስትየ፡ እምርስዓን፡ በ
+					<lb facs="#facs_3_r4l16" n="N016"/>ማባርኪ፡ ተፀውረ፡ ብ <lb facs="#facs_3_r4l17"
+					n="N017"/>ለየ፡ መባዕል፡ ሕን፡ አ <lb facs="#facs_3_r4l18" n="N018"/>ወርያም፡ ተሥሩ፡ ስሕ <lb
+					facs="#facs_3_r4l19" n="N019"/>ቡዓን፡ በጊዜ፡ ጸሎት፡ ወፅ <lb facs="#facs_3_r4l20"
+					n="N020"/>ብርን፡ ወበጊቤ፡ ንጹሕ፡ ቍ <lb facs="#facs_3_r4l21" n="N021"/>ርሳድም፡ ስሩርዘትነ፡ ንዒ፡
+					<lb facs="#facs_3_r4l22" n="N022"/>ውስተዝ፡ መሳን። ወላዲ <lb facs="#facs_3_r4l23"
+					n="N023"/>አምላክ፡ ማርያም፡ እ </p>
+			<pb facs="#facs_4" xml:id="QS-014_008.jpeg" n="4"/>
+			<p facs="#facs_4_r2">
+				<lb facs="#facs_4_r2l1" n="N001"/>ርዓት፡ ወሥርጉት፡ <lb facs="#facs_4_r2l2" n="N002"
+				/>በግዕት፡ ወሁዕፍት <lb facs="#facs_4_r2l3" n="N003"/>በዝንቱ፡ ስብሐት፡ <lb facs="#facs_4_r2l4"
+					n="N004"/>ዓቢይ። በከመ፡ ይቤ <lb facs="#facs_4_r2l5" n="N005"/>ዓቢይ፡ ወልደ፡ ነጉ <lb
+					facs="#facs_4_r2l6" n="N006"/>ድኅድ፡ ዮሐንስ፡ ያ <lb facs="#facs_4_r2l7" n="N007"
+				/>ንግል፡ ወንጹሕ፨ ይ <lb facs="#facs_4_r2l8" n="N008"/>ጸርኅ፡ እንዘ፡ ይብል፡ <lb
+					facs="#facs_4_r2l9" n="N009"/>እስመ፡ አብርሃ፡ ለዛ <lb facs="#facs_4_r2l10" n="N010"
+				/>ቲ፡ መርዓት፡ ፈድፋ <lb facs="#facs_4_r2l11" n="N011"/>ደ፡ እምኮ፡ ርከበ፡ ጽ <lb
+					facs="#facs_4_r2l12" n="N012"/>ባሕ፨ ዛቲ፡ ይእቲ፡ ጸ <lb facs="#facs_4_r2l13" n="N013"
+				/>ዮን፡ ሐዳሰ፡ ኢያሩሳ <lb facs="#facs_4_r2l14" n="N014"/>ሊም፡ በገረ፡ አምላክ <lb
+					facs="#facs_4_r2l15" n="N015"/>ነ፡ ዘኀደረ፡ ላዕሌሃ <lb facs="#facs_4_r2l16" n="N016"
+				/>ፍሥሐ፡ ኵሎሙ፡ ነ <lb facs="#facs_4_r2l17" n="N017"/>ቢያት፡ ቅዱሳን። ደ <lb
+					facs="#facs_4_r2l18" n="N018"/>ኅረ፡ አንበቡ፡ ፫ተአ <lb facs="#facs_4_r2l19" n="N019"
+				/>ምሪሃ። ይትቀነዩ፡ <lb facs="#facs_4_r2l20" n="N020"/>እንዘ፡ ይብሉ፡ ዐረከ </p>
+			<p facs="#facs_4_r3">
+				<lb facs="#facs_4_r3l1" n="N001"/>ታቲሃ፡ ለዛቲ፡ ለዛቲ <lb facs="#facs_4_r3l2" n="N002"
+				/>እግዝእትነ፡ ማያም <lb facs="#facs_4_r3l3" n="N003"/>ወላዲተ፡ አምላክ፡ <lb facs="#facs_4_r3l4"
+					n="N004"/>ሊ፡ ሉያ፡ ሃሊ፡ ሉያ፡ ሃሴ <lb facs="#facs_4_r3l5" n="N005"/>ያ። የሀሉ፡ ላዕለ፡ ኵል
+					<lb facs="#facs_4_r3l6" n="N006"/>ነ፡ ሕዝብ። ለመስቀል <lb facs="#facs_4_r3l7" n="N007"
+				/>ከ፡ እግዚአ፡ ንፌኑ፡ ሰ <lb facs="#facs_4_r3l8" n="N008"/>ብሐተ። ገሊ፡ ሉያ፡ የ <lb
+					facs="#facs_4_r3l9" n="N009"/>ላም፡ ለከ፡ ዮሐንስ፡ ወ <lb facs="#facs_4_r3l10" n="N010"
+				/>ልደ፡ ነጉድንድ፡ ሰላ፡ <lb facs="#facs_4_r3l11" n="N011"/>ም፡ ለከ፡ ዮሐንሰ፡ አበ <lb
+					facs="#facs_4_r3l12" n="N012"/>ቀለምሲሉ፡ ሰላም፡ ለ <lb facs="#facs_4_r3l13" n="N013"
+				/>ከ፡ ዮሐንስ፡ ቴምኀለ <lb facs="#facs_4_r3l14" n="N014"/>ሰ፡ ሰላም፡ ለከ፡ ዮሐንስ፡ <lb
+					facs="#facs_4_r3l15" n="N015"/>ፍቁረ፡ እግዚእ፡ ሰላ <lb facs="#facs_4_r3l16" n="N016"
+				/>ም፡ ለከ፡ ዮሐንሰ፡ ድን <lb facs="#facs_4_r3l17" n="N017"/>ግል፡ ሰላም፡ ለከ፡ የሐ <lb
+					facs="#facs_4_r3l18" n="N018"/>ንሰ፡ ዘረፈቀ፡ ውስተ፡ <lb facs="#facs_4_r3l19" n="N019"
+				/>ኅፅነ፡ እግዚአብሔ <lb facs="#facs_4_r3l20" n="N020"/>ር። ሰላም፡ ለክሙ፡ </p>
+			<p facs="#facs_4_r4">
+				<lb facs="#facs_4_r4l1" n="N001"/>ጴጥሮስ፡ ወጸውሎ <lb facs="#facs_4_r4l2" n="N002"/>ለ፡
+				ያዕቆብ፡ ወዮሐን <lb facs="#facs_4_r4l3" n="N003"/>ሰ፡ ወእንድርያስ፡ ማ <lb facs="#facs_4_r4l4"
+					n="N004"/>ቴዎስ፡ ፊልጶሰ፡ ወበ <lb facs="#facs_4_r4l5" n="N005"/>ርተሎሜዎስ፡ ተማ <lb
+					facs="#facs_4_r4l6" n="N006"/>ሰ፡ ወያዕቆብ፡ ወግደ፡ <lb facs="#facs_4_r4l7" n="N007"
+				/>እልፍዮስ፡ ታዳዎስ፡ <lb facs="#facs_4_r4l8" n="N008"/>ወናትናኤል፡ ወማት <lb facs="#facs_4_r4l9"
+					n="N009"/>ያስ፡ ሉቃስ፡ ወማርቶስ፡ <lb facs="#facs_4_r4l10" n="N010"/>ወያዕቆብ፡ ኤጲስ፡ ቆጶ <lb
+					facs="#facs_4_r4l11" n="N011"/>ስ፡ ለደቂትክሙ፡ ባርኩ <lb facs="#facs_4_r4l12" n="N012"
+				/>ነ፡ በቅዱስ፡ መንፈስ። ወ <lb facs="#facs_4_r4l13" n="N013"/>ዓም፡ ለኬ፡ ኆኅተ፡ ም <lb
+					facs="#facs_4_r4l14" n="N014"/>ሥራት፡ ዘወልደ፡ ኖሬ <lb facs="#facs_4_r4l15" n="N015"
+				/>ሰላም፡ ለኪ፡ ዓበድ፡ ዘ <lb facs="#facs_4_r4l16" n="N016"/>ኢስኪድራ፡ ሰላም፡ ለ <lb
+					facs="#facs_4_r4l17" n="N017"/>ኪ፡ እስመ፡ ወልድኪ፡ ፈ <lb facs="#facs_4_r4l18" n="N018"
+				/>ግሬ፡ ሰላ፡ ለኪ፡ ጽድል <lb facs="#facs_4_r4l19" n="N019"/>ተ፡ ንጸሬ፡ ሰላም፡ ሥር <lb
+					facs="#facs_4_r4l20" n="N020"/>ጉት፡ በወራውረ፡ ሰ፡ በ </p>
+			<p facs="#facs_4_r5">
+				<lb facs="#facs_4_r5l1" n="N001"/>ትረ፡ አሮን፡ ጸዋሪተ፡ <lb facs="#facs_4_r5l2" n="N002"
+				/>ፍሬ፡ ሰ፡ ዘምስለ፡ ዝ <lb facs="#facs_4_r5l3" n="N003"/>ማሬ፡ ንሰግድ፡ ለኪ፡ ሰ <lb
+					facs="#facs_4_r5l4" n="N004"/>በ፡ ይትነበብ፡ መጽሐ <lb facs="#facs_4_r5l5" n="N005"/>ፈ፡
+				ተአምርኪ፡ በሰላ <lb facs="#facs_4_r5l6" n="N006"/>ም፡ ኪያነ፡ ባርኪ። <lb facs="#facs_4_r5l7"
+					n="N007"/>ስቲያን። እግዚአብ <lb facs="#facs_4_r5l8" n="N008"/>ሔር፡ ይባርክሙ፡ ወይ <lb
+					facs="#facs_4_r5l9" n="N009"/>ብርህ፡ አዕይንተ፡ <lb facs="#facs_4_r5l10" n="N010"
+				/>አልባቢክሙ፡ ለሰሚ <lb facs="#facs_4_r5l11" n="N011"/>ዓ፡ ተአምሪሃ፡ ለእግዝ <lb
+					facs="#facs_4_r5l12" n="N012"/>እትነ፡ ቅድስት፡ ወድ <lb facs="#facs_4_r5l13" n="N013"
+				/>ግልት፡ በ፪ማርያም፡ <lb facs="#facs_4_r5l14" n="N014"/>ወላዲተ፡ አምላክ። ዘ <lb
+					facs="#facs_4_r5l15" n="N015"/>ያሥ፡ ተፈስሕ፡ አልባብ፡ <lb facs="#facs_4_r5l16" n="N016"
+				/>ወይመርህ፡ ውስተ፡ መ <lb facs="#facs_4_r5l17" n="N017"/>ንግሥተ፡ ሰማያት፡ <lb
+					facs="#facs_4_r5l18" n="N018"/>ዘኢይክሉ፡ ሰማያወ <lb facs="#facs_4_r5l19" n="N019"
+				/>ያን፡ ወምድራውያ፡ <lb facs="#facs_4_r5l20" n="N020"/>ፈጽሞተ፡ ውዳሴሃ </p>
+			<p facs="#facs_4_r6">
+				<lb facs="#facs_4_r6l1" n="N001"/>ተአምሪሃ፡ ለእግዝእትነ፡ <lb facs="#facs_4_r6l2" n="N002"
+				/>ቅድስት፡ ድንግል፡ በክል <lb facs="#facs_4_r6l3" n="N003"/>፪ማርያም፡ ወላዲተ፡ <lb
+					facs="#facs_4_r6l4" n="N004"/>አምላክ። ጸሎታ፡ ወ <lb facs="#facs_4_r6l5" n="N005"
+				/>ምሕረተ፡ ፍቁር፡ በ <lb facs="#facs_4_r6l6" n="N006"/>ልዳ፡ የሀሉ፡ ምስለ <lb
+					facs="#facs_4_r6l7" n="N007"/>ምስለ፡ ገብራ፡ ክር <lb facs="#facs_4_r6l8" n="N008"/>ቆስ፡
+				ለዓለመ <lb facs="#facs_4_r6l9" n="N009"/>ዓለም፡ አሜን፡ ውሀ <lb facs="#facs_4_r6l10"
+					n="N010"/>ሎ፡ ፩ብእሲ፡ እምዘመ <lb facs="#facs_4_r6l11" n="N011"/>ደ፡ ይሁዳ። ወይሰመይ <lb
+					facs="#facs_4_r6l12" n="N012"/>ኢያቄም፡ ወኢአውሰ <lb facs="#facs_4_r6l13" n="N013"/>በ፡
+				ብእሲተ፡ እምአገ <lb facs="#facs_4_r6l14" n="N014"/>ልደ፡ ካህናት፡ ወትስ <lb facs="#facs_4_r6l15"
+					n="N015"/>መይ፡ ሐና። ወ፪ሆሙ፡ <lb facs="#facs_4_r6l16" n="N016"/>ኃራን፡ ወሥሙራ፡ <lb
+					facs="#facs_4_r6l17" n="N017"/>ወኢራሐያነ፡ እግዚ <lb facs="#facs_4_r6l18" n="N018"
+				/>እግዚአብሔር፤፡ ወብ <lb facs="#facs_4_r6l19" n="N019"/>እሲቱሰ፡ መካን፤ ወነበ <lb
+					facs="#facs_4_r6l20" n="N020"/>ሩ፡ እንዘ፡ የሐዝኑ፡ ወ </p>
+			<p facs="#facs_4_r7">
+				<lb facs="#facs_4_r7l1" n="N001"/>ይቴክዙ፡ በእንተ፡ ዘአልቦ <lb facs="#facs_4_r7l2" n="N002"
+				/>ሙ፡ ውሉድ፡ ወኵሎ <lb facs="#facs_4_r7l3" n="N003"/>፡ አሚረ፡ የሐ <lb facs="#facs_4_r7l4"
+					n="N004"/>ውሩ፡ ኀበ፡ ቤተ፡ ክርስ <lb facs="#facs_4_r7l5" n="N005"/>ቲያን፡ ወያዋርዙ፡ ጸሎ፡ <lb
+					facs="#facs_4_r7l6" n="N006"/>ለእግዚአብሔር፡ <lb facs="#facs_4_r7l7" n="N007"/>ር፡
+				በብካይ፡ ወበገዓር <lb facs="#facs_4_r7l8" n="N008"/>ከመ፡ የሀቦሙ፡ ውሉ <lb facs="#facs_4_r7l9"
+					n="N009"/>ደ፡ ወይክፍሉ፡ እምን <lb facs="#facs_4_r7l10" n="N010"/>ዋዮሙ፡ ለነዳያን፡ ወ <lb
+					facs="#facs_4_r7l11" n="N011"/>ለምስኪናን፨ ወለቤ <lb facs="#facs_4_r7l12" n="N012"/>ተ፡
+				እግዚአብሔር፡ <lb facs="#facs_4_r7l13" n="N013"/>ወነበሩ፡ እንዘ፡ ይሲፈ <lb facs="#facs_4_r7l14"
+					n="N014"/>ዉ፡ ተአሚኖሙ፡ ከመ፡ <lb facs="#facs_4_r7l15" n="N015"/>ይትወከፍ፡ እግዚአ <lb
+					facs="#facs_4_r7l16" n="N016"/>ብሔር፡ ስእለቶሙ፡ <lb facs="#facs_4_r7l17" n="N017"
+				/>ወየሀኮሙ፡ ውሉደ <lb facs="#facs_4_r7l18" n="N018"/>ወአሐተ፡ ዕለተ፡ ወፅኡ <lb
+					facs="#facs_4_r7l19" n="N019"/>ኢያቄም፡ ወሐና፡ ብእ <lb facs="#facs_4_r7l20" n="N020"
+				/>ቤቱ፡ ወቦኡ፡ ውስተ፡ </p>
+			<pb facs="#facs_5" xml:id="UM-014_009.jpeg" n="5"/>
+			<p facs="#facs_5_r1">
+				<lb facs="#facs_5_r1l1" n="N001"/>ወ፩ኀበ፡ ሥዕሉ፡ ለእግ <lb facs="#facs_5_r1l2" n="N002"
+				/>ዝእትነ፡ ማርያም፡ ወኃበ <lb facs="#facs_5_r1l3" n="N003"/>ዘይትነበብ፡ መጽሐፈ፡ ተ <lb
+					facs="#facs_5_r1l4" n="N004"/>አምሪሃ፡ ለእግዝእትነ፡ ማ <lb facs="#facs_5_r1l5" n="N005"
+				/>ርያም፡ ወኢይምሴሎ፡ <lb facs="#facs_5_r1l6" n="N006"/>ለኵሉ፡ ክርስቲያናዊ፡ ት <lb
+					facs="#facs_5_r1l7" n="N007"/>ሌለ፡ ሰሚዓ፡ ተአምሪሃ፡ <lb facs="#facs_5_r1l8" n="N008"
+				/>ለእግዝእትነ፡ ማርያም፡ <lb facs="#facs_5_r1l9" n="N009"/>እስመ፡ ዓቢይ፡ ወክቡር፡ <lb
+					facs="#facs_5_r1l10" n="N010"/>ውእቱ፡ ወአጽርኡ፡ ሰማ <lb facs="#facs_5_r1l11" n="N011"
+				/>አዩ፡ እድ፡ ወአንስት፡ ከመ <lb facs="#facs_5_r1l12" n="N012"/>ኢይባኡ፡ ውስተ፡ ግዘት፡ <lb
+					facs="#facs_5_r1l13" n="N013"/>ወዘተካህሎ፡ ሰሚአ፡ ቶአ <lb facs="#facs_5_r1l14" n="N014"
+				/>ምሪሃ፡ ለእግዝትነ፡ ማርያ <lb facs="#facs_5_r1l15" n="N015"/>ም፡ ይንሣአ፡ ቁርባነ፡ በይ <lb
+					facs="#facs_5_r1l16" n="N016"/>እቲ፡ ዕለት ፩ዕመ፡ ኢክል <lb facs="#facs_5_r1l17"
+					n="N017"/>ኑ፡ ምክንያት፡ ዕውቅ፡ በከ <lb facs="#facs_5_r1l18" n="N018"/>መ፡ ንቤ፡ ቀዳሜ። ወዘአ
+					<lb facs="#facs_5_r1l19" n="N019"/>ተከህሎ፡ ንሢአ፡ ቈርባን፡ <lb facs="#facs_5_r1l20"
+					n="N020"/>ዕሜእ፡ ይሑር፡ ውስተ፡ ቤ <lb facs="#facs_5_r1l21" n="N021"/>ቱ፡ ወይከውኖ፡ ከመ፡ ቁር
+					<lb facs="#facs_5_r1l22" n="N022"/>ባን፡ ለእመ፡ ስምዓ፡ በእሜ </p>
+			<p facs="#facs_5_r2">
+				<lb facs="#facs_5_r2l1" n="N001"/>ን፡ ወእለሰ፡ ያስትቱ <lb facs="#facs_5_r2l2" n="N002"
+				/>ሰሜን፡ መጽሐፈ፡ ተነ <lb facs="#facs_5_r2l3" n="N003"/>ምሪሃ፡ ለእግዝእትነ፡ <lb
+					facs="#facs_5_r2l4" n="N004"/>ርያም፡ ወዘወኃበ፡ ኪያ <lb facs="#facs_5_r2l5" n="N005"
+				/>ዓ፡ ቦእሙ። ውድእን፡ እ <lb facs="#facs_5_r2l6" n="N006"/>ሙንቱ፡ እምአሜነ፡ አ <lb
+					facs="#facs_5_r2l7" n="N007"/>ብከተ፡ ወልደ፡ እግዚእ <lb facs="#facs_5_r2l8" n="N008"
+				/>ብሔ። ወኢይትጐለቅ <lb facs="#facs_5_r2l9" n="N009"/>ምስለ፡ አባጣን፡ መርነ <lb
+					facs="#facs_5_r2l10" n="N010"/>ቱ፡ በክርስቶስ፡ ርጉማ <lb facs="#facs_5_r2l11" n="N011"
+				/>ን፡ ወውጕዘን፡ ወውቅ <lb facs="#facs_5_r2l12" n="N012"/>ውርሃን፡ ወውቁያን። <lb
+					facs="#facs_5_r2l13" n="N013"/>በሰይራ፡ ቃሎሙ፡ ለእ <lb facs="#facs_5_r2l14" n="N014"
+				/>ጥሮስ፡ ወጳውሎስ፡ ወ <lb facs="#facs_5_r2l15" n="N015"/>ለነሂ፡ በሰይፈ፡ ቃልኒ፡ ሰ <lb
+					facs="#facs_5_r2l16" n="N016"/>አባ፡ ሚካኤል፡ ወገብር <lb facs="#facs_5_r2l17" n="N017"
+				/>ኦል። ውቂያን፡ ወውኅ <lb facs="#facs_5_r2l18" n="N018"/>ዝን፡ ይኩኑ። እስመን <lb
+					facs="#facs_5_r2l19" n="N019"/>ንሣእ፡ ሥጠጠነ፡ ዚረአ <lb facs="#facs_5_r2l20" n="N020"
+				/>እሆሙ፡ ወበእንተዝ፡ ነ <lb facs="#facs_5_r2l21" n="N021"/>ሰርነ፡ ወአውገዝነ፡ ሀማ <lb
+					facs="#facs_5_r2l22" n="N022"/>ዕስርነ፡ ዘኢይትፈታሕ፡ <lb facs="#facs_5_r2l23" n="N023"
+				/>ዘኢያክብር፡ በእዛቲ፡ </p>
+			<p facs="#facs_5_r3">
+				<lb facs="#facs_5_r3l1" n="N001"/>ለእግዝትነ፡ ማርያም፡ <lb facs="#facs_5_r3l2" n="N002"
+				/>ከመ፡ እኁድ፡ ሰንበት፡ <lb facs="#facs_5_r3l3" n="N003"/>እስከ፡ አመ፡ ይመጽእ <lb
+					facs="#facs_5_r3l4" n="N004"/>ወልድ፡ በስብሐቲሁ፡ <lb facs="#facs_5_r3l5" n="N005"
+				/>ለዓለመ፡ ዓለም፡ አሜን። <lb facs="#facs_5_r3l6" n="N006"/>ጸሎታ፡ ወበረከታ፡ ወም <lb
+					facs="#facs_5_r3l7" n="N007"/>ሕረተ፡ ፍቁር፡ ወልዳ፡ ን <lb facs="#facs_5_r3l8" n="N008"
+				/>ሀሉ፡ ምስለ፡ ገብራ፡ ዘወ <lb facs="#facs_5_r3l9" n="N009"/>ልደ፡ ማርያም፡ ማር <lb
+					facs="#facs_5_r3l10" n="N010"/>አቡን፡ ትካለ፡ ሃይማኖት፡ <lb facs="#facs_5_r3l11"
+					n="N011"/>ለዓለመ፡ ዓለም፡ አሜን፡ <lb facs="#facs_5_r3l12" n="N012"/>፡ <lb
+					facs="#facs_5_r3l13" n="N013"/>ኖኂተ፡ ሞሥ <lb facs="#facs_5_r3l14" n="N014"/>እእ <lb
+					facs="#facs_5_r3l15" n="N015"/>ራቅ፡ ዘወልደ፡ ኖሬ፡ ሰላም <lb facs="#facs_5_r3l16"
+					n="N016"/>ለኪ፡ ዓፀድ፡ ዘእስከደረ፡ <lb facs="#facs_5_r3l17" n="N017"/>ለም፡ ስርጉት፡ በወሪ <lb
+					facs="#facs_5_r3l18" n="N018"/>ውሬ፡ ሰለኪ፡ ሰድልት <lb facs="#facs_5_r3l19" n="N019"
+				/>ንጸሬ፡ ሰላኪ፡ በትረ፡ እ <lb facs="#facs_5_r3l20" n="N020"/>ሮን፡ ጸዋሪተ፡ ፍሬ፡ ሶብ <lb
+					facs="#facs_5_r3l21" n="N021"/>፡ እንተ፡ ወለድኪ፡ ፈ <lb facs="#facs_5_r3l22" n="N022"
+				/>ብሬ፡ ዘምስለ፡ ዝማረ፡ <lb facs="#facs_5_r3l23" n="N023"/>ንወድለኪ፡ ለበይት <lb
+					facs="#facs_5_r3l24" n="N024"/>በብ፡ መጽሐፈ፡ ተአም <lb facs="#facs_5_r3l25" n="N025"
+				/>ርኪ፡ በሰላም፡ ኪያነ፡ ባ </p>
+			<p facs="#facs_5_r4">
+				<lb facs="#facs_5_r4l1" n="N001"/>ርኪ። ወኢትርስእኒ፡ ለ <lb facs="#facs_5_r4l2" n="N002"
+				/>ገብርኪ፡ ኃጥእ፡ ወአባሴ <lb facs="#facs_5_r4l3" n="N003"/>ተ፡ወልደ፡ ማርያም <lb
+					facs="#facs_5_r4l4" n="N004"/>ማር፡ አቡነ፡ ትክለ፡ ሃይወ <lb facs="#facs_5_r4l5" n="N005"
+				/>ሮት፡ ወልደሙ፡ ለአቡን <lb facs="#facs_5_r4l6" n="N006"/>ዘገብርኤል፡ በዓለመ፡ ዘ <lb
+					facs="#facs_5_r4l7" n="N007"/>ለም፡ አሜን፡ ወአሜን፡ <lb facs="#facs_5_r4l8" n="N008"
+				/>እመ፡ ሥሉስ፡ ቅዱስ፡ <lb facs="#facs_5_r4l9" n="N009"/>ዘይ፡ስ፡ በእካሳት፡ ወ <lb
+					facs="#facs_5_r4l10" n="N010"/>ይትወሐድ፡ በመለኮት፡ <lb facs="#facs_5_r4l11" n="N011"
+				/>ብሁት፡ መንግሥት፡ ወ <lb facs="#facs_5_r4l12" n="N012"/>ዕረየ፡ ስብሐት። ንጽሕ <lb
+					facs="#facs_5_r4l13" n="N013"/>ፍ፡ መጽሐፈ፡ ተአምር <lb facs="#facs_5_r4l14" n="N014"
+				/>ዘከሠትት፡ ቦቱ፡ እግዝ <lb facs="#facs_5_r4l15" n="N015"/>እትነ፡ ማርያም፡ አበየ፡ ነ <lb
+					facs="#facs_5_r4l16" n="N016"/>ጋሃ፡ ለውሉደ፡ ሰብእ፡ ወ <lb facs="#facs_5_r4l17"
+					n="N017"/>ቦቱ፡ ረባሕ፡ ዓቢየ፡ ለዘይ <lb facs="#facs_5_r4l18" n="N018"/>አምዖ፡ በአርሞሞ፡ ዘአ
+					<lb facs="#facs_5_r4l19" n="N019"/>ንበለ፡ ተዘውአ፡ ሕሲና <lb facs="#facs_5_r4l20"
+					n="N020"/>ወውእቱ፡ ማዕጸት፡ እ <lb facs="#facs_5_r4l21" n="N021"/>ሞት፡ ውስተ፡ ሕይወት <lb
+					facs="#facs_5_r4l22" n="N022"/>ጸሎታ፡ ወበረከታ፡ ወም <lb facs="#facs_5_r4l23" n="N023"
+				/>ሕረተ፡ ፍቁር፡ ወልዳየ <lb facs="#facs_5_r4l24" n="N024"/>ሀሉ፡ ምስለ፡ ገብራ፡ <lb
+					facs="#facs_5_r4l25" n="N025"/>ም፡ ኤማር </p>
+			<div type="apparatus">
+				<app>
+					<rdg wit="W1">ያዕቆብ፡ ወዮሐንሰ፡ ወእንድ ርያስ፨ ማቴዎስ፡ ወፊልቁሰ፡ ወበርተ፡ ሎሚዎሰ፡ ተማስ፡</rdg>
+					<rdg wit="W2">መላእክተ፡ ሰማይ። ኵሎ፡</rdg>
+					<rdg wit="W3">ድንግል፡ ዳ፡ ለዓለመ፡ ዓ ለም፡ አሜን።ተአም</rdg>
+					<rdg wit="W4">ርዓት፡ ወሥርጉት፡ በግዕት፡ ወሁዕፍት በዝንቱ፡ ስብሐት፡ ዓቢይ። በከመ፡ ይቤ ዓቢይ፡</rdg>
+					<rdg wit="W5">ወ፩ኀበ፡ ሥዕሉ፡ ለእግ ዝእትነ፡ ማርያም፡ ወኃበ ዘይትነበብ፡ መጽሐፈ፡ ተ አምሪሃ፡ ለእግዝእትነ፡ ማ
+						ርያም፡ ወኢይምሴሎ፡ ለኵሉ፡ ክርስቲያናዊ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4 W5"/>
+					<rdg wit="W3 W2">ሙ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ወ</rdg>
+					<rdg wit="W3 W2 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ያስቆብ፡</rdg>
+					<rdg wit="W2">አሜን። ወአሜን። ኦእ ግዝእትየ፡</rdg>
+					<rdg wit="W3">ለአብ፡ ወወልድወ መንፈስ፡ ቅዱስ፡ ኃይለ፡ ረድኤቶሙ፡ ይዕቀበነ፡ ለ ኵልነ፡ ለዓለመ፡ ዓለም፡ አሜን።
+						ወሶበ፡ ኮኖ፡ ለ አዳም፡ ወጽባሕ፡ ነሥን ሦ፡ በሠረገለ፡ መንፈስ፡ ወአብጽሕዎ፡ ገንተ፡</rdg>
+					<rdg wit="W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W4">ወልደ፡</rdg>
+					<rdg wit="W2"/>
+					<rdg wit="W3 W5">ት</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">እልዱዮስ። ዲኖስ፡</rdg>
+					<rdg wit="W2"/>
+					<rdg wit="W3">ፍሥሕት። ወይቤልዎ፡ ሥላሴ፡ ወሀብናከ፡ ርስቲ ከ፡</rdg>
+					<rdg wit="W4">ነጉ ድኅድ፡ ዮሐንስ፡ ያ ንግል፡ ወንጹሕ፨ ይ ጸርኅ፡ እንዘ፡ ይብል፡</rdg>
+					<rdg wit="W5">ሌለ፡ ሰሚዓ፡ ተአምሪሃ፡ ለእግዝእትነ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W4"/>
+					<rdg wit="W2 W5">ማርያም፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2 W4 W5"/>
+					<rdg wit="W3">ዛቲ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1"/>
+					<rdg wit="W2">ወላዲ ተ፡ አምላክ፡ ጸሎትኪ፡</rdg>
+					<rdg wit="W3">ገነት፡ ብላዕ፡ ፍሬ ሃ፡ ቡሩክ፡ ወተገብራ።</rdg>
+					<rdg wit="W4 W5">እስመ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W4 W5"/>
+					<rdg wit="W2">ወ</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2"/>
+					<rdg wit="W4">አብርሃ፡ ለዛ ቲ፡ መርዓት፡ ፈድፋ ደ፡ እምኮ፡ ርከበ፡ ጽ ባሕ፨</rdg>
+					<rdg wit="W5">ዓቢይ፡ ወክቡር፡ ውእቱ፡ ወአጽርኡ፡ ሰማ አዩ፡ እድ፡ ወአንስት፡ ከመ ኢይባኡ፡ ውስተ፡ ግዘት፡
+						ወዘተካህሎ፡ ሰሚአ፡ ቶአ ምሪሃ፡ ለእግዝትነ፡ ማርያ ም፡ ይንሣአ፡ ቁርባነ፡ በይ እቲ፡ ዕለት ፩ዕመ፡ ኢክል ኑ፡
+						ምክንያት፡ ዕውቅ፡ በከ መ፡ ንቤ፡ ቀዳሜ። ወዘአ ተከህሎ፡ ንሢአ፡ ቈርባን፡ ዕሜእ፡ ይሑር፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2 W5"/>
+					<rdg wit="W4">ዛቲ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W4 W5"/>
+					<rdg wit="W2">ስእለትኪ፡ ወምሕረ፡ተ፡ ፍ ቁር፡ ወልድኪ። የሀሉ፡ ም ስለ፡ ኵልነ፡ አግብርትኪ፡ ወአእማትኪ። እለ፡ ተጋህ
+						ነ፡ ለአንብቦ፡ ተአምርኪ፡ ወ ለወዳሴ፡ ዚአኬ፡ ክድንነ፡ አ ጽፈ፡ ሣህልኪ፡ ወሠውር ነበአክናፈ፡ ምሕረትኪ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W5"/>
+					<rdg wit="W3 W2">ወ</rdg>
+					<rdg wit="W4">ይእቲ፡ ጸ ዮን፡ ሐዳሰ፡ ኢያሩሳ ሊም፡ በገረ፡ አምላክ ነ፡ ዘኀደረ፡ ላዕሌሃ ፍሥሐ፡ ኵሎሙ፡ ነ ቢያት፡
+						ቅዱሳን። ደ ኅረ፡ አንበቡ፡ ፫ተአ ምሪሃ። ይትቀነዩ፡ እንዘ፡ ይብሉ፡ ዐረከ ታቲሃ፡ ለዛቲ፡ ለዛቲ እግዝእትነ፡ ማያም
+						ወላዲተ፡ አምላክ፡ ሊ፡ ሉያ፡ ሃሊ፡ ሉያ፡ ሃሴ ያ። የሀሉ፡ ላዕለ፡ ኵል ነ፡ ሕዝብ። ለመስቀል ከ፡ እግዚአ፡ ንፌኑ፡ ሰ
+						ብሐተ። ገሊ፡ ሉያ፡ የ ላም፡ ለከ፡ ዮሐንስ፡ ወ ልደ፡ ነጉድንድ፡ ሰላ፡ ም፡ ለከ፡ ዮሐንሰ፡ አበ ቀለምሲሉ፡ ሰላም፡ ለ
+						ከ፡ ዮሐንስ፡ ቴምኀለ ሰ፡ ሰላም፡ ለከ፡ ዮሐንስ፡ ፍቁረ፡ እግዚእ፡ ሰላ ም፡ ለከ፡ ዮሐንሰ፡ ድን ግል፡ ሰላም፡ ለከ፡
+						የሐ ንሰ፡ ዘረፈቀ፡ ውስተ፡ ኅፅነ፡ እግዚአብሔ ር። ሰላም፡ ለክሙ፡ ጴጥሮስ፡ ወጸውሎ ለ፡ ያዕቆብ፡ ወዮሐን ሰ፡
+						ወእንድርያስ፡ ማ ቴዎስ፡ ፊልጶሰ፡ ወበ ርተሎሜዎስ፡ ተማ ሰ፡ ወያዕቆብ፡ ወግደ፡ እልፍዮስ፡ ታዳዎስ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4">ወናትናኤል፡ ወማት ያስ፡</rdg>
+					<rdg wit="W2">በርክነ፡ በድሳት፡ አእዳውኪ፡ ወጸግውነ፡ መክፈልተ፡</rdg>
+					<rdg wit="W3">ዘርሳ፡ ላዕ፡ እንተ፡ ሀለወት ማዕከለ፡ ገንት፡ ኢትብላዕ ወበእለተ፡ ትበልዕ፡ እም ኔሁ፡ ሞተ፡ ትመውት፡
+						ወትከውን፡ ዕሩቀ፡ ወካ መዝ፡ አእምር። ወእምጽ ኅረዝ፡ ተዘከርኖ፡ ለሐጥ ን፡ ወአዕረግዋ፡</rdg>
+					<rdg wit="W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ሉቃሰ፡</rdg>
+					<rdg wit="W2"/>
+					<rdg wit="W3 W5">ውስተ፡</rdg>
+					<rdg wit="W4">ሉቃስ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4">ወማርቶስ፡</rdg>
+					<rdg wit="W2"/>
+					<rdg wit="W3">ገካ በ፪ዕለት። ወሶበ፡ ርእያ፡</rdg>
+					<rdg wit="W5">ቤ ቱ፡ ወይከውኖ፡ ከመ፡ ቁር ባን፡ ለእመ፡ ስምዓ፡ በእሜ ን፡ ወእለሰ፡ ያስትቱ ሰሜን፡ መጽሐፈ፡ ተነ
+						ምሪሃ፡ ለእግዝእትነ፡ ርያም፡ ወዘወኃበ፡ ኪያ ዓ፡ ቦእሙ። ውድእን፡ እ ሙንቱ፡ እምአሜነ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ወይ ዕቆብ፡</rdg>
+					<rdg wit="W2"/>
+					<rdg wit="W3 W5">አ</rdg>
+					<rdg wit="W4">ወያዕቆብ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4">ኤጲስ፡</rdg>
+					<rdg wit="W2"/>
+					<rdg wit="W3">ዳም፡ ለሔዋን፡ ተእምኃ፡ በ እምኃ፡ መንፈሳዌ፡ ወዜ ዋ፡ ኵሎ፡ ዘአዘዝዎ፡ ሥላ ሲ፡ ወትቤ፡ አሁ፡ ፈቀጸ፡
+						ሥላሴ፡ ለይኩን፡ አሜን፨ ተአምሪሆሙ፡ ለአብ፡</rdg>
+					<rdg wit="W5">ብከተ፡ ወልደ፡ እግዚእ ብሔ። ወኢይትጐለቅ ምስለ፡ አባጣን፡ መርነ ቱ፡ በክርስቶስ፡ ርጉማ ን፡ ወውጕዘን፡
+						ወውቅ ውርሃን፡ ወውቁያን። በሰይራ፡ ቃሎሙ፡ ለእ ጥሮስ፡ ወጳውሎስ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ቆጶስ፡ ለደቂ ቅክሙ፡ በርኩነ፡ ሰሐዲስ፡ መ ንፈስ። ሰላም፡ ለኪ፡ ማርያ ም። ኆዓተ፡ ምሥራት፡</rdg>
+					<rdg wit="W2"/>
+					<rdg wit="W3 W5">ወ</rdg>
+					<rdg wit="W4">ቆጶ ስ፡ ለደቂትክሙ፡ ባርኩ ነ፡ በቅዱስ፡ መንፈስ። ወ ዓም፡ ለኬ፡ ኆኅተ፡ ም ሥራት፡ ዘወልደ፡
+						ኖሬ</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2 W4"/>
+					<rdg wit="W5">ለነሂ፡ በሰይፈ፡ ቃልኒ፡ ሰ አባ፡ ሚካኤል፡ ወገብር ኦል። ውቂያን፡ ወውኅ ዝን፡ ይኩኑ። እስመን ንሣእ፡
+						ሥጠጠነ፡ ዚረአ እሆሙ፡ ወበእንተዝ፡ ነ ሰርነ፡ ወአውገዝነ፡ ሀማ ዕስርነ፡ ዘኢይትፈታሕ፡ ዘኢያክብር፡ በእዛቲ፡
+						ለእግዝትነ፡ ማርያም፡ ከመ፡ እኁድ፡ ሰንበት፡ እስከ፡ አመ፡ ይመጽእ</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2 W5"/>
+					<rdg wit="W4">ሰላም፡ ለኪ፡ ዓበድ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2"/>
+					<rdg wit="W3 W5">ወልድ፡</rdg>
+					<rdg wit="W4">ዘ ኢስኪድራ፡ ሰላም፡ ለ ኪ፡ እስመ፡ ወልድኪ፡ ፈ ግሬ፡ ሰላ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2 W4"/>
+					<rdg wit="W3">ወመንፈስ፡ ቅዱ መሕረድ፡</rdg>
+					<rdg wit="W5">በስብሐቲሁ፡ ለዓለመ፡ ዓለም፡ አሜን። ጸሎታ፡ ወበረከታ፡ ወም ሕረተ፡ ፍቁር፡ ወልዳ፡ ን ሀሉ፡ ምስለ፡
+						ገብራ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W5">ዘወ ልደ፡</rdg>
+					<rdg wit="W3 W2 W4"/>
+				</app>
+				<app>
+					<rdg wit="W1">ናዊ፡</rdg>
+					<rdg wit="W3 W2 W4"/>
+					<rdg wit="W5">ማርያም፡ ማር አቡን፡ ትካለ፡ ሃይማኖት፡ ለዓለመ፡ ዓለም፡ አሜን፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ሰላም፡ ለኪ፡ ዓበድ፡</rdg>
+					<rdg wit="W3 W2 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W2 W4"/>
+					<rdg wit="W3 W5">፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ዘእሰ፡ከደሬ፡ ሰላም፡ ለኪ፡ ጽ ድልተ፡ ንባሬ፡ ሥርጉት፡ በወ ራውሬ፡ ሰላም፡</rdg>
+					<rdg wit="W2 W4"/>
+					<rdg wit="W3">ይበቶ፡ ምስሌነ፡</rdg>
+					<rdg wit="W5">ኖኂተ፡ ሞሥ እእ ራቅ፡ ዘወልደ፡ ኖሬ፡ ሰላም</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4 W5">ለኪ፡</rdg>
+					<rdg wit="W3 W2"/>
+				</app>
+				<app>
+					<rdg wit="W1">በቅ ረ፡</rdg>
+					<rdg wit="W3 W2"/>
+					<rdg wit="W4">ጽድል ተ፡</rdg>
+					<rdg wit="W5">ዓፀድ፡ ዘእስከደረ፡ ለም፡ ስርጉት፡ በወሪ ውሬ፡ ሰለኪ፡ ሰድልት</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2"/>
+					<rdg wit="W4 W5">ንጸሬ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2"/>
+					<rdg wit="W4">ሰላም፡ ሥር ጉት፡ በወራውረ፡ ሰ፡ በ ትረ፡</rdg>
+					<rdg wit="W5">ሰላኪ፡ በትረ፡ እ ሮን፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4">አሮን፡</rdg>
+					<rdg wit="W3 W2 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W5">ጸዋሪተ፡ ፍሬ፡</rdg>
+					<rdg wit="W3 W2"/>
+					<rdg wit="W4">ጸዋሪተ፡ ፍሬ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ሳላ ም፡ ለኪ። አንተ፡</rdg>
+					<rdg wit="W3 W2"/>
+					<rdg wit="W4">ሰ፡</rdg>
+					<rdg wit="W5">ሶብ ፡ እንተ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W5">ወለድኪ፡ ፈ</rdg>
+					<rdg wit="W3 W2 W4"/>
+				</app>
+				<app>
+					<rdg wit="W1">ጣረ፡ ሰላም፡ ለኪ።</rdg>
+					<rdg wit="W3 W2 W4"/>
+					<rdg wit="W5">ብሬ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4 W5">ዘምስለ፡</rdg>
+					<rdg wit="W3 W2"/>
+				</app>
+				<app>
+					<rdg wit="W1">ዝግሪ፡ ንሰድ፡ ለኪ፡ ሶበ፡ ይ ትነበብ፡</rdg>
+					<rdg wit="W3 W2"/>
+					<rdg wit="W4">ዝ ማሬ፡ ንሰግድ፡ ለኪ፡ ሰ በ፡</rdg>
+					<rdg wit="W5">ዝማረ፡ ንወድለኪ፡ ለበይት በብ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W5">መጽሐፈ፡ ተአም</rdg>
+					<rdg wit="W3 W2 W4"/>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2 W4"/>
+					<rdg wit="W5">ርኪ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ርኪ።</rdg>
+					<rdg wit="W3 W2 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W5">በሰላም፡ ኪያነ፡</rdg>
+					<rdg wit="W3 W2 W4"/>
+				</app>
+				<app>
+					<rdg wit="W1">በዕ ኪ። ወላዲተ፡ አምላክ፡ መ ርያም፡ እንበለ፡ ዕብሳብ፡</rdg>
+					<rdg wit="W3 W2 W4"/>
+					<rdg wit="W5">ባ</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2 W4"/>
+					<rdg wit="W5">ርኪ።</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2 W4"/>
+					<rdg wit="W5">ወኢትርስእኒ፡ ለ ገብርኪ፡ ኃጥእ፡ ወአባሴ ተ፡ወልደ፡ ማርያም ማር፡ አቡነ፡ ትክለ፡ ሃይወ ሮት፡ ወልደሙ፡
+						ለአቡን ዘገብርኤል፡ በዓለመ፡ ዘ ለም፡ አሜን፡ ወአሜን፡ እመ፡ ሥሉስ፡ ቅዱስ፡ ዘይ፡ስ፡ በእካሳት፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2 W5">ወ</rdg>
+					<rdg wit="W3 W4"/>
+				</app>
+				<app>
+					<rdg wit="W1">ሩካቤ፡ በይነ፡ ዘዓቀሂ፡ ብኩ ለኪ፡ ንስቲተ፡ ቃለ፡ ይባቤ፡ ፈትዊ፡ እሙ፡ በረከተ፡ አፉ ኪ፡ ሙስዘ፡
+						ከርቤ። ለነዳይ፡ ብእሲ፡ ወለዘረከበ፡ ምንደ ቤ፡ ሰብስተከ፡ ፈትት፡ ኢሳዊ ያስ፡ ይቤ። ስብሐት፡ ለኪ፡ ማ ርያም፡
+						በተልቈ፡ መላእክት፡ ዘአርያም። ሰብ፡ ለኪ፡ ማር ያም፡ በጕልቈ፡ ሣዕር፡ ዘገ ዳም። ስብሐት፡ ለኪ፡ ማር ያም፡ በኀልቈ፡
+						ልደቱ፡ ለ ዝናም። ስብሐት፡ ይጸሱ ለተአምርኪ፡ ዮም። ወበተ እምረ፡ ወልድኪ፡ ተፈሥሐ፡ ኵሉ፡ ዓለም።ኦእግዝእ ትየ፡
+						ማርያም፡ እሙ፡ ለእ የሱስ፡ ከዓሊ።</rdg>
+					<rdg wit="W2">ርስተ፡ ውስተ፡ ሰማያዊት ሀገርኪ፡ ምስለ፡ እለኦፍቁ ኪያኪ። ወምስለ፡ እለ፡ አስመርዎ፡ ለወልድኪ</rdg>
+					<rdg wit="W3 W4"/>
+					<rdg wit="W5">ይትወሐድ፡ በመለኮት፡ ብሁት፡ መንግሥት፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4 W5"/>
+					<rdg wit="W3 W2">ለዓለመ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4 W5"/>
+					<rdg wit="W2">ዓለም።</rdg>
+					<rdg wit="W3">ዓለም፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4 W5"/>
+					<rdg wit="W3 W2">አሜን።</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W4 W5"/>
+					<rdg wit="W2">ዘአትየ፡ ቅድስት፡ ድንግል፡ በ፪ማርያም። ማ አሃማ፡ እሙ፡ ለኢየሱስ፡ ክር ስቶስ፡ ከዓሊ፡</rdg>
+					<rdg wit="W3">ወእምዝ ናሁ፡ አዝዝዎሙ፡ ለመላ እክት፤ ወይቤልዎሙ፨</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2 W4"/>
+					<rdg wit="W3 W5">ወ</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ኀበ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ይትንበ ብ፡ መጽሐፈ፡ ተአምርኪ። አ ክናፈኪ፡ ጸልሊ። ወዘሰማዕ ነ፡ ቃላቲሁ፡</rdg>
+					<rdg wit="W2 W4">ይትነበብ፡</rdg>
+					<rdg wit="W3">ላሴ፡ ወአገብርኤል፡ ሁሩእ ወአንሥኡአ፡ አልባሰ፡ ዘመ ርዓ። ወኵሎ፡ ዘይትፈቀ ድ፡ ለወርጐ፡ መርዓዊ፡ ወ
+						መርዓቆ፡ ወረዱ፡ ምስለ ሠራዊትክሙ፡ ኀበ፡ እዳ ም፡ ወሔዋን። ወአስተዋ ብዎሙ፡ ወግባሩ፡ በዓለ። ወይቤልዎ፡ ለጢካኤል፡ ገ
+						ዱሕ፡ ቀርነ፡ ወሶበ፡ ነፍሐ፡ ሚካኤል፡ ወረዱ፡ መላእ ክት፡</rdg>
+					<rdg wit="W5">ዕረየ፡ ስብሐት። ንጽሕ ፍ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2 W4 W5"/>
+					<rdg wit="W3">ኀበ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1"/>
+					<rdg wit="W2 W5">መጽሐፈ፡</rdg>
+					<rdg wit="W4">መጽሐ ፈ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1"/>
+					<rdg wit="W2 W4">ተአምርኪ፡</rdg>
+					<rdg wit="W3">አዳም፡ ወሔዋን ። ወአስተጥሰብዎሙ፡ ወአ ልበስዎሙ፡ አልባሰ፡ ዘመር</rdg>
+					<rdg wit="W5">ተአምር ዘከሠትት፡ ቦቱ፡ እግዝ እትነ፡ ማርያም፡ አበየ፡ ነ ጋሃ፡ ለውሉደ፡ ሰብእ፡ ወ ቦቱ፡ ረባሕ፡
+						ዓቢየ፡ ለዘይ አምዖ፡ በአርሞሞ፡ ዘአ ንበለ፡ ተዘውአ፡ ሕሲና ወውእቱ፡ ማዕጸት፡ እ ሞት፡ ውስተ፡ ሕይወት</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W5"/>
+					<rdg wit="W2">አክና ፍኪ። ጸላሊ፡ ወዘሰማዕነ፡ ቃ ፡ ፡ ቲሁ፡</rdg>
+					<rdg wit="W4">በሰላ ም፡ ኪያነ፡ ባርኪ። ስቲያን። እግዚአብ ሔር፡ ይባርክሙ፡ ወይ ብርህ፡ አዕይንተ፡ አልባቢክሙ፡
+						ለሰሚ</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">በልብነ፡</rdg>
+					<rdg wit="W3 W4">ዓ፡</rdg>
+					<rdg wit="W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">አብቍለ አዕፁዊሁ፡ አልዕሊ። ወሕንበ ባቲሁ፡ ኦጽድሊ፡ ወህየንተ፡ ፲፴ወ፲ወየበላዕሌነ፡ አሰብሲ፡</rdg>
+					<rdg wit="W2">አብቍኪ። ወሕ ትባስቲነ፡ እጽድሊ፡ ህየንተ ፩፴ወ፡ ወይበላዕሕነ፡ አስብ ቤ፡</rdg>
+					<rdg wit="W3 W5"/>
+					<rdg wit="W4">ተአምሪሃ፡ ለእግዝ እትነ፡ ቅድስት፡ ወድ ግልት፡ በ፪ማርያም፡ ወላዲተ፡ አምላክ። ዘ ያሥ፡ ተፈስሕ፡
+						አልባብ፡ ወይመርህ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ወኵሎ፡ አሚረ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">በእንቲአነ፡ ተንብሊ።</rdg>
+					<rdg wit="W2">በእንቲ፡ ነ፡ ተኀብሊ። በከመተበውሐ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W3 W1">በከመ፡</rdg>
+					<rdg wit="W2 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ተበውሐ</rdg>
+					<rdg wit="W2 W4 W5"/>
+					<rdg wit="W3">ሕገ፡ ዘመርዓ። ወአንፈርዓሁ፡ ወገብሩ፡ በዓ ለ፡ ወተፈሥሑ፡ ወአስተነ፡ የድዎሙ፡ በኪደን፡ ጽኑዕ።
+						ወአንበሩ፡ እዴዊሆሙ፡ ዲ በ፡ ርእሶሙ፡ ወባረከዎሙ ወወሀብዎሙ፡ ሰላመ፡ ወዓ ርጉ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ለኪ፡ እምአብ፡ ወወልድ፡</rdg>
+					<rdg wit="W3 W4">ውስተ፡</rdg>
+					<rdg wit="W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W5"/>
+					<rdg wit="W2">ወወ ንፈስ፡</rdg>
+					<rdg wit="W3">ሰማይ፡ ወከመ ዝ፡ ገብሩ፡ ሥላሴ፡ በኪን፡ ወበጥበበ፡ ከመ፡ ያርእዩ፡ ብእለ፡ እጋ፡ ጥበቦሙ።</rdg>
+					<rdg wit="W4">መ ንግሥተ፡ ሰማያት፡ ዘኢይክሉ፡ ሰማያወ ያን፡ ወምድራውያ፡ ፈጽሞተ፡ ውዳሴሃ ተአምሪሃ፡ ለእግዝእትነ፡
+						ቅድስት፡ ድንግል፡ በክል ፪ማርያም፡ ወላዲተ፡ አምላክ።</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W2"/>
+					<rdg wit="W4 W5">ጸሎታ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W4">ወ</rdg>
+					<rdg wit="W2"/>
+					<rdg wit="W5">ወበረከታ፡ ወም ሕረተ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">መንፈስ፡</rdg>
+					<rdg wit="W2 W5"/>
+					<rdg wit="W3">ሎሙ፡ ስብሐት። በረከቶ ሙ፡</rdg>
+					<rdg wit="W4">ምሕረተ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ቅዱስ፡ ኃጢአተነ፡</rdg>
+					<rdg wit="W3"/>
+					<rdg wit="W4 W5">ፍቁር፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">አቅልሲ፡ በዝ፡</rdg>
+					<rdg wit="W2">እል ሴ፡ ዘዝ፡</rdg>
+					<rdg wit="W3"/>
+					<rdg wit="W4">በ ልዳ፡</rdg>
+					<rdg wit="W5">ወልዳየ ሀሉ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ዓለም፡ እምኔነ፡</rdg>
+					<rdg wit="W3 W4">የሀሉ፡</rdg>
+					<rdg wit="W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ኢትሲሰሊ፡ ወበዘይመጽእ።</rdg>
+					<rdg wit="W2">ኢትለ ሰሲ፡ ወበዘይመጽእ፡</rdg>
+					<rdg wit="W3 W5"/>
+					<rdg wit="W4">ምስለ</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2"/>
+					<rdg wit="W3 W4 W5">ምስለ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ዓለም፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ወልድኪ፡</rdg>
+					<rdg wit="W3">ኦመት ሙ፡ ላህየ፡ ድንግል፡ ለዓለ መ፡</rdg>
+					<rdg wit="W4 W5">ገብራ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ነፍሳነ፡ እ ምነፍሰኪ፡ ኢይሴሊ። በዓበ መ፡ ዓለም፤፡ አሜን። ሰላም፡</rdg>
+					<rdg wit="W2">ነፍስኒ፡ እምነፍን፡ ኢይሴሊ፡ ለዓለመ፡ ዓለም። አ ኦእግዝእትየ፡ ቅድስት፡ ድን ግል፡</rdg>
+					<rdg wit="W3"/>
+					<rdg wit="W4">ክር ቆስ፡ ለዓለመ</rdg>
+					<rdg wit="W5">ም፡ ኤማር</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2 W5"/>
+					<rdg wit="W3 W4">ዓለም፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2 W5"/>
+					<rdg wit="W3">አሜን።። ስላም፡ ለኪ፡ ምኅተ፡ ም ሥራቅ፡ በወልዳ፡ ኖሬ፡ ሰላ ም፡ ለኪ፡ ጽጽልት፡ በወራው ራ፡ ሰላም፡
+						ለኪ፡ ወጽዕደ ውት፡ ዘምስለ፡ ንዳል፡ ሳላ ም፡ ለኪ። በትረ፡ አፎን፡ ነ ዋፊተ፡ ፍሬ፡ ሰላምኪ፡ አንተ፡ ወለጽኪ፡ ፈብል፡
+						ዘምስለ፡ ዝማሬ፡ እስግድ ለኪ። መጽሐፈ፡ ተአምና ኪ፡ ይትነበብ፡ እለወትረ፡ ኪያነ፡ ባርኪ፡ ሰላመ፡ ባር</rdg>
+					<rdg wit="W4">አሜን፡ ውሀ ሎ፡ ፩ብእሲ፡ እምዘመ ደ፡ ይሁዳ። ወይሰመይ ኢያቄም፡ ወኢአውሰ በ፡ ብእሲተ፡ እምአገ ልደ፡
+						ካህናት፡ ወትስ መይ፡ ሐና። ወ፪ሆሙ፡ ኃራን፡ ወሥሙራ፡ ወኢራሐያነ፡ እግዚ እግዚአብሔር፤፡ ወብ እሲቱሰ፡ መካን፤ ወነበ
+						ሩ፡ እንዘ፡ የሐዝኑ፡ ወ ይቴክዙ፡ በእንተ፡ ዘአልቦ ሙ፡ ውሉድ፡ ወኵሎ ፡ አሚረ፡ የሐ ውሩ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W3 W1">ኪ፡</rdg>
+					<rdg wit="W2 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ኦእግዝእየ፡</rdg>
+					<rdg wit="W2 W4 W5"/>
+					<rdg wit="W3">ኪያነ፡ ኅቡረ። ከተ፡ ነ፡ እምኃዘን፡ ወኀይለ፡ ው ርስትየ፡ እምርስዓን፡ በ ማባርኪ፡ ተፀውረ፡ ብ ለየ፡
+						መባዕል፡ ሕን፡ አ ወርያም፡ ተሥሩ፡ ስሕ ቡዓን፡ በጊዜ፡ ጸሎት፡ ወፅ ብርን፡ ወበጊቤ፡ ንጹሕ፡ ቍ ርሳድም፡ ስሩርዘትነ፡
+						ንዒ፡ ውስተዝ፡ መሳን። ወላዲ አምላክ፡ ማርያም፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1">ማርያም፡ እመ፡</rdg>
+					<rdg wit="W2">ማርያም፡ እመ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">መድኅን፡ ወእመ፡ ብር ሃን፤</rdg>
+					<rdg wit="W2">መድኀን እመብርሃን፡ እመ፡ ቍርባ ንወእመ፡ ዕጠን፡ እመ፡ ነደ ወእመዋህድ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W2">እመ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ቍርባን። ወእመ ዕጣን፡ እመነድ፤</rdg>
+					<rdg wit="W2">ንገ ሥ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ወእመ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ዋሐድ። ስመ፡ ሰማያዊ፡ እ መ፡</rdg>
+					<rdg wit="W3 W2 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ክርስቶስ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">አምላክ፡</rdg>
+					<rdg wit="W3 W2 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W2">እመ</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">መሢሕ፡ ወእመ፡ መለኮታዊ፡ መፍርሕ። በማህለ፡ ወልድኪ</rdg>
+					<rdg wit="W2">መሲሕ፡ ወእመ፡ መለከታ ዊ፡ መፍርህ፡ በሣህለ፡ ወል ድኪ፡ ስእለተነ፡ ነጽሪ፡ በሞ ሕረተ፡ ወልድኪ፡ ሐውጸ
+						ተነ፡ ሥመሪ፡ እዴሁድ፡ እከ ያን፡ እስመ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W4">ኀበ፡</rdg>
+					<rdg wit="W3 W2 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ሰእስትነ፡ ነጽሪ። ወበም ሕረቱ፡ ለወልድኪ፡ ለሐውዖ፡ ትነ፡ ሥመሪ። መዓተ፡ ወልድ ኪ፡ በጸሎትኪ፡
+						አቅርሪ፡ አሜ ን። አይሁድ፡ ምዝቡራን፡ ሰ መ፡</rdg>
+					<rdg wit="W3 W2 W5"/>
+					<rdg wit="W4">ቤተ፡ ክርስ ቲያን፡ ወያዋርዙ፡ ጸሎ፡ ለእግዚአብሔር፡ ር፡ በብካይ፡ ወበገዓር ከመ፡ የሀቦሙ፡ ውሉ ደ፡
+						ወይክፍሉ፡ እምን ዋዮሙ፡ ለነዳያን፡ ወ ለምስኪናን፨ ወለቤ</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">መሪራን፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W3 W1 W4 W5"/>
+					<rdg wit="W2">ለኃደ ቲ፡ ይረዱ።፡ ታሕተ፡ ዕመቀ፡ ደ ይን። አሜን። አይሁድ፡ ምዝ ቡራን፡ ስመ፡ ዚአኪ፡ እለይ ጸልሁ፡
+						ድንግልናኪ፡ እለ፡ ይ ጋዱ፡ በሰይፌ፡ ወኬኤ ል፡ ይትኅበዱ፡ በሥቃየ፡ እኅ ይሕመሙ፡ ታሕተ፡ ደ ደን፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ለኃዲር፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ይረደ ታሐተ፡ ዕመ፡ ቀ፡</rdg>
+					<rdg wit="W2">ደረዱ። አሜ አይሁድሐሳውያውን፡ ይ ንግልናኪ፡ እለ፡ ያሰቈርሩ፡ በሰናስለ፡ እሳት፡ ይትዓመራ፡
+						ታሕት፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ደይን፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">አሜ ን። አይሁድ፡ እኩያን፡ ዕመ፡ ዚአኬ፡ እላ፡ ይጸልዑ፡ ድንግ ልናኪ፡ ይከህሩ፡ በሰይፈ፡ ሚ ካኤል፡
+						ይትዓፀዱ። ወበሥ ቃየ፡ እሳት፡ ይንድዱ፨ ታሐ</rdg>
+					<rdg wit="W2">እንበለ፡ ወፂ እ፡ ይንበሩ። አ። አይሁድ፡ አ ማዕያን፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1 W4">ተ፡</rdg>
+					<rdg wit="W3 W2 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">ደይን፡ ለኃዲር፡ ይረድ። አሜን፨ አይሁድ፡ ሐበውደ፡ ን፡</rdg>
+					<rdg wit="W3 W2 W5"/>
+					<rdg wit="W4">እግዚአብሔር፡ ወነበሩ፡ እንዘ፡ ይሲፈ ዉ፡ ተአሚኖሙ፡ ከመ፡ ይትወከፍ፡ እግዚአ ብሔር፡ ስእለቶሙ፡
+						ወየሀኮሙ፡ ውሉደ ወአሐተ፡ ዕለተ፡ ወፅኡ ኢያቄም፡ ወሐና፡ ብእ ቤቱ፡ ወቦኡ፡ ውስተ፡</rdg>
+				</app>
+				<app>
+					<rdg wit="W1 W2">ድንግልናኪ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W1">እስ፡ ድሰ ቈርሩ፨ በሰናስለ፡ እሳት፡ ያ ትንሠሩ፨ ታሐተ፡ ደደኖ፡</rdg>
+					<rdg wit="W2">እለ ይረግሙ፡ በሰይፌ፡ ሚካኤ ል፡ ይትገዞሙ፡ በሥቃየ እሳተ፡ ይሕመሙ፡ ታሕተ ደደን፡ ዘአልቦ፡ ሙዓሉ፡ ይ
+						ትሐቶሙ አ፡ አደሀር፡ አኩ ያን፡ ወጽድአን፡ ወዝልጉሳ ን፡ ድድንግልናኪ፡ እለ፡ ይፀ ርሩ፡ በእደ፡ ማካኤል፡ ይት ቀሰሩ፡
+						መታሕተ፡ ታሕቲ ት፡ ይትወረዉ፡ ወይትደፋ፡</rdg>
+					<rdg wit="W3 W4 W5"/>
+				</app>
+				<app>
+					<rdg wit="W3 W1">እ</rdg>
+					<rdg wit="W2 W4 W5"/>
+				</app>
+			</div>
+		</body>
+	</text>
+</TEI>
