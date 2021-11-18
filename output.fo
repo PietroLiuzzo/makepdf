@@ -1,0 +1,2234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+   <fo:layout-master-set>
+      <fo:page-sequence-master master-name="Aethiopica-master">
+         <fo:repeatable-page-master-alternatives>
+            <fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/>
+            <fo:conditional-page-master-reference page-position="first"
+                                                  odd-or-even="odd"
+                                                  master-reference="Aethiopica-chapter-first-odd"/>
+            <fo:conditional-page-master-reference page-position="first"
+                                                  odd-or-even="even"
+                                                  master-reference="Aethiopica-chapter-first-even"/>
+            <fo:conditional-page-master-reference page-position="rest"
+                                                  odd-or-even="odd"
+                                                  master-reference="Aethiopica-chapter-rest-odd"/>
+            <fo:conditional-page-master-reference page-position="rest"
+                                                  odd-or-even="even"
+                                                  master-reference="Aethiopica-chapter-rest-even"/>
+         </fo:repeatable-page-master-alternatives>
+      </fo:page-sequence-master>
+      <fo:page-sequence-master master-name="Aethiopica-Indexes">
+         <fo:repeatable-page-master-alternatives>
+            <fo:conditional-page-master-reference master-reference="indexes-blank" blank-or-not-blank="blank"/>
+            <fo:conditional-page-master-reference page-position="first"
+                                                  odd-or-even="odd"
+                                                  master-reference="Aethiopica-Indexes-first-odd"/>
+            <fo:conditional-page-master-reference page-position="first"
+                                                  odd-or-even="even"
+                                                  master-reference="Aethiopica-Indexes-first-even"/>
+            <fo:conditional-page-master-reference page-position="rest"
+                                                  odd-or-even="odd"
+                                                  master-reference="Aethiopica-Indexes-rest-odd"/>
+            <fo:conditional-page-master-reference page-position="rest"
+                                                  odd-or-even="even"
+                                                  master-reference="Aethiopica-Indexes-rest-even"/>
+         </fo:repeatable-page-master-alternatives>
+      </fo:page-sequence-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="blank"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="indexes-blank"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-Indexes-rest-odd"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"
+                         column-count="2"
+                         column-gap="10mm"/>
+         <fo:region-before region-name="rest-region-before-odd" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-odd" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-Indexes-rest-even"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"
+                         column-count="2"
+                         column-gap="10mm"/>
+         <fo:region-before region-name="rest-region-before-even" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-even" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-Indexes-first-even"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"
+                         column-count="2"
+                         column-gap="10mm"/>
+         <fo:region-after extent="25pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-Indexes-first-odd"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"
+                         column-count="2"
+                         column-gap="10mm"/>
+         <fo:region-before region-name="rest-region-before-first" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-first" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-chapter-first-odd"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+         <fo:region-before region-name="rest-region-before-first" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-first" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-chapter-first-even"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+         <fo:region-after extent="25pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-chapter-rest-odd"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+         <fo:region-before region-name="rest-region-before-odd" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-odd" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-chapter-rest-even"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+         <fo:region-before region-name="rest-region-before-even" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-even" extent="12.5pt"/>
+      </fo:simple-page-master>
+   </fo:layout-master-set>
+   <fo:bookmark-tree>
+      <fo:bookmark internal-destination="LIT4714Salamlaki">
+         <fo:bookmark-title/>
+      </fo:bookmark>
+   </fo:bookmark-tree>
+   <fo:page-sequence master-reference="Aethiopica-master">
+      <fo:flow flow-name="xsl-region-body" font-family="Ludolfus">
+         <fo:block-container font-size="12pt"
+                             space-before="25.2pt"
+                             space-after="12.24pt"
+                             font-family="Ludolfus"
+                             font-weight="700"
+                             text-align="center"
+                             display-align="center">
+            <fo:block>Test Edition</fo:block>
+         </fo:block-container>
+         <fo:block font-size="12pt"
+                   space-before="25.2pt"
+                   space-after="12.24pt"
+                   font-family="Ludolfus"
+                   font-weight="700"
+                   text-align="center"
+                   display-align="center"/>
+         <fo:block text-align="center"
+                   font-size="20pt"
+                   font-style="italic"
+                   space-before="2em"
+                   space-after="2em"/>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd"
+                     master-reference="Aethiopica-master"
+                     format="i">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Table of Contents</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body" font-family="Ludolfus">
+         <fo:block-container font-size="12pt"
+                             space-before="25.2pt"
+                             space-after="12.24pt"
+                             font-family="Ludolfus"
+                             font-weight="700"
+                             text-align="center"
+                             display-align="center">
+            <fo:block>Test Edition</fo:block>
+         </fo:block-container>
+         <fo:block font-size="12pt"
+                   space-before="25.2pt"
+                   space-after="12.24pt"
+                   font-family="Ludolfus"
+                   font-weight="700"
+                   text-align="center"
+                   display-align="center">Table of Contents</fo:block>
+         <fo:block text-align-last="justify"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus"
+                   margin-bottom="0.5cm">
+            <fo:inline>Acknowledgements</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="Acknowledgement">
+               <fo:page-number-citation ref-id="Acknowledgement"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block text-align-last="justify"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus"
+                   margin-bottom="0.5cm">
+            <fo:inline>List of Figures</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="listfigures">
+               <fo:page-number-citation ref-id="listfigures"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block text-align-last="justify"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus"
+                   margin-bottom="0.5cm">
+            <fo:inline>Introduction</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="introduction">
+               <fo:page-number-citation ref-id="introduction"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block text-align-last="justify"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus"
+                   margin-bottom="0.5cm">
+            <fo:inline>Bibliography</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="bibliography">
+               <fo:page-number-citation ref-id="introduction"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block margin-top="0.5cm"/>
+         <fo:block text-align-last="justify"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus">
+            <fo:inline>Index of Persons</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="IndexPersons">
+               <fo:page-number-citation ref-id="IndexPersons"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block text-align-last="justify"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus">
+            <fo:inline>Index of Places</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="IndexPlaces">
+               <fo:page-number-citation ref-id="IndexPlaces"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block margin-top="0.5cm"/>
+         <fo:block text-align-last="justify"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus">
+            <fo:inline>Plates</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="Appendix">
+               <fo:page-number-citation ref-id="Appendix"/>
+            </fo:basic-link>
+         </fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd"
+                     master-reference="Aethiopica-master"
+                     format="i">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Acknowledgement</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true">
+         <fo:block-container id="Acknowledgement">
+            <fo:block xml:lang="en" hyphenate="true">I wish to aknowledge the fact that individual scholarly work is impossible and that lonely authorship is the sole fruit of egoistic hypocrisy and false attribution grounded on the inappropriate extension of capitalist competition principles onto the pursuit of knowledge and human moral, spiritual, and intellectual advancement. Authorship is not a necessary evil, is a plague which should be eradicated by replacing it systematically with correctly attributed, versioned and vetted contributions.</fo:block>
+            <fo:block>This output is based on collaboratively edited data from the project Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea (Schriftkultur des christlichen Äthiopiens und Eritreas: eine multimediale Forschungsumgebung). </fo:block>
+            <fo:block>Contributors to the files directly included are: Massimo Villa, Susanne Hummel, Denis Nosnitsin, Stéphane Ancel, Pietro Maria Liuzzo, Eugenia Sokolinski, Giulia Casella, Vitagrazia Pisani, Sophia Dege-Müller. This list does not include contributors to other related entities. Please follow links to the source data where contributions are listed and versioned.</fo:block>
+         </fo:block-container>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd"
+                     master-reference="Aethiopica-master"
+                     format="i">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">List of Figures</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                        <fo:page-number/>
+                     </fo:block>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                        <fo:page-number/>
+                     </fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">List of Figures</fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body" font-family="Ludolfus">
+         <fo:block id="listfigures"
+                   font-size="12pt"
+                   space-before="25.2pt"
+                   space-after="12.24pt"
+                   font-family="Ludolfus"
+                   font-weight="700"
+                   text-align="center"
+                   display-align="center">List of Figures</fo:block>
+         <fo:block text-align-last="justify"
+                   start-indent="1cm"
+                   text-indent="-1cm"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus">
+            <fo:inline font-weight="bold">Fig. 1 </fo:inline>
+            <fo:inline>AMM-007, Witness 1</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="d15e89">
+               <fo:page-number-citation ref-id="d15e89"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block text-align-last="justify"
+                   start-indent="1cm"
+                   text-indent="-1cm"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus">
+            <fo:inline font-weight="bold">Fig. 2 </fo:inline>
+            <fo:inline>MR-001, Witness 2</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="d15e98">
+               <fo:page-number-citation ref-id="d15e98"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block text-align-last="justify"
+                   start-indent="1cm"
+                   text-indent="-1cm"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus">
+            <fo:inline font-weight="bold">Fig. 3 </fo:inline>
+            <fo:inline>QS-014, Witness 3</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="d15e111">
+               <fo:page-number-citation ref-id="d15e111"/>
+            </fo:basic-link>
+         </fo:block>
+         <fo:block text-align-last="justify"
+                   start-indent="1cm"
+                   text-indent="-1cm"
+                   space-after="1pt"
+                   font-size="10.5pt"
+                   font-family="Ludolfus">
+            <fo:inline font-weight="bold">Fig. 4 </fo:inline>
+            <fo:inline>UM-014, Witness 4</fo:inline>
+            <fo:leader leader-pattern="dots"/>
+            <fo:basic-link internal-destination="d15e120">
+               <fo:page-number-citation ref-id="d15e120"/>
+            </fo:basic-link>
+         </fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd"
+                     master-reference="Aethiopica-master"
+                     format="i">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Introduction</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true"><!-- INTRODUCTION     -->
+         <fo:block id="introduction">
+            <fo:block hyphenate="true">
+               <fo:block hyphenate="true" page-break-after="avoid" id="d15e61">Intro</fo:block>
+               <fo:block xml:lang="en" hyphenate="true">This is a mini edition to demonstrate the editorial workflow described in the Guidelines.</fo:block>
+               <fo:block xml:lang="en" hyphenate="true" text-indent="0.43cm">
+                  <fo:basic-link internal-destination="bm_Liuzzo2019Digital">
+                     <fo:inline id="d15e67bm_Liuzzo2019Digital">
+                        <inline xmlns="http://www.w3.org/1999/XSL/Format">Liuzzo 2019</inline>
+                     </fo:inline>
+                  </fo:basic-link>
+               </fo:block>
+            </fo:block>
+         </fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd"
+                     master-reference="Aethiopica-master"
+                     format="i">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Bibliography</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true"><!-- BIBLIOGRAPHY           -->
+         <fo:block id="bibliography"
+                   page-break-before="always"
+                   font-weight="700"
+                   margin-bottom="6.25pt">Bibliography</fo:block>
+         <fo:block>
+            <fo:block id="bm_Liuzzo2019Digital"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">Liuzzo, P. M. 2019. <fo:inline font-style="italic">Digital Approaches to Ethiopian and Eritrean Studies</fo:inline>, Supplement to Aethiopica, 8 (Wiesbaden: Harrassowitz Verlag, 2019).<fo:basic-link internal-destination="bm:Liuzzo2019Digitald15e66">
+                  <fo:page-number-citation ref-id="bm:Liuzzo2019Digitald15e66"/>
+               </fo:basic-link>
+            </fo:block>
+         </fo:block>
+         <!--  break  before Catalogue -->
+         <fo:block page-break-after="always"/>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd" master-reference="Aethiopica-master">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Edition</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true"><!-- EDITION     -->
+         <fo:block-container>
+            <fo:block text-align="center" space-before="2mm" space-after="3mm">Edition of Salām laki ḫoḫǝta mǝśrāq</fo:block>
+            <fo:block>List of known manuscripts for this textual unit from  Beta maṣāḥǝft 
+                <fo:list-block provisional-distance-between-starts="12mm"
+                              provisional-label-separation="12mm"
+                              start-indent="1cm">
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESsdm005</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESap028</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESsdgm006</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESum042</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESdd006</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESamq002</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESamq014</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESnsm007</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block>ESdd010</fo:block>
+                     </fo:list-item-label>
+                     <fo:list-item-body/>
+                  </fo:list-item>
+                  <fo:list-item>
+                     <fo:list-item-label>
+                        <fo:block/>
+                     </fo:list-item-label>
+                     <fo:list-item-body>
+                        <fo:block>Witnesses used for the edition of the text <fo:list-block provisional-distance-between-starts="12mm"
+                                          provisional-label-separation="12mm"
+                                          start-indent="1cm">
+                              <fo:list-item>
+                                 <fo:list-item-label>
+                                    <fo:block>
+                                       <fo:inline font-weight="800" font-size="9pt">W1</fo:inline>
+                                    </fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body>
+                                    <fo:block hyphenate="true"
+                                              space-before="0.45cm"
+                                              font-size="9pt"
+                                              line-height="11pt"
+                                              margin-left="0.45cm">
+                                       (https://betamasaheft.eu/ESamm007)
+                                    </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                              <fo:list-item>
+                                 <fo:list-item-label>
+                                    <fo:block>
+                                       <fo:inline font-weight="800" font-size="9pt">W2</fo:inline>
+                                    </fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body>
+                                    <fo:block hyphenate="true"
+                                              space-before="0.45cm"
+                                              font-size="9pt"
+                                              line-height="11pt"
+                                              margin-left="0.45cm">
+                                       (https://betamasaheft.eu/ESmr001)
+                                    </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                              <fo:list-item>
+                                 <fo:list-item-label>
+                                    <fo:block>
+                                       <fo:inline font-weight="800" font-size="9pt">W3</fo:inline>
+                                    </fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body>
+                                    <fo:block hyphenate="true"
+                                              space-before="0.45cm"
+                                              font-size="9pt"
+                                              line-height="11pt"
+                                              margin-left="0.45cm">
+                                       (https://betamasaheft.eu/ESqs014)
+                                    </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                              <fo:list-item>
+                                 <fo:list-item-label>
+                                    <fo:block>
+                                       <fo:inline font-weight="800" font-size="9pt">W4</fo:inline>
+                                    </fo:block>
+                                 </fo:list-item-label>
+                                 <fo:list-item-body>
+                                    <fo:block hyphenate="true"
+                                              space-before="0.45cm"
+                                              font-size="9pt"
+                                              line-height="11pt"
+                                              margin-left="0.45cm">
+                                       (https://betamasaheft.eu/ESum014)
+                                    </fo:block>
+                                 </fo:list-item-body>
+                              </fo:list-item>
+                           </fo:list-block>
+                        </fo:block>
+                     </fo:list-item-body>
+                  </fo:list-item>
+               </fo:list-block>
+            </fo:block>
+            <fo:block text-align="center" space-before="2mm" space-after="3mm">Descriptions of the witnesses for Salām laki ḫoḫǝta mǝśrāq</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">SDM-005</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESsdm005d16e552">
+                     <fo:inline id="ESsdm005d16e554INS0177SDM">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0177SDM">Soṭā Dabra Salām Qǝddus Mikāʾel</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>According to Additio 1, the writing
+                        was commissioned during the time of rās Mangašā (Yoḥannǝs), governor of
+                        Tǝgray in 1889-1906.</fo:inline>
+                  The Ms. was donated by qesa gabaz Śāhlu (acronym for Śāhla Śǝllāse). The names of Śāhla Śǝllāse and
+                     Ḫirut Śǝllāse are written in supplication formulas. Other persons mentioned are
+                     Gabra Giyorgis (fols. 32rb, , 53ra), Habta Māryām (33vb, , 710va), Gabra ʾAragāwi (30vb, , 70va) and Walatta Bǝrhān (27rb,
+                     53vb).
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESsdm005">https://betamasaheft.eu/ESsdm005</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">AP-028. Also identified as C3-IV-65 </fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESap028d17e212">
+                     <fo:inline id="ESap028d17e214INS0030AP">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0030AP">ʿĀddaqāḥarsi Ṗarāqliṭos</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>19th century; quires I-V might be
+                        only a little older than quire VI.</fo:inline>
+                  Owners and donors: unit 1: Ḫāyla Śǝllāse, Walatta ʾAnanya, Gabra Ṣādǝqān
+                     (supplication formulas, e.g., fols. 36rb, ); unit 2: Ḫāyla
+                     Śǝllāse, Gabra Ṣādǝqān, Kidāna Māryām (41rb)
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESap028">https://betamasaheft.eu/ESap028</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p1</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESap028">https://betamasaheft.eu/ESap028</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p2</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESap028">https://betamasaheft.eu/ESap028</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">SDGM-006</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESsdgm006d18e414">
+                     <fo:inline id="ESsdgm006d18e416INS0204SDGM">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0204SDGM">Ṣabalā Dabra Gannat Māryām</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>According to the colophon, the main codicological unit of the Ms. (<fo:inline>#p3</fo:inline>)
+                        was written in 250 year of mercy (= 1674 A.D.). It could be dated back also
+                        to 1598 A.D. (if the date is calculated according to the cicle of martyrs);
+                        this earlier date would better match the palaeographic features attested for
+                        hand a. 
+ Quire II (<fo:inline>#p2</fo:inline>) is of much more recent time (first half of the 20th
+                        cent., cp. dated Ms. BMQM-004 written by the same hand).
+ Fol. 90 and 91 (with miniatures), originating from a
+                        different codex (?), probably date back to the 17th cent.</fo:inline>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESsdgm006">https://betamasaheft.eu/ESsdgm006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p1</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>The unit probably dates back to the 17th cent.; may be contemporary with the main unit (<fo:inline>#p3</fo:inline>
+                  </fo:inline>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESsdgm006">https://betamasaheft.eu/ESsdgm006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p2</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>Quire II is of recent time (first half of the 20th
+                        cent.)</fo:inline>
+                  The name of the donor/owner
+                     Walda Śǝllāse is written in the supplication formula on fol. 15vb.
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESsdgm006">https://betamasaheft.eu/ESsdgm006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p3</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>According to the colophon, the unit
+                        was written in 250 year of mercy (= 1674 A.D.). It could be dated back also
+                        to 1598 A.D. (if the date is calculated according to the cicle of martyrs);
+                        this earlier date would better match the palaeographic features attested for
+                        hand a.</fo:inline>
+                  The name of the original donors have been
+                     erased throughout the Ms. and often crudely replaced with that of Qǝddǝsta
+                     Krǝstos and Tasfā Mikāʾel (see also Additio 6). Besides, many other names have
+                     been added in the same more recent hand: Walatta Dǝngǝl (fols. 23rb, ), Walatta Qāl (24va, , 25vb),
+                     Walda Krǝstos (26va), and others.
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESsdgm006">https://betamasaheft.eu/ESsdgm006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p4</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>17th cent.</fo:inline>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESsdgm006">https://betamasaheft.eu/ESsdgm006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">UM-042</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESum042d19e2397">
+                     <fo:inline id="ESum042d19e2399INS0017UM">ʿUra Qirqos / UQ</fo:inline>
+                  </fo:inline>
+                  <fo:inline>Second half of the 18th cent.
+                        (?)</fo:inline>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESum042">https://betamasaheft.eu/ESum042</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">DD-006. Also identified as C3-IV-221, 508</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESdd006d20e451">
+                     <fo:inline id="ESdd006d20e453INS0105DD">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0105DD">Dabra Dāmmo ʾAbuna ʾAragāwi</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>According to Additio 2, the main production unit was
+                        donated in the time of King <fo:inline id="ESdd006d20e458PRS6229LebnaDe">King Lǝbna Dǝngǝl</fo:inline> (r. 1508-1540).
+ Quires III,
+                        V-XXVIII, XXXIV date to the first half of the 16th cent.
+ Quires IV,
+                        XXIX-XXXIII date to the 18th cent.
+ Quires I and II date to a more
+                        recent time (19th cent.?).
+ Fol. 252 (with the
+                        miniature) originates from an old codex (15th cent.?).</fo:inline>
+                  <fo:block xml:lang="en" hyphenate="true">According to Additio
+                     2, Gabra Manfas Qǝddus donated the Ms. to Dabra Dāmmo; he is also mentioned on
+                     fol. 83rb, 215vb (Text III-4b, hand d, 16th century). </fo:block>
+                  <fo:block xml:lang="en" hyphenate="true" text-indent="0.43cm"> ʾAbuna Bǝʾǝse ʾƎgziʾabǝḥer is mentioned as the commissioner in the
+                     concluding supplication formula of Text III-4a; furthermore, his name is
+                     written throughout Texts III-2 and III-4a (hand e, 18th century).</fo:block>
+                  <fo:block xml:lang="en" hyphenate="true" text-indent="0.43cm">Owner ʾabuna Gabra Māryām is mentioned in
+                     supplication formulas throughout Text I (hand a, 19th century).</fo:block>
+                  <fo:block xml:lang="en" hyphenate="true" text-indent="0.43cm">The names Gabra Śǝllāse
+                     and Gabra ʾAmlāk are written in Text II (fol. 6vb, hand
+                     b, 19th century).</fo:block>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd006">https://betamasaheft.eu/ESdd006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p1</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>19th cent.?</fo:inline>
+                  <fo:block xml:lang="en" hyphenate="true">Owner ʾabuna Gabra Māryām is mentioned in
+                     supplication formulas throughout Text I (hand a, 19th century).</fo:block>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd006">https://betamasaheft.eu/ESdd006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p2</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>19th cent.?</fo:inline>
+                  <fo:block xml:lang="en" hyphenate="true">The names Gabra Śǝllāse
+                     and Gabra ʾAmlāk are written in Text II (fol. 6vb, hand
+                     b, 19th century).</fo:block>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd006">https://betamasaheft.eu/ESdd006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p3</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>According to Additio 2, the main production unit was
+                        donated in the time of King <fo:inline id="ESdd006d20e1282PRS6229LebnaDe">King Lǝbna Dǝngǝl</fo:inline> (r. 1508-40).</fo:inline>
+                  <fo:block xml:lang="en" hyphenate="true">According to Additio
+                     2, Gabra Manfas Qǝddus donated the Ms. to Dabra Dāmmo; he is also mentioned on
+                     fol. 83rb, 215vb (Text III-4b, hand d, 16th century). </fo:block>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd006">https://betamasaheft.eu/ESdd006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p4</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>18th cent.</fo:inline>
+                  <fo:block xml:lang="en" hyphenate="true"> ʾAbuna Bǝʾǝse ʾƎgziʾabǝḥer is mentioned as the commissioner in the
+                     concluding supplication formula of Text III-4a; furthermore, his name is
+                     written throughout Texts III-2 and III-4a (hand e, 18th century).</fo:block>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd006">https://betamasaheft.eu/ESdd006</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">MR-001</fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESmr001">https://betamasaheft.eu/ESmr001</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p1</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESmr001d21e468">
+                     <fo:inline id="ESmr001d21e470INS0042MR">Mǝdra Ruba /MR</fo:inline>
+                  </fo:inline>
+                  <fo:inline> Based on other manuscripts
+                           written by <fo:inline id="ESmr001d21e476PRS10788WaldaMuse">Walda
+                              Muse</fo:inline> (<fo:inline/>, <fo:inline/>, <fo:inline/>, and <fo:inline/>) which contain information allowing
+                           approximate dating, we may infer that the scribe should have written the
+                           manuscript between 1865 and 1890.</fo:inline>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESmr001">https://betamasaheft.eu/ESmr001</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p2</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESmr001">https://betamasaheft.eu/ESmr001</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">AMQ-002</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESamq002d22e478">
+                     <fo:inline id="ESamq002d22e480INS0065AMQ">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0065AMQ">ʿĀddigrāt Dabra Mankǝrāt Qǝddus Qirqos</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>1931 E.C. (s. Additio 1).</fo:inline>
+                  According to Additio 1, the Ms. was purchased
+                     and donated to the church by Gabra Ḥǝywat. He and his family members are
+                     mentioned also in the supplication formulas throughout the Ms.
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESamq002">https://betamasaheft.eu/ESamq002</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">AMQ-014</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESamq014d23e270">
+                     <fo:inline id="ESamq014d23e272INS0065AMQ">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0065AMQ">ʿĀddigrāt Dabra Mankǝrāt Qǝddus Qirqos</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>18th century; Quires XIII-XVI were added probably
+                        somewhat later.</fo:inline>
+                  The owner ʿAmda Māryām is mentioned in the supplication formulas
+                     throughout quires I-XII; Lǝbna Dǝngǝl and his wife ʾAmata Mikāʾel are mentioned
+                     in quires XIII-XVI.
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESamq014">https://betamasaheft.eu/ESamq014</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p1</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESamq014d23e577">
+                     <fo:inline id="ESamq014d23e579INS0065AMQ"> /</fo:inline>
+                  </fo:inline>
+                  <fo:inline>The first unit is somewhat older than the second.</fo:inline>
+                     The owner ʿAmda Māryām is mentioned in the supplication formulas
+                        throughout quires I-XII
+                  </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESamq014">https://betamasaheft.eu/ESamq014</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p2</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>Quires XIII-XVI were added probably
+                           somewhat later.</fo:inline>
+                     The owner Lǝbna Dǝngǝl and his wife ʾAmata Mikāʾel are mentioned
+                        in quires XIII-XVI.
+                  </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESamq014">https://betamasaheft.eu/ESamq014</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">AMM-007</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESamm007d24e554">
+                     <fo:inline id="ESamm007d24e556INS0064AMM">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0064AMM">ʿĀddigrāt Madḫāne ʿĀlam</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>19th century</fo:inline>
+                  Various names have been written in the
+                     supplication formulas throughout the Ms., in a secondary hand, e.g., Za-Walda
+                     Māryām, Walda Yoḥannǝs, Walatta Śǝllāse.
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESamm007">https://betamasaheft.eu/ESamm007</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">NSM-005</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESnsm007d25e579">
+                     <fo:inline id="ESnsm007d25e581INS0113NSM">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0113NSM">Nǝḥbi Qǝddus Mikāʾel</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>First half of the 20th
+                        cent.(?)</fo:inline>
+                  Several names of donors/owners, such as "our brother" (ʾǝḫuna)
+                     Walda Māryām and Walatta Māryām, are inserted in supplication formulas
+                     throughout Text I-4, by a secondary hand.
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESnsm007">https://betamasaheft.eu/ESnsm007</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">UM-014</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESum014d26e350">
+                     <fo:inline id="ESum014d26e352INS0082UMQ">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0082UMQ">ʿUrā Masqal</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline id="ESum014d26e355">
+                     <fo:inline id="ESum014d26e357INS0017UM">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0017UM">ʿUrā Qirqos</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>Quires III-XXI: first half of the
+                        16th cent.(before 1540). King Lǝbna Dǝngǝl (r. 1508-1540) is mentioned on
+                           fol. 16rb.
+ Quires I and II: late 18th or
+                        early 19th cent. (?)</fo:inline>
+                  According to Additio 1, <fo:inline id="ESum014d26e369PRS13060Cammar">ʾabeto Č̣ammār</fo:inline> has
+                     donated the Ms. His name (also called Zawalda Māryām Č̣ammār) and that of
+                     <fo:inline id="ESum014d26e372PRS13062TaklaHaymanotUraMasqal">ʾabuna Takla Hāymānot</fo:inline> are written in the
+                     supplication formulas on fols. 9ra, b (hand a).
+ Walda
+                     Śǝllāse is mentioned in the supplication formula on fols. 9va,  in hand b. The names of ʿĀmdā Yoḥannǝs and Sabla Wangel are
+                     stated in the supplication formula in fol. 15vb (hand
+                     c).
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESum014">https://betamasaheft.eu/ESum014</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p1</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESum014d26e724">
+                     <fo:inline id="ESum014d26e726INS0082UMQ">Dabra Masqal</fo:inline>
+                  </fo:inline>
+                  <fo:inline>late 18th or
+                        early 19th cent. (?)</fo:inline>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESum014">https://betamasaheft.eu/ESum014</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p2</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline>late 18th or
+                           early 19th cent. (?)</fo:inline>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESum014">https://betamasaheft.eu/ESum014</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p3</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESum014d26e1179">
+                     <fo:inline id="ESum014d26e1181INS0082UMQ">Dabra Masqal</fo:inline>
+                  </fo:inline>
+                  <fo:inline>Quires III-XXI: first half of the
+                           16th cent.(before 1540). <fo:inline id="ESum014d26e1187PRS6229LebnaDe">King Lǝbna Dǝngǝl</fo:inline> (r. 1508-1540) is mentioned on
+                           fol. 16rb.</fo:inline>
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESum014">https://betamasaheft.eu/ESum014</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">QS-014</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESqs014d27e801">
+                     <fo:inline id="ESqs014d27e803INS0198QS">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0198QS">Qalāqǝl Māryām Ṣǝyon</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>Za-Manfas Qǝddus is the baptismal
+                        name of <fo:inline id="ESqs014d27e808PRS8265Sabagadi">daǧǧāzmāč Subagadis or Sabāgādis</fo:inline>, the ruler of Tǝgray in 1822-31.
+                        The replacement of the name of the original donors by that of his name hints
+                        that the Ms. was written not later than in the early 19th
+                        century.</fo:inline>
+                  The names of the original donors have been
+                     erased throughout the Ms. and replaced with <fo:inline id="ESqs014d27e817PRS8265Sabagadi">Za-Manfas Qǝddus</fo:inline>, often together
+                     with the names of his mother Walatta Ṣǝyon, his father Walda Lǝʿul and Gabra
+                     Sāmuʾel (in red, until fols. 109vc, ), written in a
+                     secondary hand. In some cases, the original names have been preserved in
+                     supplication formulas: Hǝryaqos on fols. 12va, , Zenā
+                     Gabrǝʾel fols 204vb–212rb, , 219vb-227va, and
+                     Takla Hāymānot fols 213vb–218vc.
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESqs014">https://betamasaheft.eu/ESqs014</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm" space-after="3mm">DD-010. Also identified as 338, C3-IV-258</fo:block>
+            <fo:block space-before="2mm">
+               <fo:block font-style="italic"
+                         space-after="3mm"
+                         page-break-inside="avoid"
+                         page-break-after="avoid">History</fo:block>
+               <fo:block>
+                  <fo:inline id="ESdd010d28e573">
+                     <fo:inline id="ESdd010d28e575INS0105DD">
+                        <fo:basic-link external-destination="https://betamasaheft.eu//INS0105DD">Dabra Dāmmo ʾAbuna ʾAragāwi</fo:basic-link>
+                     </fo:inline>
+                  </fo:inline>
+                  <fo:inline>According to the colophon, the Ms.
+                        was written in the third year of the reign of King Takla Hāymānot who is
+                        King Takla Hāymānot II (r. 1769-77), put on the throne by rās Mikāʾel Sǝhul
+                        on 17 October 1769. Ras Mikāʾel is also mentioned in the colophon.
+                        
+ ff. 2-5 (quire A), dating possibly to the 17th cent., and quire I,
+                        dating probably to the 16th century, were added later.</fo:inline>
+                  According to Additio 3, the Ms. was donated
+                     by Walda ʾAragāwi, disciple of ʾabuna
+                     Mātǝyās. Both names are mentioned in supplication formulas, sometimes written
+                     interlineally in the main hand. In addition, further names were added to
+                     supplication formulas by the main hand: his father Za-Walda Māryām (fols. 19vc, , 25ra, 32rc etc.) and his mother ʾAmata Krǝstos
+                     (22vc, 25rc etc.).
+               </fo:block>
+            </fo:block>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd010">https://betamasaheft.eu/ESdd010</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p1</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd010">https://betamasaheft.eu/ESdd010</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p2</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd010">https://betamasaheft.eu/ESdd010</fo:basic-link>
+            </fo:block>
+            <fo:block space-before="2mm" space-after="3mm">
+        Part p3</fo:block>
+            <fo:block space-before="2mm" space-after="3mm"/>
+            <fo:block space-before="2mm"
+                      space-after="3mm"
+                      margin-bottom="16.25pt"
+                      page-break-before="avoid">URL: <fo:basic-link external-destination="https://betamasaheft.eu/ESdd010">https://betamasaheft.eu/ESdd010</fo:basic-link>
+            </fo:block>
+            <fo:block hyphenate="true">
+               <fo:block hyphenate="true" id="#Incipit">
+                  <fo:block linefeed-treatment="preserve"> ​ሰላ​ም፡ ​ለኪ፡
+                            ​ማር​ያም።
+                        ​ኆኅ​ተ፡ ​ምሥ​ራቅ፡</fo:block>
+               </fo:block>
+               <fo:block hyphenate="true">
+                  <fo:block linefeed-treatment="preserve">
+                            ​ዘወ​ልደ፡
+                            ​በወ​ልዳ፡
+                            ​ናዊ፡
+                            ​ኖሬ፡
+                        ​ሰላ​ም፡ ​ለኪ፡
+                            ​ዓፀ​ድ፡
+                            ​ጽጽ​ልት፡
+                            ​ዘእ​ሰከ​ደሬ፡
+                            ​ዘኢ​ስኪ​ድራ፡
+                            ​ዘእ​ስከ​ደሬ፡ ​ለሶ​ኪ፡ ​ስር​ጉት፡ ​በወ​ሪው​ሬ፡ ​ሰለ​ኪ፡ ​ፅድ​ልት፡
+                            ​ሰላ​ም፡ ​ለኪ፡
+                            ​እስ​መ፡ ​ወል​ድኪ፡
+                            ​ፈጣ​ሬ፡
+                            ​ሰላ፡
+                            ​ለኪ፡ ​ጽድ​ልተ፡
+                            ​ንጸ​ሬ፡
+                            ​ሰላ​ም፡
+                            ​ሰላ​ኪ፡
+                            ​ለኪ፡ ​ጽድ​ልተ፡
+                            ​ንፂ​ሬ፡
+                            ​ሥር​ጉት፡
+                            ​በወ​ራው​ሬ፡
+                            ​በወ​ራው​ረ፡ ​ሰ፡
+                            ​ሰላ​ም፡
+                            ​ለኪ፡
+                            ​በቅ​ረ፡
+                            ​ወጽ​ዕድ​ውት፡ ​ዘም​ስለ፡ ​ንዳ​ሬ፡
+                            ​ሳላ​ም፡ ​ለኪ።
+                            ​በት​ረ፡
+                            ​አሮ​ን፡
+                            ​እሮ​ን፡
+                            ​ጸዋ​ሪተ፡
+                            ​ጸዋ​ፊተ፡
+                            ​ጸዋ​ሪተ፡ፍ​ሬ፡ ​ሰ፡
+                            ​ፍሬ፡
+                            ​ሳላ​ም፡ ​ለኪ።
+                            ​ሶላ​ኪ፡ ​እን​ተ፡
+                            ​ሰላ​ም፡
+                            ​ኪ፡
+                            ​አን​ተ፡
+                            ​ወለ​ድኪ፡
+                            ​ወለ​ጽኪ፡ ​ፈብ​ሬ፡
+                            ​ፈጣ​ሬ፡
+                            ​ሰላ​ም፡
+                            ​ዘም​ስለ፡
+                            ​ዝማ​ረ፡ ​ንስ​ጣድ፡
+                            ​ዝማ​ሬ፡
+                            ​ለኪ፡
+                            ​እስ​ግድ፡
+                            ​ንሰ​ግድ፡
+                            ​ለኪ።
+                            ​ለስ​ይትን ​በብ፡
+                            ​ዘም​ስለ፡ ​ዝማ​ሬ፡
+                            ​መጽ​ሐፈ፡
+                            ​ንሰ​ማድ፡
+                            ​ተአ​ምና​ኪ፡
+                            ​ለኪ፡ ​ሶበ፡
+                            ​ይት​ነበ​ብ፡
+                            ​መጽ​ሐፈ፡
+                            ​ለለ​ወት​ረ፡
+                            ​ተአ​ምር​ኪ።
+                            ​ተአ​ምር​ኪ፡
+                            ​በሰ​ላም፡
+                            ​ኪያ​ነ፡
+                            ​ባር​ኪ፡ ​ሰላ​መ፡ ​ባር​ኪ፡
+                            ​ባር​ኪ።
+                            ​ኪያ​ነ፡
+                            ​ወኢ​ትር​ስእ​ኒ፡ ​ለገ​ብር​ኪ፡ ​ኃጥ​እ፡ ​ወአ​ባሴ፡ ​ዘወ​ልደ፡ ​ማር​ያሞ፡ ​ማር፡ ​አቡ​ነ፡ ​ትክ​ለ፡
+                                ​ሃይ​ማሮ​ት፡ ​ወል​ደሙ፡ ​ለአ​ቡን፡ ​ዘገ​ብር​ኤል፡ ​ለዓ​ለመ፡ ​ንለ​ም፡ ​አሜ​ን፡ ​ወአ​ሜን፡
+                            ​በር​ኪ። ​ወላ​ዲተ፡ ​አም​ላክ፡ ​ማር​ያም፡ ​እን​በለ፡ ​ዕብ​ሳብ፡ ​ወሩ​ካቤ፡ ​በይ​ነ፡ ​ዘዓ​ቀሂ፡ ​ብኩ​ለኪ፡
+                                ​ንስ​ቲተ፡ ​ቃለ፡ ​ይባ​ቤ፡ ​ፈት​ዊ፡ ​እሙ፡ ​በረ​ከተ፡ ​አፉ​ኪ፡ ​ሙሐ​ዘ፡ ​ከር​ቤ። ​ለነ​ዳይ፡ ​ብእ​ሲ፡ ​ወለ​ዘረ​ከበ፡
+                                ​ምን​ደቤ፡ ​ኅብ​ስተ​ከ፡ ​ፈት​ት፡ ​ኢሳ​ይያ​ስ፡ ​ይቤ።
+                            ​ኅቡ​ረ።
+                    </fo:block>
+               </fo:block>
+            </fo:block>
+         </fo:block-container>
+         <!--  break  after Catalogue -->
+         <fo:block page-break-after="always"/>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd" master-reference="Aethiopica-Indexes">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Index</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true">
+         <fo:block-container text-align="left">
+            <fo:block page-break-after="avoid"
+                      id="IndexPersons"
+                      text-align="justify"
+                      font-weight="700"
+                      margin-top="6.25pt"
+                      margin-bottom="6.25pt">Index of Persons</fo:block>,
+                                        

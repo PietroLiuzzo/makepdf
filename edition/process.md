@@ -1,5 +1,8 @@
 # testing a prototype edition workflow
 
+
+
+
 day 1
 
 Started at 12:45.
@@ -438,10 +441,17 @@ driver points to the files as they are in the local file system, which is on the
 settings changed to article
 added photos.
 
+
+This is the point when one can opt to stay in that file only and use another tool for producing the output.
+
+Here we demonstrate one more of the tool at disposal, which leaves the data in the common pot and detaches the process of editing the article/book from that of editing its sources.
+
+
 Tests:
 
 - export edition as TEI-->docx within oxygen: result is very poor.
 
+define requirements for output
 - integrate in PDF production
     - the objective is the edition, so, start from the Work file and fetch relevant sources from the DTS collection endpoint.
     - print introduction with integrated views from BM. see below
@@ -451,6 +461,9 @@ Tests:
     - use also those for indexes. (dorothea)
 
 
+day 3
+
+
 - integrate views from manuscripts containg the work:
     map, comparison
     https://betamasaheft.eu/compare?workid=LIT4714Salamlaki
@@ -458,3 +471,18 @@ Tests:
 
 - integrate in BM branches and produce PDF from branch (DTS improved module + viewItem module expansion for apparata)
 - export list of contributors to manuscript descriptions in the PDF output
+
+
+add steps for  
+
+bibliography (pointer!)
+at each step add options like: you can do this or go on.
+- viewers will often expect that everything you want is contained in your input, which is a false expectation. The expectation should be that your input will be tying up in a specific way a series of sources of different types. You can do the job for the viewer or software of your choice and tidily pack everything explicitly for it, and have the certainties coming out of having layed out everything explicitly (or at least think you did so) or you can embrace the sources and play with that.
+- add a new manuscript
+- add a new apparatus
+
+
+- final touches in the FO.
+- deposit of data.
+- morphological annotation
+

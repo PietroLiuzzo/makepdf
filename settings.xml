@@ -5,7 +5,7 @@
         journal Aethiopica. In the second case, 
         items in orderOfParts like title page, aknowledgments, 
         toc, indexes should be omitted-->
-    <format>article</format>
+    <format>book</format>
     <!--if your manuscripts all use a specific prefix for identification, please state it here-->
     <localPrefix></localPrefix>
     <!-- here you can set the order and existince of parts of your catalogue
@@ -14,49 +14,51 @@
         ask and you will be served.-->
     <orderOfParts>
         <!--sets the presence or not of some standard bookmarks available in the PDF-->
-         <PDFbookmarks>no</PDFbookmarks>
+         <PDFbookmarks>yes</PDFbookmarks>
         <!--the page with title and authors as cover-->
-        <titlePage>no</titlePage>
+        <titlePage>yes</titlePage>
         <!--print the table of contents with all included parts-->
-        <tableofcontents>no</tableofcontents>
+        <tableofcontents>yes</tableofcontents>
         <!--print a section of your catalogue.xml file with aknowledgements-->
-        <aknowledgments>no</aknowledgments>
+        <aknowledgments>yes</aknowledgments>
         <!--print a list of all images in any file with page number-->
-        <listofimages>no</listofimages>
+        <listofimages>yes</listofimages>
         <!--print a section of your catalogue.xml file (also if included) with the introduction-->
-        <introduction>no</introduction>
+        <introduction>yes</introduction>
         <!--prints a list of references for each bibl with pointer to the Zotero EthioStudies Library-->
-        <bibliography>no</bibliography>
-        <!--prints the manuscripts included in the catalogue.xml file-->
-        <catalogue>yes</catalogue>
+        <bibliography>yes</bibliography>
+        <!--prints the manuscripts included in the driver.xml file-->
+        <catalogue>no</catalogue>
+        <!--this is an edition, start from the included Work record-->
+        <edition>yes</edition>
         <!--prints the indexes: you can select which in the following section if here you have set "yes"-->
         <indexes>yes</indexes>
         <!--prints the images as listed in the back of the catalogue.xml file-->
-        <images>no</images>
+        <images>yes</images>
     </orderOfParts>
     <!--if your manuscripts come from several repositories, you can group them by repository, they will be listed in alphabetical order by repository-->
     <cataloguesSettings>
         <groupByRepository>no</groupByRepository>
     </cataloguesSettings>
-<!--    if you are printing a catalogue, here you can decide in which order to
+<!--    if you are printing a catalogue or include the description of witnessess in your edition, here you can decide in which order to
     treat the different parts of your entry -->
     <catalogueEntries>
         <!--prints a header before the catalogue entry-->
         <header>yes</header>
         <!--prints the shelfmarks under the header-->
-        <shelfmark>yes</shelfmark>
+        <shelfmark>no</shelfmark>
         <!--prints the section under history in the XML-->
         <history>yes</history>
         <!--prints the contents of msContents, can be further specified below with contentStructure, levelsOfContents, contentsExceptions-->
-        <contents>yes</contents>
+        <contents>no</contents>
         <!--prints the objectDesc element from the XML, can be further specified in partsOfObjectDesc-->
         <objectDesc>yes</objectDesc>
         <!-- prints the collation-->
-        <collation>yes</collation>
+        <collation>no</collation>
         <!--prints the additions element from the XML-->
-        <additions>yes</additions>
+        <additions>no</additions>
         <!--prints the binding element from the XML-->
-        <binding>yes</binding>
+        <binding>no</binding>
         <!--prints the layoutDesc element from the XML-->
         <layout>yes</layout>
         <!--prints the handDesc element from the XML-->
@@ -64,7 +66,7 @@
         <!--prints the decoDesc element from the XML-->
         <decorations>yes</decorations>
         <!--prints the URI of the element in BM-->
-        <URI>yes</URI>
+        <URI>no</URI>
     </catalogueEntries>
     <contentsStructure>
         <!--include the incipit if available-->
@@ -87,10 +89,10 @@
     <indexes>
         <persons>yes</persons>
         <places>yes</places>
-        <works>yes</works>
-        <subjects>yes</subjects>
-        <keywords>yes</keywords>
-        <languages>yes</languages>
+        <works>no</works>
+        <subjects>no</subjects>
+        <keywords>no</keywords>
+        <languages>no</languages>
     </indexes>
     <!--you can list here, separted by commas the keywords you wish to exclude-->
     <keywordsExceptions></keywordsExceptions>

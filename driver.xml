@@ -23,8 +23,6 @@
       <fileDesc>
          <titleStmt>
             <title>Test Edition</title>
-            <author>Pietro Liuzzo</author>
-            <!--            more authors, editors, contributors can be added here-->
          </titleStmt>
          <publicationStmt>
             <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
@@ -53,17 +51,19 @@
    </teiHeader>
    <text>
       <front>
-         <p>front</p>
+         <p>I wish to aknowledge the fact that individual scholarly work is impossible and that lonely authorship is the sole fruit of egoistic hypocrisy and false attribution grounded on the inappropriate extension of capitalist competition principles onto the pursuit of knowledge and human moral, spiritual, and intellectual advancement. Authorship is not a necessary evil, is a plague which should be eradicated by striving to replace it systematically with most correctly attributed, versioned and vetted contributions possible to the user.</p>
       </front>
       <body>
          <div>
             <head>Intro</head>
            <p>This is a mini edition to demonstrate the editorial workflow described in the Guidelines.</p>
+            <p><bibl><ptr target="bm:Liuzzo2019Digital"/></bibl></p>
          </div>
       </body>
       <back>
          <div>
             <head>Plates</head>
+            <p>This example uses both a table and normal figure placement without further settings for the images.</p>
             <table>
                <row role="label">
                   <cell/>
@@ -83,21 +83,18 @@
                      </figure>
                   </cell>
                </row>
-               <row>
-                  <cell><figure>
-                     <graphic url="edition/images/QS-014_008.jpeg">
-                        <desc>QS-014, Witness 3</desc>
-                     </graphic>
-                  </figure></cell>
-                  <cell><figure>
-                     <graphic
-                        url="edition/images/UM-014_093.jpeg">
-                        <desc>UM-014, Witness 4</desc>
-                     </graphic>
-                  </figure>
-                  </cell>
-               </row>
             </table>
+            <figure>
+               <graphic url="edition/images/QS-014_008.jpeg">
+                  <desc>QS-014, Witness 3</desc>
+               </graphic>
+            </figure>
+            <figure>
+               <graphic
+                  url="edition/images/UM-014_009.jpeg">
+                  <desc>UM-014, Witness 4</desc>
+               </graphic>
+            </figure>
            </div>
       </back>
    </text>
