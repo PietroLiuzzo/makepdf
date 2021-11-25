@@ -94,22 +94,7 @@
             <head>Aknow</head>
             <p>Aknowledgements text</p>
          </div>
-         <div>
-            <head>Abbreviations</head>
-            <p>In the following list <att>corresp</att> points in an abbreviated form to the selected source text of reference. The shortened reference can be resolved with <gi>prefixDef</gi>. The content of <gi>label</gi> in each item in the list is the value which will be used in <tag>ref @cRef</tag> and eventually specified by additional attributes or structure </p>
-            <list xml:id="abbreviations">
-               <item corresp="perseids:tlg0016.tlg001"><label>Hdt</label> = Herodotus, The
-                  Histories</item>
-               <item corresp="alpheios:tlg0085.tlg003.alpheios-text-grc1"><label>Aesch</label> =
-                  Aeschylus Prometheus Bound</item>
-               <item corresp="bmcoldts:LIT1546Genesi"><label>Gen.</label> = Book of Genesis,
-                  Ethiopian</item>
-               <item corresp="bmcoldts:BMLacq810"><label>BML acq. 810</label> = Biblioteca Medicea
-                  Laurenziana, MS Acquisizioni e Doni 810.</item>
-               <item corresp="bmcoldts:BLorient718"><label>BL orient 718</label> = London, British Library, BL Oriental 718.</item>
-               <item corresp="enc:pos2012.pos201218.positionThese-fr1"><label>Mon tres cher pere</label> = Étude et édition critique de la correspondance de Gabriel François de Brueys d’Aigalliers avec son père (1755-1782).</item>
-            </list>
-         </div>
+         
       </front>
       <body>
          <div>
@@ -120,37 +105,7 @@
                to prepare inscriptions before inclusion which uses the EpiDoc example XSLT.</p>
             <div type="chapter">
                <head>chapter head</head>
-               <p>This paragraph of text contains references to texts which assume a resolution
-                  possibility in one existing DTS endpoint. <list>
-                     <item>The following is a <gi>ref</gi> pointing to the Perseids DTS endpoint to print a
-                        citation only. <ref cRef="Hdt" corresp="7.10" rend="cit">Herodotus book 7,
-                           chapter 10</ref></item>
-                     <item>The following is an empty <gi>ref</gi> pointing to the Perseids DTS endpoint to print a
-                        citation only. The text of the citation is computed. <ref cRef="Hdt" corresp="7.10" rend="cit"/></item>
-                     <item>The following is a ref pointing to the Perseids DTS endpoint to print a
-                        quote based on that source. <ref cRef="Hdt" corresp="7.10" rend="quote"
-                           >Herodotus book 7, chapter 10</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a citation only. <ref cRef="Gen." corresp="43.34" rend="cit"
-                           >Genesis:43,34 Ethiopian text</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a quote. <ref cRef="Gen." corresp="43.34" rend="quote"
-                           >Genesis:43,34 Ethiopian text</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a citation based on that source printing images if available for the passage. <ref cRef="BML acq. 810" corresp="12"
-                           rend="cit">Manuscript BML acq. 810, folio 12</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a quote based on that source printing images if available for the passage. <ref cRef="BL orient 718" corresp="1.1ra1" rend="quote">Manuscript BL orient 718, folio 11 recto column a line 1</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Alpheios DTS endpoint to print a
-                        citation only.<ref cRef="Aesch" corresp="221" rend="cit">Aeschilus,
-                           Prometeus Bound, verse 221</ref></item>
-                     <item></item>
-                     <item>The following is a <gi>ref</gi> pointing to the ENC demo endpoint to print a
-                        citation only.<ref cRef="Mon tres cher pere" corresp="1" rend="cit">Introduction</ref></item>
-                     <item></item>
-                  </list>
-               </p>
-               
+              <p>paragraphs paragraphs and other paragraphs</p> 
             </div>
             <div>
                <head>Other things you can do in your encoding</head>
@@ -212,36 +167,25 @@
    </text>
    <!--   
       here you can use xi:include to point to the manuscripts files. 
-      You can have as many as you want, here there is one simple example
+      You can have as many as you want, here there are some simple examples of including from remote and from local
+      loading from your local copy is faster.
    -->
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="https://ilc4clarin.ilc.cnr.it/cretaninscriptions/en/inscriptions/seg_64_798.xml">
-      <xi:fallback>
-         <p>inscription from Cretan Institutional Inscriptions</p>
-      </xi:fallback>
-   </xi:include>
-   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="https://igcyr.unibo.it/igcyr/gvcyr001.xml">
-      <xi:fallback>
-         <p>inscription from IGCyr</p>
-      </xi:fallback>
-   </xi:include>
+   
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/ESum035">
       <xi:fallback>
-         <p>ES um 35 with images available and linked transkribus-transcription</p>
+         <p>ES um 35 with images available and linked transkribus-transcription (picks the latest merged version)</p>
       </xi:fallback>
    </xi:include>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="mss/simple.xml">
       <xi:fallback>
-         <p>(The Psalter)</p>
+         <p>(The Psalter) a manuscript stored here within the project, not in BM.</p>
       </xi:fallback>
    </xi:include>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="https://betamasaheft.eu/api/dts/document?id=https://betamasaheft.eu/BMLacq810">
+      href="/Users/hlz-ad/Documents/GitHub/Manuscripts/LondonBritishLibrary/orient/BLorient481.xml">
       <xi:fallback>
-         <p>Masahfa Genzat Florence (with images available via IIIF at
-            https://betamasaheft.eu/api/iiif/BMLacq810/manifest)</p>
+         <p>A random BL manuscript from my local copy of the repository (picks up my local version, if it is ahead of the one online, that is ok. carefull of the branch.)</p>
       </xi:fallback>
    </xi:include>
 </teiCorpus>
