@@ -3387,7 +3387,7 @@ declare function fo:SimpleMsstructureelements($part) {
                         fo:ifThereIs($part/tei:physDesc/tei:additions)
                 case 'binding'
                     return
-                        fo:ifThereIs($part/tei:bindingDesc/tei:binding)
+                        fo:ifThereIs($part/tei:physDesc/tei:bindingDesc/tei:binding)
                 case 'collation'
                     return
                         fo:ifThereIs($part/tei:physDesc/tei:objectDesc/tei:collation)
@@ -3396,10 +3396,10 @@ declare function fo:SimpleMsstructureelements($part) {
                         fo:ifThereIs($part/tei:pyhsDesc/tei:layoutDesc)
                 case 'hands'
                     return
-                        fo:ifThereIs($part/tei:handDesc)
+                        fo:ifThereIs($part/tei:physDesc/tei:handDesc)
                 case 'decorations'
                     return
-                        fo:ifThereIs($part/tei:decoDesc)
+                        fo:ifThereIs($part/tei:physDesc/tei:decoDesc)
                 case 'URI'
                     return
                         fo:URL($mainid, $anchor)
@@ -3413,7 +3413,7 @@ declare function fo:SimpleMsStructure($file) {
     <fo:block
         space-before="2mm"
         space-after="3mm">
-        {fo:tei2fo($file/tei:sourceDesc/node()[not(self::tei:*/name() = 'msDesc')])}
+        {fo:tei2fo($file/tei:sourceDesc/node()[not(self::tei:msDesc)])}
     </fo:block>,
     let $msDesc := $file//tei:msDesc
     return
