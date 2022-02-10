@@ -22,12 +22,14 @@
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
-            <title>My mashup Book</title>
+            <title>My Papyri Collection Book from Collaboratively edited sources</title>
             <author>Pietro Liuzzo</author>
             <!--            more authors, editors, contributors can be added here-->
          </titleStmt>
          <publicationStmt>
-            <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
+            <authority>ENCODE Project Conference
+               “Papyri and Crowdsourcing”
+               Würzburg, 17 February 2022, 14.00-17.30 (CET)</authority>
             <pubPlace>Hamburg</pubPlace>
             <availability>
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
@@ -91,8 +93,8 @@
    <text>
       <front>
          <div>
-            <head>Aknow</head>
-            <p>Aknowledgements text</p>
+            <head>Aknowledgements</head>
+            <p>text</p>
          </div>
          <div>
             <head>Abbreviations</head>
@@ -102,12 +104,12 @@
                   Histories</item>
                <item corresp="alpheios:tlg0085.tlg003.alpheios-text-grc1"><label>Aesch</label> =
                   Aeschylus Prometheus Bound</item>
-               <item corresp="bmcoldts:LIT1546Genesi"><label>Gen.</label> = Book of Genesis,
+              <!-- <item corresp="bmcoldts:LIT1546Genesi"><label>Gen.</label> = Book of Genesis,
                   Ethiopian</item>
                <item corresp="bmcoldts:BMLacq810"><label>BML acq. 810</label> = Biblioteca Medicea
                   Laurenziana, MS Acquisizioni e Doni 810.</item>
                <item corresp="bmcoldts:BLorient718"><label>BL orient 718</label> = London, British Library, BL Oriental 718.</item>
-               <item corresp="enc:pos2012.pos201218.positionThese-fr1"><label>Mon tres cher pere</label> = Étude et édition critique de la correspondance de Gabriel François de Brueys d’Aigalliers avec son père (1755-1782).</item>
+               <item corresp="enc:pos2012.pos201218.positionThese-fr1"><label>Mon tres cher pere</label> = Étude et édition critique de la correspondance de Gabriel François de Brueys d’Aigalliers avec son père (1755-1782).</item>-->
             </list>
          </div>
       </front>
@@ -118,40 +120,6 @@
                and external resources to build with Xquery and FOP a PDF output. The result mixes
                information retrieved from the APIs. An additional layer of transformation is added
                to prepare inscriptions before inclusion which uses the EpiDoc example XSLT.</p>
-            <div type="chapter">
-               <head>chapter head</head>
-               <p>This paragraph of text contains references to texts which assume a resolution
-                  possibility in one existing DTS endpoint. <list>
-                     <item>The following is a <gi>ref</gi> pointing to the Perseids DTS endpoint to print a
-                        citation only. <ref cRef="Hdt" corresp="7.10" rend="cit">Herodotus book 7,
-                           chapter 10</ref></item>
-                     <item>The following is an empty <gi>ref</gi> pointing to the Perseids DTS endpoint to print a
-                        citation only. The text of the citation is computed. <ref cRef="Hdt" corresp="7.10" rend="cit"/></item>
-                     <item>The following is a ref pointing to the Perseids DTS endpoint to print a
-                        quote based on that source. <ref cRef="Hdt" corresp="7.10" rend="quote"
-                           >Herodotus book 7, chapter 10</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a citation only. <ref cRef="Gen." corresp="43.34" rend="cit"
-                           >Genesis:43,34 Ethiopian text</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a quote. <ref cRef="Gen." corresp="43.34" rend="quote"
-                           >Genesis:43,34 Ethiopian text</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a citation based on that source printing images if available for the passage. <ref cRef="BML acq. 810" corresp="12"
-                           rend="cit">Manuscript BML acq. 810, folio 12</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Beta Masaheft DTS endpoint to
-                        print a quote based on that source printing images if available for the passage. <ref cRef="BL orient 718" corresp="1.1ra1" rend="quote">Manuscript BL orient 718, folio 11 recto column a line 1</ref></item>
-                     <item>The following is a <gi>ref</gi> pointing to the Alpheios DTS endpoint to print a
-                        citation only.<ref cRef="Aesch" corresp="221" rend="cit">Aeschilus,
-                           Prometeus Bound, verse 221</ref></item>
-                     <item></item>
-                     <item>The following is a <gi>ref</gi> pointing to the ENC demo endpoint to print a
-                        citation only.<ref cRef="Mon tres cher pere" corresp="1" rend="cit">Introduction</ref></item>
-                     <item></item>
-                  </list>
-               </p>
-               
-            </div>
             <div>
                <head>Other things you can do in your encoding</head>
                <p> You can use here <list>
@@ -161,8 +129,6 @@
                         xml:id, a manuscript in BM a work in BM</item>
                      <item><bibl><ptr target="bm:Meinardus1961Monks"/><citedRange unit="page"
                               >117</citedRange></bibl></item>
-                     <item><placeName ref="LOC6126WadinN"/></item>
-                     <item><persName ref="PRS7185Mosesof"/></item>
                      <item><note>to make a footnote</note></item>
                      <item>lists like this one</item>
                      <item>cit and quote</item>
@@ -191,22 +157,11 @@
                               image</desc>
                         </graphic>
                      </figure></cell>
-                  <cell><figure>
-                        <graphic
-                           url="https://betamasaheft.eu/iiif/AP/046/AP-046_014.tif/665,1084,465,125/full/0/default.jpg">
-                           <desc>Image on the right using a TEI table from a remotely stored image
-                              fetched with a IIIF Image API request </desc>
-                        </graphic>
-                     </figure>
+                  <cell>
                   </cell>
                </row>
             </table>
-             <figure>
-               <graphic
-                  url="https://digi.vatlib.it/pub/digit/MSS_Vat.et.1/thumb/Vat.et.1_0001.tif.jpg">
-                  <desc>Image from a different IIIF API (Vatican Library) added explicitly</desc>
-               </graphic>
-            </figure>
+            
          </div>
       </back>
    </text>
@@ -214,7 +169,20 @@
       here you can use xi:include to point to the manuscripts files. 
       You can have as many as you want, here there is one simple example
    -->
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+<!--   https://papyri.info/dclp/59916/source-->
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="papyri/59916.xml">
+      <xi:fallback>
+         <p>59916</p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="papyri/59916.xml">
+      <xi:fallback>
+         <p>59916</p>
+      </xi:fallback>
+   </xi:include>
+  <!--  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="https://ilc4clarin.ilc.cnr.it/cretaninscriptions/en/inscriptions/seg_64_798.xml">
       <xi:fallback>
          <p>inscription from Cretan Institutional Inscriptions</p>
@@ -243,5 +211,5 @@
          <p>Masahfa Genzat Florence (with images available via IIIF at
             https://betamasaheft.eu/api/iiif/BMLacq810/manifest)</p>
       </xi:fallback>
-   </xi:include>
+   </xi:include>-->
 </teiCorpus>
