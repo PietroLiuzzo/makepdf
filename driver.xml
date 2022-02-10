@@ -173,15 +173,46 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="papyri/59916.xml">
       <xi:fallback>
-         <p>59916</p>
+         <p>Euripides, Orest (P.Oxy. 3716), TM 59916</p>
       </xi:fallback>
    </xi:include>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="papyri/59916.xml">
+      href="papyri/63659.xml">
       <xi:fallback>
-         <p>59916</p>
+         <p>Tragödie (P.Oxy. 3216), TM 63659</p>
       </xi:fallback>
    </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="papyri/59022.xml">
+      <xi:fallback>
+         <p>Aeschylus, Theori or Isthmiastae (P.Oxy. 2162), TM 59022</p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="papyri/59788.xml">
+      <xi:fallback>
+         <p>Cratinus, Opus incertum (P.Oxy. 2806), TM 59788</p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="papyri/59476.xml">
+      <xi:fallback>
+         <p>Cratinus, Ploutoi (PSI 1212, 1279, P.Brux. E 6842, P.Cairo JdE 68906), TM 59476</p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="papyri/62766.xml">
+      <xi:fallback>
+         <p>Sophocles, Inachus (P.Oxy. 2369), TM 62766</p>
+      </xi:fallback>
+   </xi:include>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="papyri/62767.xml">
+      <xi:fallback>
+         <p>Sophocles, Inachus (P.Tebt. 3 692), TM 62767</p>
+      </xi:fallback>
+   </xi:include>
+   
   <!--  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
       href="https://ilc4clarin.ilc.cnr.it/cretaninscriptions/en/inscriptions/seg_64_798.xml">
       <xi:fallback>

@@ -16,8 +16,8 @@ declare namespace map = "http://www.w3.org/2005/xpath-functions/map";
 
 declare variable $local:BMappUrl := 'https://betamasaheft.eu/';
 
-declare variable $local:Z := if($local:settings/s:zotero/text()) then $local:settings/s:zotero/text() else 'https://api.zotero.org/groups/358366/items' ;
-declare variable $local:zstyle := if($local:settings/s:zstyle/text()) then $local:settings/s:zstyle/text() else 'hiob-ludolf-centre-for-ethiopian-studies' ;
+declare variable $local:Z := if($local:settings/s:zotero/text()) then $local:settings/s:zotero/text() else 'no zotero style specified' ;
+declare variable $local:zstyle := if($local:settings/s:zstyle/text()) then $local:settings/s:zstyle/text() else 'chicago-author-date' ;
 
 
 (:the basis of transformation is a series of strings for components:)
