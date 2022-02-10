@@ -67,9 +67,10 @@
     
     <xsl:template match="t:TEI[not(@type)]">
         <xsl:variable name="ins" select="."/>
-            <xsl:variable name="filename" select="translate(.//t:idno[@type = 'filename']/text(), ' .', '__')"/>
+        <xsl:variable name="idno" select="if(.//t:idno[@type = 'filename']) then .//t:idno[@type = 'filename'] else .//t:idno[@type = 'TM']"/>
+            <xsl:variable name="filename" select="translate($idno/text(), ' .', '__')"/>
             <xsl:message>filename:<xsl:value-of select="$filename"/></xsl:message>
-            <xsl:result-document method="xml" href="inscriptions/{$filename}.xml">
+            <xsl:result-document method="xml" href="FO/{$filename}.xml">
                 <fo:block-container>
                     <xsl:call-template name="generic-fo-structure">
                         <xsl:with-param name="file" select="$ins"/>
@@ -96,9 +97,22 @@
         <fo:block id="edition{$filename}" >
             <xsl:variable name="edtxt">
                 <xsl:apply-templates select="$file//t:div[@type='edition']">
-                    <xsl:with-param name="parm-edition-type" tunnel="yes"><xsl:text>interpretive</xsl:text></xsl:with-param>
+                    <xsl:with-param name="parm-leiden-style" tunnel="yes"><xsl:text>ddbdp</xsl:text></xsl:with-param>
+                    <xsl:with-param name="parm-internal-app-style" tunnel="yes"><xsl:text>ddbdp</xsl:text></xsl:with-param>
                     <xsl:with-param name="parm-verse-lines" tunnel="yes"><xsl:text>off</xsl:text></xsl:with-param>
                     <xsl:with-param name="parm-line-inc" tunnel="yes"><xsl:text>5</xsl:text></xsl:with-param>
+                </xsl:apply-templates>
+            </xsl:variable>
+            <!-- Moded templates found in htm-tpl-sqbrackets.xsl -->
+            <xsl:apply-templates select="$edtxt" mode="sqbrackets"/>
+        </fo:block>
+        <fo:block id="diplomatic{$filename}" >
+            <xsl:variable name="edtxt">
+                <xsl:apply-templates select="$file//t:div[@type='edition']">
+                    <xsl:with-param name="parm-edition-type" tunnel="yes"><xsl:text>diplomatic</xsl:text></xsl:with-param>
+                    <xsl:with-param name="parm-leiden-style" tunnel="yes"><xsl:text>ddbdp</xsl:text></xsl:with-param>
+                    <xsl:with-param name="parm-verse-lines" tunnel="yes"><xsl:text>off</xsl:text></xsl:with-param>
+                    <xsl:with-param name="parm-line-inc" tunnel="yes"><xsl:text>off</xsl:text></xsl:with-param>
                 </xsl:apply-templates>
             </xsl:variable>
             <!-- Moded templates found in htm-tpl-sqbrackets.xsl -->

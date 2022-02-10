@@ -18,15 +18,15 @@
         ask and you will be served.-->
     <orderOfParts>
         <!--sets the presence or not of some standard bookmarks available in the PDF-->
-         <PDFbookmarks>yes</PDFbookmarks>
+         <PDFbookmarks>no</PDFbookmarks>
         <!--the page with title and authors as cover-->
-        <titlePage>yes</titlePage>
+        <titlePage>no</titlePage>
         <!--print the table of contents with all included parts-->
-        <tableofcontents>yes</tableofcontents>
+        <tableofcontents>no</tableofcontents>
         <!--print a section of your catalogue.xml file with aknowledgements-->
         <aknowledgments>yes</aknowledgments>
         <!--print a list of all images in any file with page number-->
-        <listofimages>yes</listofimages>
+        <listofimages>no</listofimages>
         <!--print a section of your catalogue.xml file (also if included) with the introduction-->
         <introduction>yes</introduction>
         <!--prints a list of references for each bibl with pointer to the Zotero EthioStudies Library-->
@@ -34,13 +34,13 @@
         <!--prints the manuscripts included in the catalogue.xml file-->
         <catalogue>yes</catalogue>
         <!--prints the indexes: you can select which in the following section if here you have set "yes"-->
-        <indexes>yes</indexes>
+        <indexes>no</indexes>
         <!--prints the images as listed in the back of the catalogue.xml file-->
-        <images>yes</images>
+        <images>no</images>
     </orderOfParts>
     <!--if your manuscripts come from several repositories, you can group them by repository, they will be listed in alphabetical order by repository-->
     <cataloguesSettings>
-        <groupByRepository>yes</groupByRepository>
+        <groupByRepository>no</groupByRepository>
     </cataloguesSettings>
 <!--    if you are printing a catalogue, here you can decide in which order to
     treat the different parts of your entry -->

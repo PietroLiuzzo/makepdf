@@ -16,8 +16,6 @@ declare namespace map = "http://www.w3.org/2005/xpath-functions/map";
 
 declare variable $local:BMappUrl := 'https://betamasaheft.eu/';
 
-declare variable $local:Z := if($local:settings/s:zotero/text()) then $local:settings/s:zotero/text() else 'no zotero style specified' ;
-declare variable $local:zstyle := if($local:settings/s:zstyle/text()) then $local:settings/s:zstyle/text() else 'chicago-author-date' ;
 
 
 (:the basis of transformation is a series of strings for components:)
@@ -67,6 +65,9 @@ declare variable $local:catalogue := doc('driver.xml')/tei:teiCorpus;
 declare variable $local:listPrefixDef := $local:catalogue//tei:listPrefixDef;
 declare variable $local:entries := $local:catalogue//tei:TEI;
 declare variable $local:settings := doc('settings.xml')/s:settings;
+declare variable $local:Z := if($local:settings/s:zotero/text()) then $local:settings/s:zotero/text() else 'no zotero style specified' ;
+declare variable $local:zstyle := if($local:settings/s:zstyle/text()) then $local:settings/s:zstyle/text() else 'chicago-author-date' ;
+
 declare variable $local:dtscollprefix := $local:catalogue//tei:prefixDef[@ident = 'bmcoldts']/@replacementPattern;
 declare variable $local:title := fo:tei2fo($local:catalogue/tei:teiHeader//tei:titleStmt/tei:title);
 
@@ -1186,16 +1187,16 @@ case element(tei:listBibl)
 case element(tei:bibl)
     return
         let $rootid := string(root($node)/tei:TEI/@xml:id)
-        let $bibid := string($node/tei:ptr/@target)
+        let $bibid := string($node/tei:ptr[1]/@target)
         return
             <fo:basic-link
                 internal-destination="{replace($bibid, ':', '_')}"><fo:inline
-                    id="{$rootid}{generate-id($node/tei:ptr)}{replace($bibid, ':', '_')}">
+                    id="{$rootid}{generate-id($node/tei:ptr[1])}{replace($bibid, ':', '_')}">
                     {
-                        if (starts-with($node/tei:ptr/@target, 'bm:')) then
-                            fo:zoteroCit($node/tei:ptr/@target)
+                        if (starts-with($node/tei:ptr[1]/@target, 'bm:')) then
+                            fo:zoteroCit($node/tei:ptr[1]/@target)
                         else
-                            string($node/tei:ptr/@target)
+                            string($node/tei:ptr[1]/@target)
                     }
                     {
                         if ($node/tei:citedRange) then
@@ -3529,7 +3530,7 @@ declare function fo:bookmarks() {
                 string($file/@xml:id)
             else
                 $file//tei:idno[@type = 'filename']/text()
-            let $shelf := $file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text()
+            let $shelf := $file//tei:msDesc/tei:msIdentifier/tei:idno[@type="dclp-hybrid"]/text()
             let $num := number(substring-after($shelf, $local:prefix))
                 order by $num
             return
@@ -4653,75 +4654,16 @@ declare function fo:layoutmaster($type) {
 
 declare function fo:catalogue() {
     <fo:block-container>
-        {
-            for $file in $local:entries
-            let $dtsCall := (substring-before($local:dtscollprefix, '$') || string($file/@xml:id))
-            let $dtscollectionapi := try {
-                json-doc($dtsCall)
-            } catch * {
-                map {'info': 'no depiction'}
-            }
-            let $msmainid := number(substring-after($file//tei:msDesc/tei:msIdentifier/tei:idno[not(@xml:lang)]/text(), $local:prefix))
-                order by $msmainid
-            return
-                (fo:msheader($file//tei:msDesc/tei:msIdentifier),
-                if (not(map:contains($dtscollectionapi, 'info')) and count($dtscollectionapi?("dts:extensions")?("foaf:depiction")) ge 1)
-                then
-                    let $manifest := $dtscollectionapi?("dts:extensions")?("foaf:depiction")?('svcs:has_service')?('@id')
-                    return
-                        <fo:block>
-                            IIIF manifest: {$manifest}
-                            <fo:footnote>
-                                <fo:inline
-                                    font-size="7pt"
-                                    vertical-align="text-top">*</fo:inline>
-                                
-                                <fo:footnote-body
-                                    text-align="justify"
-                                    text-indent="0">
-                                    <fo:list-block>
-                                        <fo:list-item>
-                                            <fo:list-item-label>
-                                                <fo:block>
-                                                    <fo:inline
-                                                        vertical-align="text-top"
-                                                        font-size="9pt"
-                                                    >*</fo:inline>
-                                                </fo:block>
-                                            </fo:list-item-label>
-                                            <fo:list-item-body>
-                                                <fo:block
-                                                    hyphenate="true"
-                                                    space-before="0.45cm"
-                                                    font-size="9pt"
-                                                    line-height="11pt"
-                                                    margin-left="0.45cm"
-                                                >{json-doc($manifest)?('attribution')}
-                                                </fo:block>
-                                            </fo:list-item-body>
-                                        </fo:list-item>
-                                    </fo:list-block>
-                                </fo:footnote-body>
-                            </fo:footnote>
-                        </fo:block>
-                else
-                    ($dtscollectionapi('info')),
-                <fo:block
-                    text-align="center"
-                    space-before="2mm"
-                    space-after="3mm">{$file//tei:titleStmt/tei:title[not(@xml:lang)]/text()}</fo:block>,
-                if ($file/@type) then
-                    fo:SimpleMsStructure($file)
-                else
-                    let $filename := $file//tei:idno[@type = 'filename']/text()
+        {for $file in $local:entries
+        let $idno := if( $file//tei:idno[@type = 'filename']) then  $file//tei:idno[@type = 'filename'] else  $file//tei:idno[@type = 'TM']
+                    let $filename := $idno/text()
                     let $f := translate($filename, ' .', '__')
                     return
                         <fo:block
                             id="{$f}">{
-                                doc(concat('inscriptions/', $f, '.xml'))/fo:*
+                                doc(concat('papyri/FO/', $f, '.xml'))/fo:*
                             }</fo:block>
-                )
-        }
+                        }
     </fo:block-container>
 };
 
@@ -4735,12 +4677,12 @@ declare function fo:bibliography($r) {
     <fo:block>
         {
             let $mspointers := for $file in $local:entries
-            for $ptr in $file//tei:bibl/tei:ptr/@target
+            for $ptr in $file//tei:bibl[@type='reference']/tei:ptr/@target
             return
                 string($ptr)
             let $allptrs := distinct-values($mspointers)
             let $msID := $r/ancestor::tei:TEI/@xml:id
-            let $articleptrs := distinct-values($r//tei:bibl/tei:ptr/@target)
+            let $articleptrs := distinct-values($r//tei:body/tei:div//tei:bibl[not(@type)]/tei:ptr/@target)
             let $merge := ($allptrs, $articleptrs)
             return
                 let $allrefs := for $ptr in distinct-values($merge)
@@ -4752,10 +4694,11 @@ declare function fo:bibliography($r) {
                         start-indent="0.5cm"
                         text-indent="-0.5cm">
                         {
-                            if (starts-with($ptr, 'bm:')) then
+                            if (starts-with($ptr, 'pietro:')) then
                                 fo:Zotero($ptr)
                             else
-                                string($ptr)
+                                let $papyriinfobibl:= doc(concat(string($ptr), '/source'))
+                                return $papyriinfobibl//tei:bibl//text()
                         }
                         {
                             for $bib in $r//tei:bibl[tei:ptr/@target = $ptr]

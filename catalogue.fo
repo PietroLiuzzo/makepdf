@@ -1,0 +1,2946 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+   <fo:layout-master-set>
+      <fo:page-sequence-master master-name="Aethiopica-master">
+         <fo:repeatable-page-master-alternatives>
+            <fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/>
+            <fo:conditional-page-master-reference page-position="first"
+                                                  odd-or-even="odd"
+                                                  master-reference="Aethiopica-chapter-first-odd"/>
+            <fo:conditional-page-master-reference page-position="first"
+                                                  odd-or-even="even"
+                                                  master-reference="Aethiopica-chapter-first-even"/>
+            <fo:conditional-page-master-reference page-position="rest"
+                                                  odd-or-even="odd"
+                                                  master-reference="Aethiopica-chapter-rest-odd"/>
+            <fo:conditional-page-master-reference page-position="rest"
+                                                  odd-or-even="even"
+                                                  master-reference="Aethiopica-chapter-rest-even"/>
+         </fo:repeatable-page-master-alternatives>
+      </fo:page-sequence-master>
+      <fo:page-sequence-master master-name="Aethiopica-Indexes">
+         <fo:repeatable-page-master-alternatives>
+            <fo:conditional-page-master-reference master-reference="indexes-blank" blank-or-not-blank="blank"/>
+            <fo:conditional-page-master-reference page-position="first"
+                                                  odd-or-even="odd"
+                                                  master-reference="Aethiopica-Indexes-first-odd"/>
+            <fo:conditional-page-master-reference page-position="first"
+                                                  odd-or-even="even"
+                                                  master-reference="Aethiopica-Indexes-first-even"/>
+            <fo:conditional-page-master-reference page-position="rest"
+                                                  odd-or-even="odd"
+                                                  master-reference="Aethiopica-Indexes-rest-odd"/>
+            <fo:conditional-page-master-reference page-position="rest"
+                                                  odd-or-even="even"
+                                                  master-reference="Aethiopica-Indexes-rest-even"/>
+         </fo:repeatable-page-master-alternatives>
+      </fo:page-sequence-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="blank"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="indexes-blank"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-Indexes-rest-odd"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"
+                         column-count="2"
+                         column-gap="10mm"/>
+         <fo:region-before region-name="rest-region-before-odd" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-odd" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-Indexes-rest-even"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"
+                         column-count="2"
+                         column-gap="10mm"/>
+         <fo:region-before region-name="rest-region-before-even" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-even" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-Indexes-first-even"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"
+                         column-count="2"
+                         column-gap="10mm"/>
+         <fo:region-after extent="25pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-Indexes-first-odd"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"
+                         column-count="2"
+                         column-gap="10mm"/>
+         <fo:region-before region-name="rest-region-before-first" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-first" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-chapter-first-odd"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+         <fo:region-before region-name="rest-region-before-first" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-first" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-chapter-first-even"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+         <fo:region-after extent="25pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-chapter-rest-odd"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+         <fo:region-before region-name="rest-region-before-odd" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-odd" extent="12.5pt"/>
+      </fo:simple-page-master>
+      <fo:simple-page-master page-height="297mm"
+                             page-width="210mm"
+                             master-name="Aethiopica-chapter-rest-even"
+                             margin-top="45mm"
+                             margin-bottom="53mm"
+                             margin-left="45mm"
+                             margin-right="45mm">
+         <fo:region-body background-image="sample.png"
+                         margin-top="37.5pt"
+                         margin-bottom="37.5pt"/>
+         <fo:region-before region-name="rest-region-before-even" extent="25pt"/>
+         <fo:region-after region-name="rest-region-after-even" extent="12.5pt"/>
+      </fo:simple-page-master>
+   </fo:layout-master-set>
+   <fo:page-sequence initial-page-number="auto-odd"
+                     master-reference="Aethiopica-master"
+                     format="i">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Acknowledgement</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true">
+         <fo:block-container id="Acknowledgement">
+            <fo:block hyphenate="true">
+               <fo:block hyphenate="true" page-break-after="avoid" id="d1e119">Aknowledgements</fo:block>
+               <fo:block xml:lang="en" hyphenate="true">text</fo:block>
+            </fo:block>
+            <fo:block hyphenate="true">
+               <fo:block hyphenate="true" page-break-after="avoid" id="d1e126">Abbreviations</fo:block>
+               <fo:block xml:lang="en" hyphenate="true">
+                  <fo:list-block provisional-distance-between-starts="6mm"
+                                 provisional-label-separation="6mm"
+                                 start-indent="1cm">
+                     <fo:list-item>
+                        <fo:list-item-label end-indent="label-end()">
+                           <fo:block>
+                              <fo:inline>1)</fo:inline>
+                           </fo:block>
+                        </fo:list-item-label>
+                        <fo:list-item-body start-indent="body-start()">
+                           <fo:block hyphenate="true">A : A</fo:block>
+                        </fo:list-item-body>
+                     </fo:list-item>
+                  </fo:list-block>
+               </fo:block>
+            </fo:block>
+         </fo:block-container>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd"
+                     master-reference="Aethiopica-master"
+                     format="i">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Introduction</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true"><!-- INTRODUCTION     -->
+         <fo:block id="introduction">
+            <fo:block hyphenate="true">
+               <fo:block hyphenate="true" page-break-after="avoid" id="d1e142">Intro</fo:block>
+               <fo:block xml:lang="en" hyphenate="true">This article prepares a submission for the journal Aethiopica, because it is based on a branch of a project set up with those requirements. It use the same setup to print a collection of papyri. The text of the papyri is rendered using a local copy of the EpiDoc example XSLT</fo:block>
+               <fo:block hyphenate="true">
+                  <fo:block hyphenate="true" page-break-after="avoid" id="d1e148">Things you can do in your encoding include...</fo:block>
+                  <fo:block xml:lang="en" hyphenate="true"> You can use here <fo:list-block provisional-distance-between-starts="6mm"
+                                    provisional-label-separation="6mm"
+                                    start-indent="1cm">
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block>
+                                 <fo:inline>1)</fo:inline>
+                              </fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block hyphenate="true">links <fo:basic-link external-destination="http://www.thelevantinefoundation.co.uk"
+                                                hyphenate="false">&lt;http://www.thelevantinefoundation.co.uk&gt;</fo:basic-link>
+                              </fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block>
+                                 <fo:inline>2)</fo:inline>
+                              </fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block hyphenate="true">
+                                 <fo:footnote>
+                                    <fo:inline font-size="7pt" vertical-align="text-top">1</fo:inline>
+                                    <fo:footnote-body text-align="justify" text-indent="0">
+                                       <fo:list-block>
+                                          <fo:list-item>
+                                             <fo:list-item-label>
+                                                <fo:block>
+                                                   <fo:inline vertical-align="text-top" font-size="9pt">1</fo:inline>
+                                                </fo:block>
+                                             </fo:list-item-label>
+                                             <fo:list-item-body>
+                                                <fo:block hyphenate="true"
+                                                          space-before="0.45cm"
+                                                          font-size="9pt"
+                                                          line-height="11pt"
+                                                          margin-left="0.45cm">to make a footnote</fo:block>
+                                             </fo:list-item-body>
+                                          </fo:list-item>
+                                       </fo:list-block>
+                                    </fo:footnote-body>
+                                 </fo:footnote>
+                              </fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block>
+                                 <fo:inline>3)</fo:inline>
+                              </fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block hyphenate="true">lists like this one</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                        <fo:list-item>
+                           <fo:list-item-label end-indent="label-end()">
+                              <fo:block>
+                                 <fo:inline>4)</fo:inline>
+                              </fo:block>
+                           </fo:list-item-label>
+                           <fo:list-item-body start-indent="body-start()">
+                              <fo:block hyphenate="true">cit and quote for quoted passages</fo:block>
+                           </fo:list-item-body>
+                        </fo:list-item>
+                     </fo:list-block>
+                  </fo:block>
+                  <fo:block hyphenate="true">
+                     <fo:block hyphenate="true"
+                               page-break-after="avoid"
+                               id="d1e169"
+                               font-weight="700"
+                               margin-top="12.5pt"
+                               margin-bottom="6.25pt">1.1.1 section head</fo:block>
+                     <fo:block xml:lang="en" hyphenate="true">In this section I am using pointers to bibliographical items which are not in the editions of the papyri.
+                     <fo:basic-link internal-destination="pietro_epidoc">
+                           <fo:inline id="d1e174pietro_epidoc">pietro:epidoc</fo:inline>
+                        </fo:basic-link>
+                        <fo:basic-link internal-destination="pietro_xslt">
+                           <fo:inline id="d1e176pietro_xslt">pietro:xslt</fo:inline>
+                        </fo:basic-link>
+                        <fo:basic-link internal-destination="pietro_xquery">
+                           <fo:inline id="d1e178pietro_xquery">pietro:xquery</fo:inline>
+                        </fo:basic-link>
+                     </fo:block>
+                  </fo:block>
+               </fo:block>
+            </fo:block>
+         </fo:block>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd"
+                     master-reference="Aethiopica-master"
+                     format="i">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">
+                           <fo:inline>Pietro</fo:inline>
+                           <fo:inline>Liuzzo</fo:inline>
+                           <fo:inline>Sophocles</fo:inline>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Bibliography</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true"><!-- BIBLIOGRAPHY           -->
+         <fo:block id="bibliography"
+                   page-break-before="always"
+                   font-weight="700"
+                   margin-bottom="6.25pt">Bibliography</fo:block>
+         <fo:block>
+            <fo:block id="http_//papyri.info/biblio/10897"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="http://papyri.info/biblio/10897d1e2483">
+                  <fo:page-number-citation ref-id="http://papyri.info/biblio/10897d1e2483"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="http_//papyri.info/biblio/13993"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="http://papyri.info/biblio/13993d1e3152">
+                  <fo:page-number-citation ref-id="http://papyri.info/biblio/13993d1e3152"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="http_//papyri.info/biblio/7698"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="http://papyri.info/biblio/7698d1e3131">
+                  <fo:page-number-citation ref-id="http://papyri.info/biblio/7698d1e3131"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="http_//papyri.info/biblio/9024"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="http://papyri.info/biblio/9024d1e4135">
+                  <fo:page-number-citation ref-id="http://papyri.info/biblio/9024d1e4135"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="http_//papyri.info/biblio/9699"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="http://papyri.info/biblio/9699d1e1191">
+                  <fo:page-number-citation ref-id="http://papyri.info/biblio/9699d1e1191"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="pietro_xquery"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">Anderson, Clifford B., and Joseph C. Wicentowski. 2020. <fo:inline font-style="italic">Xquery for Humanists</fo:inline>. Illustrated Edition. College Station, Texas: Texas A &amp; M University Press.<fo:basic-link internal-destination="pietro:xqueryd1e177">
+                  <fo:page-number-citation ref-id="pietro:xqueryd1e177"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="pietro_epidoc"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">Elliott, Tom, G. Bodard, E. Milonas, S. Stoyanova, C. Tupman, S. Vanderbilt, Pietro Maria Liuzzo, and Alice Bencivenni. 2007. ‘EpiDoc Guidelines: Ancient Documents in TEI XML’. <fo:basic-link external-destination="http://www.stoa.org/epidoc/gl/latest">http://www.stoa.org/epidoc/gl/latest</fo:basic-link>.<fo:basic-link internal-destination="pietro:epidocd1e173">
+                  <fo:page-number-citation ref-id="pietro:epidocd1e173"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="pietro_xslt"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">Kay, Michael. 2008. <fo:inline font-style="italic">XSLT 2.0 and XPath 2.0 Programmer’s Reference</fo:inline>. 4th edn. Wrox Programmer to Programmer. Indianapolis, IN: Wiley Publishing, Inc.<fo:basic-link internal-destination="pietro:xsltd1e175">
+                  <fo:page-number-citation ref-id="pietro:xsltd1e175"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="http_//papyri.info/biblio/95236"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">
+               <fo:basic-link internal-destination="https_//archive.org/details/oxyrhynchuspapyr06gren">
+                  <fo:inline id="d18e27https_//archive.org/details/oxyrhynchuspapyr06gren">https://archive.org/details/oxyrhynchuspapyr06gren</fo:inline>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="http://papyri.info/biblio/95236d1e3110">
+                  <fo:page-number-citation ref-id="http://papyri.info/biblio/95236d1e3110"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="http_//papyri.info/biblio/86769"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="https_//papyri.info/biblio/511">
+                  <fo:inline id="d12e19https_//papyri.info/biblio/511">https://papyri.info/biblio/511</fo:inline>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="http://papyri.info/biblio/86769d1e3169">
+                  <fo:page-number-citation ref-id="http://papyri.info/biblio/86769d1e3169"/>
+               </fo:basic-link>
+            </fo:block>
+            <fo:block id="http_//papyri.info/biblio/86800"
+                      margin-bottom="2pt"
+                      start-indent="0.5cm"
+                      text-indent="-0.5cm">
+               <fo:basic-link internal-destination="">
+                  <fo:inline id=""/>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="https_//papyri.info/biblio/511">
+                  <fo:inline id="d14e19https_//papyri.info/biblio/511">https://papyri.info/biblio/511</fo:inline>
+               </fo:basic-link>
+               <fo:basic-link internal-destination="http://papyri.info/biblio/86800d1e3185">
+                  <fo:page-number-citation ref-id="http://papyri.info/biblio/86800d1e3185"/>
+               </fo:basic-link>
+            </fo:block>
+         </fo:block>
+         <!--  break  before Catalogue -->
+         <fo:block page-break-after="always"/>
+      </fo:flow>
+   </fo:page-sequence>
+   <fo:page-sequence initial-page-number="auto-odd" master-reference="Aethiopica-master">
+      <fo:static-content flow-name="rest-region-before-odd">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block text-align="right"/>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">
+                           <fo:inline>Pietro</fo:inline>
+                           <fo:inline>Liuzzo</fo:inline>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-even">
+         <fo:block-container height="100%" display-align="center">
+            <fo:table>
+               <fo:table-column column-width="30%"/>
+               <fo:table-column column-width="40%"/>
+               <fo:table-column column-width="30%"/>
+               <fo:table-body>
+                  <fo:table-row>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="left">
+                           <fo:page-number/>
+                        </fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block text-align="center" font-size="9pt" font-family="Ludolfus">Catalogue</fo:block>
+                     </fo:table-cell>
+                     <fo:table-cell>
+                        <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                     </fo:table-cell>
+                  </fo:table-row>
+               </fo:table-body>
+            </fo:table>
+         </fo:block-container>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="right" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-odd">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-after-even">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="left"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="center"><!--<fo:page-number/>--></fo:block>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="left"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="rest-region-before-first">
+         <fo:table>
+            <fo:table-column column-width="30%"/>
+            <fo:table-column column-width="40%"/>
+            <fo:table-column column-width="30%"/>
+            <fo:table-body>
+               <fo:table-row>
+                  <fo:table-cell>
+                     <fo:block text-align="right"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block text-align="center" font-size="9pt" font-family="Ludolfus"/>
+                  </fo:table-cell>
+                  <fo:table-cell>
+                     <fo:block font-size="9pt" font-family="Ludolfus" text-align="right"/>
+                  </fo:table-cell>
+               </fo:table-row>
+            </fo:table-body>
+         </fo:table>
+      </fo:static-content>
+      <fo:static-content flow-name="xsl-footnote-separator">
+         <fo:block space-before="5mm" space-after="5mm">
+            <fo:leader leader-length="30%" rule-thickness="0pt"/>
+         </fo:block>
+      </fo:static-content>
+      <fo:flow flow-name="xsl-region-body"
+               font-size="10.5pt"
+               line-height="12.5pt"
+               font-family="Ludolfus"
+               text-align="justify"
+               hyphenate="true"><!-- CATALOGUE     -->
+         <fo:block-container>
+            <fo:block id="59916">
+               <fo:block-container xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <fo:block id="bibliography59916"/>
+                  <fo:block id="edition59916">
+                     <fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab1">1</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[---]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[---]</fo:inline> `<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>´
+
+<fo:inline/>[ὁ νόμος ἀνεῖται, κοὐ φθάνοι θνήισκων τις] ἄ̣ν̣·
+
+<fo:inline/>[ὡς τῆς γε τόλμης οὐ σπάνις γενήσεται.]
+
+<fo:inline/>
+                                          <!--5-->[ἀλλ' οὐκ ἔπειθ' ὅμιλον, εὖ δοκῶν λέγειν·]
+
+<fo:inline/>[νικᾶι δ' ἐκεῖνος ὁ κακὸς ἐν πλήθει λ]έ̣γ̣[ων,] 
+
+<fo:inline/>[ὃς ἠγόρευσε σύγγονον σέ τε θ]α̣νεῖν. `ζή(τει)´
+
+<fo:inline/>[μόλις δ' ἔπεισε μὴ] [πετρούμε]ν̣[ος] [θανεῖν]
+
+<fo:inline/>[τλήμων ᾿Ορέστης· αὐτόχειρι δὲ σφ]αγῆι 
+
+<fo:inline/>
+                                          <!--10-->[ὑπέσχετ' ἐν τῆιδ' ἡμέραι λείψειν βίο]ν̣
+
+<fo:inline/>[σὺν σοί. πορεύει δ' αὐτὸν ἐκκλήτω]ν ἄπ̣ο 
+
+<fo:inline/>[Πυλάδης δακρύων, σὺν δ' ὁμαρτοῦ]σ̣ιν φίλοι 
+
+<fo:inline/>[κλαίοντες, οἰκτίροντες· ἔρχεται δέ] σ̣οι
+
+<fo:inline/>
+                                          <fo:inline>[---]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab2">2</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ζ[ῆλος ὤν ποτ' οἴκοις·]
+
+<fo:inline/>φθ[όνος νιν εἷλε θεόθεν ἅ τε δυσμενὴς]
+
+<fo:inline/>φο̣ινί̣[α ψῆφος ἐν πολίταις.]
+
+<fo:inline/>ἰώ̣, ὦ̣ πα̣[νδάκρυτ' ἐφαμέρων]
+
+<fo:inline/>
+                                          <!--5-->ἔ̣θ̣ν̣η̣ πο[λύπονα, λεύσσεθ' ὡς παρ' ἐλπίδας]
+
+<fo:inline/>μοίραι βα[ίνει.]
+
+<fo:inline/>ἕτερα δ' [ἕτερον ἀμείβεται]
+
+<fo:inline/>πήματ' [ἐν χρόνωι μακρῶι·]
+
+<fo:inline/>`͵<fo:inline>error:hi tag with rend=supraline-underline is not supported!κ</fo:inline>´ βροτῶν δ' ὁ̣ [πᾶς ἀστάθμητος αἰών.]
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>diple-obelismene
+
+<fo:inline/>
+                                          <!--10-->μόλοι̣μ̣ι τὰ̣[ν οὐρανοῦ]
+
+<fo:inline/>μέσ̣ον χθ̣[ονός τεταμέναν]
+
+<fo:inline/>α[ἰ]ωρ̣ή̣μ̣[ασιν]
+
+<fo:inline/>πέ̣τ̣[ρ]α̣[ν] [lost<fo:inline>·· ? ··</fo:inline>] 
+
+<fo:inline/>
+                                          <fo:inline>[---]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:block>l.8 </fo:block>
+                     </fo:block>
+                  </fo:block>
+                  <fo:block id="commentary59916">This papyrus has been digitally edited and revised by Holger Essler as part of a workshop on digital editions of papyri within the <strong>Dottorato in Scienze dell'Antichità</strong> (Venezia, Udine, Trieste).</fo:block>
+               </fo:block-container>
+            </fo:block>
+            <fo:block id="63659">
+               <fo:block-container xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <fo:block id="bibliography63659"/>
+                  <fo:block id="edition63659">
+                     <fo:block>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>15</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>20</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>25</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[··]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>τὸν ζο̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>προσφ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>λέγε `δ'<span class="smaller" style="font-style:italic;"> apostrophe </span>´·<span class="smaller" style="font-style:italic;"> middot </span> εἰ [μὲν] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--5-->φροντ[ί]δ̣ι̣ <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>λύη`ι´ δὲ πόνω̣[ν] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>εἰ δ'<span class="smaller" style="font-style:italic;"> apostrophe </span> ἀλίαστον <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἄλλης βουλῆ[ς] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>χρείαν ἥκει̣[ς] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>
+                                          <!--10-->ἄναξ π<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ποῦ κεκ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>σὸν ὄμ̣μ[α] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>καί μο̣ι̣ <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>Φ̣οίβου τῶ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>
+                                          <!--15-->χρησμῶ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>καὶ Φρυγῶ[ν] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>δορὶ χρὴ λα̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>diple-obelismene
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline> νεόποις οὕστιν[ας] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ντας ἴσχει τ<fo:inline class="supraline" title="line above">ἀ</fo:inline>κ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--20-->
+                                          <fo:inline>[·· ? ··]</fo:inline> γὰρ οὐχ ο̣ἷόν̣ τ'<span class="smaller" style="font-style:italic;"> apostrophe </span> ἐρ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>σμεν̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>η̣σ̣φα̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>λ̣ω̣τ̣ασθ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>μενουδ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--25-->
+                                          <fo:inline>[·· ? ··]</fo:inline>γ̣ξαι·<span class="smaller" style="font-style:italic;"> middot </span> συ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>δη πᾶς·<span class="smaller" style="font-style:italic;"> middot </span> λυ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>·<span class="smaller" style="font-style:italic;"> middot </span> ηγεμ<fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:block>l.4 δ' add above | l.6 ι add above</fo:block>
+                     </fo:block>
+                  </fo:block>
+                  <fo:block id="commentary63659"> This papyrus has been digitally edited by Andrea Arrighini and by Holger Essler as part of a workshop on digital editions of papyri within the <strong>Dottorato in Scienze dell'Antichità</strong> (Venezia, Udine, Trieste). Revision by Holger Essler. </fo:block>
+               </fo:block-container>
+            </fo:block>
+            <fo:block id="59022">
+               <fo:block-container xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <fo:block id="bibliography59022"/>
+                  <fo:block id="edition59022">
+                     <fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab1">1</fo:inline>
+                        <br/>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab1-1">1</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>15</fo:inline>-
+<fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>20</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>25</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>30</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>35</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>ὁρῶντεςε̣̣ἰκοὺ[ς] οὐ κατ' ἀνθρώπους <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ὅπῃ δ' ἂν ἔ̣[ρ]δῃς, πάντα σοι τάδ'<span class="smaller" style="font-style:italic;"> apostrophe </span> εὐσεβ̣ῆ
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>ἦ κάρτ' ὀφείλω τῶνδέ σοι· πρόφρων γ̣ὰρ εἶ.
+
+<fo:inline/>ἄκουε δὴ πᾶς σῖγα δ̣ειθ̣ε̣λ̣ειδ̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline/>
+                                          <!--5-->ἄθ̣ρ̣η̣σ̣ον εἰ̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>εἴδωλον ε̣ἶναι̣ τ̣ο̣ῦτ' ἐμῇ μορφῇ πλέον
+
+<fo:inline/>τὸ Δαι̣δ̣ά̣λου μ[ί]μ̣ημα· φω̣ν̣ῆς δεῖ μόνον.
+
+<fo:inline/>ταδ<fo:inline>[··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ει̣<fo:inline>··</fo:inline>
+                                          <fo:inline/>ορα<fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>·</fo:inline>ρ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--10-->χωρει μάλα
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>εὐκταῖα κόσμον ταῦ̣τ̣[α] τῷ θεῷ φέρω
+
+<fo:inline/>καλλίγραπ̣τ̣ον εὐχ̣ά̣ν.
+
+<fo:inline/>τῇ μητρὶ τἠμῇ πρά̣γμα̣τ' ἂν παρασχέθοι·
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>ἰδοῦσα γάρ νι̣ν̣ ἂν σαφῶς
+
+<fo:inline/>
+                                          <!--15-->τρέποι̣τ' ἂν †ἀξ̣ιάζοιτό† θ' ὡς
+16  δ̣οκοῦσ' ἔμ' εἶναι, τὸν ἐξ
+-
+<fo:inline/>έθρ̣εψε̣ν̣· οὕτως ἐμφερὴς ὅδ' ἐστίν.
+
+<fo:inline/>εἷα δὴ σκοπεῖτε δ̣ῶμα ποντίου σεισίχθο[νος]
+
+<fo:inline/>κἀπιπασσάλευ' ἕ̣κ̣αστος τῆς κ[α]λῆς μορφῆς <fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--20-->ἄγγελον, κήρυκ'<span class="smaller" style="font-style:italic;"> apostrophe </span> [ἄ]ν̣αυ{δ}`λ´ον, ἐμπόρων κω̣λύτορ[α,]
+
+<fo:inline/>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>·</fo:inline> ἐπισχήσει κε̣λεύθου τοὺς ξένο[υς] φ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>χαῖρ' ἄναξ, χαῖρ' ὦ Π̣όσειδον ἐπιτροπ<fo:inline>·</fo:inline>
+                                          <fo:inline>[··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>ἔμελλον εὑρήσειν ἄρ'<span class="smaller" style="font-style:italic;"> apostrophe </span> ὑμᾶς, ὠγαθο[ί.]
+
+<fo:inline/>οὐ τοῦτ' ἐρῶ σ'· οὐ δῆλος ἦσθ' ὁδοιπο[ρῶν·]
+
+<fo:inline/>
+                                          <!--25-->αὐ[τὴ] κ̣έλευθος τ̣αῦτά μοι προσ̣εν<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ρῶντα τούσδε πλησ[ι]οσφ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>αυτα καὶ σαφῶς ἡγεῖτό μο̣[ι]
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>τα<fo:inline>·</fo:inline>δω<fo:inline>[·]</fo:inline>μ̣η̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>δωι πατ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ὁ̣ρ̣ῶ̣ν̣ μύουρα καὶ βραχέα τὰ̣ φ̣[αλλί]α  
+
+<fo:inline/>
+                                          <!--30-->ὡς ἐξέτριβες ᾿Ισθμιαστικὴν̣ <fo:inline>[·· 4··]</fo:inline>ν
+
+<fo:inline/>κοὐκ ἠμέλησας, ἀλλ' ἐγυμνάζ[ου κα]λῶς.
+
+<fo:inline/>εἰ δ' οὖν ἐσῴζου τὴν πάλαι παρο̣[ιμία]ν̣,
+
+<fo:inline/>τοὔρχημα μᾶλλον εἰκὸς ἦν σε<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· 5··]</fo:inline>ε̣ιν.
+
+<fo:inline/>σὺ δ' ἰσθμ̣ιάζεις καὶ τρόπους και[νοὺς μ]α̣θὼν̣
+
+<fo:inline/>
+                                          <!--35-->βραχεί̣ο̣[ν'] [ἀ]σ̣κ̣εῖς, χρήματα φθείρων ἐμὰ 
+
+<fo:inline/>κτεα<fo:inline>[·· 8-9··]</fo:inline>ε ταῦτ' ἐπ<fo:inline>·</fo:inline>ρανω`ι´ πονων̣  
+</fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab1-2">2</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>25</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>30</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>35</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[---]</fo:inline>
+                                          <fo:inline/>
+                                          <!--25-->
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ου<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ντο<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>·· 4··</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>···</fo:inline>δηδ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>σάκει καλύψασ<fo:inline>[···]</fo:inline>εν<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>σπείρεις δὲ μῦθον τ[ό]ν̣δε <fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--30-->καὶ ῥηματίζεις ε̣ἰ̣ς ἔμ' ἐ̣κ̣τρ<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ὡς οὐδέ̣ν εἰμι τὴν σιδηρῖτι[ν]<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>γύννις δ' ἄναλκις οὐδ̣ενειμ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>καὶ νῦν τάδ' ἄλλα καὶ ποται̣ν̣[ι]<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἔχθιστα πάντων τω<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--35-->πλύνεις τ' ἔμ' αὐτ̣ὸν <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἐφ' ἣν ἀγείρω πλ<fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab1-1b">1b</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>τιτοι<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>σ<fo:inline>·</fo:inline>λευ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline> [ο]ὐδαμως <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--5-->
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>χυπωσκ.<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>οσσαδημ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ασυν<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>σαλλο<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ισφι<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--10-->
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ουκε<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ρωντ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab2">2</fo:inline>
+                        <br/>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab2-1">1</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>15</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline> ἔ̣ν̣ο̣ρκόν ἐστι σο[ι] κα<fo:inline>[···]</fo:inline>φ̣ρ̣ον̣εῖν
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline> κ̣α̣κῶς ὄλοιο καὶ τ̣<fo:inline>·</fo:inline>ε<fo:inline>·· 6··</fo:inline>ε
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>α̣<fo:inline>···</fo:inline>ιῃ σοι πρ<fo:inline>···</fo:inline>
+                                          <fo:inline>[·· c. 6··]</fo:inline>
+                                          <fo:inline>···</fo:inline>νε<fo:inline>··</fo:inline>ν  
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>ο̣νοντωσῆ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--5-->
+                                          <fo:inline>[·· ? ··]</fo:inline>ο̣υ̣λον η τριδουλ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>αξ δ̣ικα<fo:inline>[·· 2-3··]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>θενα<fo:inline>[·· 4··]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ῳ τε κο̣[ίτ]ω̣ι̣ καὶ κακαῖς δ[υσ]αυ̣λ̣ί̣α̣ι̣ς
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ει παλαιο̣<fo:inline>·</fo:inline> το̣ῦ̣δ̣' ἐνοικτε<fo:inline>···</fo:inline>
+                                          <fo:inline>[···]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>.δεπ̣<fo:inline>[·]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>ας π̣ο̣λυπ̣<fo:inline>[·]</fo:inline>δ̣ο̣<fo:inline>[·· c. 8··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline/>
+                                          <!--10-->
+                                          <fo:inline>[·· ? ··]</fo:inline> [φ]εύγων<fo:inline>[···]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·]</fo:inline>α̣τ̣ο̣νδ'<span class="smaller" style="font-style:italic;"> apostrophe </span>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline> [π]ό̣τερα παθων̣ τι δε<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>υ πολλὰ δράξας ω<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>α θαρσῶν <fo:inline>·</fo:inline>εξ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ω̣ι ἱερῷ μ̣ε̣ν<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--15-->
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[··]</fo:inline>σ̣τ<fo:inline>[·]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ν<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab2-2">2</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>15</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>20</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>25</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>κοὐδεὶς παλαιῶν οὐδὲ τῶν νεωτέρω[ν]
+
+<fo:inline/>ἑκὼν ἄπεστι τῶνδε διστοίχω[ν]<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>σὺ δ' ἰσθμιάζεις καὶ πίτυος ἐστ[εμμένος]
+
+<fo:inline/>κλάδοισι̣ κισσοῦ̣ δ' ο̣ὐ̣δ[α]μοῦ τιμη<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--5-->ταῦτ' οὖν δακρύσεις οὐ κ̣απνῶ[ι]<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>παρόντα δ' ἐγγὺς οὐχ ὁρᾶ̣ι̣ς τα<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>ἀλλ' οὔποτ' ἔξειμ' ε<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>τοῦ ἱεροῦ και τι μο<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ταῦτ' ἀπειλεῖς ε<fo:inline>·</fo:inline>[ <fo:inline>·· ? ··</fo:inline>]
+
+<fo:inline/>
+                                          <!--10-->῎Ισθμιον αντε<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>Ποσειδᾶνοσο<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>σὺ δ' ἄλλοις ταῦτ<fo:inline>[··]</fo:inline>εμπε<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>
+                                          <fo:inline>·· 4··</fo:inline>
+                                          <fo:inline>[·]</fo:inline>α̣ καινὰ ταῦτα μα̣<fo:inline>[···]</fo:inline>νειν φιλεῖ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἐγ̣ὼ [φέ]ρ̣{ο}[[ι]]`ω´ σοι νεοχμὰ <fo:inline>[·· 4··]</fo:inline> ἀθύρματα̣  
+
+<fo:inline/>
+                                          <!--15-->ἀπὸ [σκε]πάρνου κἄκμ[ονος ν]εόκτ[ιτα.]
+
+<fo:inline/>τουτ[ὶ τὸ] πρῶτόν ἐστί σοι τ[ῶ]ν π̣αι̣γ̣[νίω]ν.
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>ἐμοὶ μὲν οὐχί· τῶν φίλων νεῖμόν τι̣νι.
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>μὴ ἄπειπε μηδ' ὄρνιθος οὕνεκ', ὠγαθέ,
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>τί δὴ γανοῦσθαι τοῦτο; καὶ τί χρήσομαι;
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>
+                                          <!--20-->ἥνπερ μεθειλ<fo:inline>[··]</fo:inline> [τὴ]ν τέχνην ταύτη̣[ι] π̣ρεπ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>τί δ' ἀ̣ντιποιεῖν <fo:inline>[···]</fo:inline>τιπλουν μου<fo:inline>[·]</fo:inline>ανδαν<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>ξυνισθμιάζειν <fo:inline>[·· 5··]</fo:inline> ἐμμελέστατο̣ν.
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>φέρω<fo:inline>[·· c. 17··]</fo:inline> ἐμβήσεται.
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>ἐπισ̣<fo:inline>[·· c. 17··]</fo:inline>β̣άδην ἐλ[ᾶ]ι̣ς
+
+<fo:inline/>
+                                          <!--25-->
+                                          <fo:inline>[··]</fo:inline>ει̣<fo:inline>[·· c. 19··]</fo:inline>φ<fo:inline>·</fo:inline>ρ̣ων σφυρά
+
+<fo:inline/>
+                                          <fo:inline>[··]</fo:inline>σε̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab2-2b">2b</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>εμπε<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>νειν̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>θυρ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ε̣σ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab3">3</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>δε<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ελφ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>τιπ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>δ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:block>l.14 ω add above | l.20 λ add above | l.35 reg., orig. βραχείον' | l.36 ι add above</fo:block>
+                     </fo:block>
+                  </fo:block>
+                  <fo:block id="commentary59022"> This papyrus has been digitally edited by Maria Francesca Melloni and by Holger Essler as part of a workshop on digital editions of papyri within the <strong>Dottorato in Scienze dell'Antichità</strong> (Venezia, Udine, Trieste). Revision by Holger Essler. </fo:block>
+               </fo:block-container>
+            </fo:block>
+            <fo:block id="59788">
+               <fo:block-container xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <fo:block id="bibliography59788"/>
+                  <fo:block id="edition59788">
+                     <fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab1">1</fo:inline>
+                        <br/>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab1-1">1</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>-
+<fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>···</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ωνετ.<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ε̣νησετ<fo:inline>[·· ? ··]</fo:inline>μετεκ
+-
+<fo:inline/>βάλωσι τοῦ νυν<fo:inline class="supraline" title="line above">ὶ</fo:inline> τρόπου.
+<fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>diple-obelismene
+
+<fo:inline/>
+                                          <!--5-->ἀλ̣λ̣ὰ τῶν λ̣οιπῶ̣ν ἄκουσον, ἄξιον γ̣[άρ] ἐστί σοι.
+
+<fo:inline/>π̣ᾶ̣ϲ̣ι̣ γὰ̣ρ τέξουσι̣ν ὑ⟦ν⟧μῖν αἱ γυναῖκες πα[ι]δ̣ία
+
+<fo:inline/>πεντέμηνα κα[ὶ] τρίμηνα καὶ τριακο[ν]τ̣ήμερα,
+
+<fo:inline/>[ὁ]πό⟦τ⟧`σ´' ἂν ἐπιθυμῶσι πλῆθ̣ος, ἄρ̣[ρ]ενά τε καὶ θήλεα.
+
+<fo:inline/>ταῦτα δ'<span class="smaller" style="font-style:italic;"> apostrophe </span> ἡβήσει πρὶν εἶναι πεντεκαίδεκ' ἡμερῶν
+
+<fo:inline/>
+                                          <!--10-->κᾆτα βεινήσουσιν ἄλλων πεντεκαίδεκ'<span class="smaller" style="font-style:italic;"> apostrophe </span> ἡμερῶν ` ἔν τι(σιν) ὁ μετὰ τοῦτον στίχος πρὸ τούτου ἦν´
+
+<fo:inline/>καὶ γενειάσουσιν ἑτέρων πεντεκαίδεκ' ἡμερῶν
+</fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab1-2">2</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>⟦σ̣⟧<fo:inline>·</fo:inline>ω̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>λε<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· 8-12··]</fo:inline>υχα<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἀναμ<fo:inline>[·· 5-10··]</fo:inline>μελ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἐπι̣τρ<fo:inline>[·· 5-10··]</fo:inline>υμ<fo:inline>[·· 5-10··]</fo:inline>νο̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--5-->ἐ̣γγυτ<fo:inline>[·· 2-4··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ν<fo:inline>[·]</fo:inline>υ̣σ̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>εα<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>diple-obelismene
+
+<fo:inline/>π<fo:inline>··</fo:inline>τ̣αν̣εμ̣<fo:inline>[·]</fo:inline>
+                                          <fo:inline>··</fo:inline>βιασ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>τέμενος μ[έ]γα καὶ<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>πλατύ,<span class="smaller" style="font-style:italic;"> hypodiastole </span> πιστὸν ἅπασι̣<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἱδρύσασθε φρενῶν ὕπ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--10-->περὶ δ' αὐτὸ δικαιων<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἐπὶ πᾶσι μὲν ἔργοις <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἐπὶ πᾶσ[ι] δὲ μύθοις. <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab2">2</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ν προ⟦σ⟧εδρ[ίαν] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>ων τοὺς φίλ[ους] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline> κ̣αταφαγεῖν <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:block>l.1  |  | l.2  | l.4  | l.6  | l.7 reg., orig. τριακοντήμερα |  | l.8 σ add above | l.9 reg., orig. πεντεκαίδεκ | l.10 reg., orig. βεινήσουσιν | reg., orig. πεντεκαίδεκ | l.11 reg., orig. πεντεκαίδεκ</fo:block>
+                     </fo:block>
+                  </fo:block>
+                  <fo:block id="commentary59788">P.Oxy. 37 2806 has been digitally edited by Michele Saccomanno and revised by Holger Essler as part of a workshop on digital editions of papyri within the <strong>Dottorato in Scienze dell'Antichità </strong>(Venezia, Udine, Trieste).</fo:block>
+               </fo:block-container>
+            </fo:block>
+            <fo:block id="">
+               <fo:block-container xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <fo:block id="bibliography">
+               Original record.</fo:block>
+                  <fo:block id="edition"/>
+                  <fo:block id="commentary"/>
+               </fo:block-container>
+            </fo:block>
+            <fo:block id="62766">
+               <fo:block-container xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <fo:block id="bibliography62766"/>
+                  <fo:block id="edition62766">
+                     <fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab1">1</fo:inline>
+                        <br/>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab1-1">1</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>15</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>20</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>25</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[---]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>α 
+
+<fo:inline/>
+                                          <fo:inline>[---]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>υμα<span class="smaller" style="font-style:italic;"> middot </span>
+                                          <fo:inline/>
+                                          <!--15-->
+                                          <fo:inline>[---]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>[·· c. 6··]</fo:inline>
+                                          <fo:inline>·· 4··</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>·· 5··</fo:inline>
+                                          <fo:inline/>
+                                          <!--20-->
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[···]</fo:inline>
+                                          <fo:inline>·</fo:inline>ο̣ς̣ ἢ̣ 'νθάδε<span class="smaller" style="font-style:italic;"> middot </span>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>τε τὸν θ̣ε̣οστυγῆ 
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline> [τὸν] ξ̣ένον νοῶ τίς ἦν 
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline> θ̣υρ̣ῶν τ̣ὸ πᾶν μύσος 
+
+<fo:inline/>
+                                          <!--25-->
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline> ⸢ἐπῃινέθη⸣ «καλά» 
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ευρ̣έθη κακά 
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline> ἐξ ἐ[ν ]ωπίων 
+
+<fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>φηλώσ̣ας ἐμέ.
+</fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="textpart-ab1-2">2</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>5</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>10</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>15</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>20</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:inline>25</fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>ἀλλ' οἴχεται μὴν̣ κ̣ <fo:inline class="supraline" title="line above">ἀ</fo:inline> σ̣τ<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>τ̣ὰ σὰ σκοτώσ<fo:inline class="supraline" title="line above">α</fo:inline>ς ὄμμ̣[α]<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>τ̣αῦτ'<span class="smaller" style="font-style:italic;"> apostrophe </span> οὐκέτ' ἴδρι̣ς εἰμ[ὶ] δειν̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>εἰ δεινά· πῶς γὰρ οὐχ;<fo:inline font-style="italic"> v </fo:inline> ὁ<fo:inline>·· 4··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--5-->σεμνὰς τραπέζας ἐν δόμοι[ς] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ὁ̣ δ̣' ἀμφὶ χ̣εῖρα παρθέν̣[ῳ] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>Ἰοῖ δι' οἴκων οἴχεται σ̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>`<fo:inline>error:hi tag with rend=supraline-underline is not supported!γ</fo:inline>´´ κόρης δὲ μυκτὴρ κρᾶ̣τ<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἐκβουτυποῦται κα<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--10-->φύει κάρ<fo:inline class="supraline" title="line above">α</fo:inline> τ̣αυρ̣ῶ̣<fo:inline>[·]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>αὐχὴν ἐπ' ὤμοι̣[ς] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>`χ´ ποδῶν δὲ χηλ[αὶ] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>κροτοῦσι θρ<fo:inline class="supraline" title="line above">ά</fo:inline>ν<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>γυνὴ λέαινα π<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--15-->ἧσται λινε̣ργ̣<fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>τοιαῦτα<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ὁ ξεῖνος α<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>paragraphos
+
+<fo:inline/>`χο(ροῦ)´ ἄφθογγός εἰ̣μ̣[ι] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ε̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· 4··]</fo:inline>
+                                          <fo:inline>·</fo:inline>ε̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·]</fo:inline>
+                                          <fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--20-->
+                                          <fo:inline>·</fo:inline>κ̣<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ὁ ξεῖνος ουθυ̣<fo:inline>···</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἄ̣π̣ιστα το<fo:inline>·· 5··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:block xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"/>diple-obelismene
+
+<fo:inline/>`χο(ροῦ)´ ἰώ, Γ<fo:inline class="supraline" title="line above">ᾶ</fo:inline>, θεῶν [μᾶτερ] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ἀξύνετ<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <!--25-->ὁ πολυφάρμ̣[ακος] <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>`χο(ροῦ)´ κάρβανος αἰθὸς<fo:inline>·</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>ὁ μὲν ε<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>`χο(ροῦ)´ ὁ δ' αἰολωπὸν α<fo:inline>·</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:inline padding-right="0.2em" position="absolute" id="ab2">2</fo:inline>
+                        <fo:block margin-bottom="3mm">
+                           <fo:table width="100%">
+                              <fo:table-column column-number="1" column-width="10%"/>
+                              <fo:table-column column-number="3" column-width="90%"/>
+                              <fo:table-body>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block><!--number--></fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block><!--line--></fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                                 <fo:table-row>
+                                    <fo:table-cell column-number="1">
+                                       <fo:block>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                          <fo:block>
+                                             <fo:leader/>
+                                          </fo:block>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                    <fo:table-cell column-number="3">
+                                       <fo:block>
+                                          <fo:inline>[---]</fo:inline>
+                                          <fo:inline><!--0--></fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>···</fo:inline>
+                                          <fo:inline>[···]</fo:inline>
+                                          <fo:inline>···</fo:inline>ν̣<fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>·</fo:inline>σ' ἔχ' αὐτόν, ὤ ἰού ἰού <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline>··</fo:inline>
+                                          <fo:inline>[·· ? ··]</fo:inline>
+                                          <fo:inline/>
+                                          <fo:inline>[---]</fo:inline>
+                                       </fo:block>
+                                    </fo:table-cell>
+                                 </fo:table-row>
+                              </fo:table-body>
+                           </fo:table>
+                        </fo:block>
+                        <fo:block>l.25 sic, orig. ἐπῃινέσθη | del κακά</fo:block>
+                     </fo:block>
+                  </fo:block>
+                  <fo:block id="commentary62766"> This papyrus has been digitally edited by Sofia Di Mambro and revised by Holger Essler as part of a workshop on digital editions of papyri within the <strong>Dottorato in Scienze dell'Antichità</strong> (Venezia, Udine, Trieste). </fo:block>
+               </fo:block-container>
+            </fo:block>
+            <fo:block id="">
+               <fo:block-container xmlns:xs="http://www.w3.org/2001/XMLSchema">
+                  <fo:block id="bibliography">
+               Original record.</fo:block>
+                  <fo:block id="edition"/>
+                  <fo:block id="commentary"/>
+               </fo:block-container>
+            </fo:block>
+         </fo:block-container>
+         <!--  break  after Catalogue -->
+         <fo:block page-break-after="always"/>
+      </fo:flow>
+   </fo:page-sequence>
+</fo:root>

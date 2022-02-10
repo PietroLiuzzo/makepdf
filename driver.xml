@@ -18,7 +18,7 @@
    xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk"
    xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml"
    xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape"
-   xmlns:t="http://www.tei-c.org/ns/1.0" type="mss" xml:id="AddisAbabaManuscripts">
+   xmlns:t="http://www.tei-c.org/ns/1.0" type="mss" xml:id="wurzburgworkshop">
    <teiHeader xml:base="https://betamasaheft.eu/">
       <fileDesc>
          <titleStmt>
@@ -98,45 +98,30 @@
          </div>
          <div>
             <head>Abbreviations</head>
-            <p>In the following list <att>corresp</att> points in an abbreviated form to the selected source text of reference. The shortened reference can be resolved with <gi>prefixDef</gi>. The content of <gi>label</gi> in each item in the list is the value which will be used in <tag>ref @cRef</tag> and eventually specified by additional attributes or structure </p>
-            <list xml:id="abbreviations">
-               <item corresp="perseids:tlg0016.tlg001"><label>Hdt</label> = Herodotus, The
-                  Histories</item>
-               <item corresp="alpheios:tlg0085.tlg003.alpheios-text-grc1"><label>Aesch</label> =
-                  Aeschylus Prometheus Bound</item>
-              <!-- <item corresp="bmcoldts:LIT1546Genesi"><label>Gen.</label> = Book of Genesis,
-                  Ethiopian</item>
-               <item corresp="bmcoldts:BMLacq810"><label>BML acq. 810</label> = Biblioteca Medicea
-                  Laurenziana, MS Acquisizioni e Doni 810.</item>
-               <item corresp="bmcoldts:BLorient718"><label>BL orient 718</label> = London, British Library, BL Oriental 718.</item>
-               <item corresp="enc:pos2012.pos201218.positionThese-fr1"><label>Mon tres cher pere</label> = Étude et édition critique de la correspondance de Gabriel François de Brueys d’Aigalliers avec son père (1755-1782).</item>-->
-            </list>
+           <p>
+              <list>
+                 <item>A : A</item>
+              </list>
+           </p>
          </div>
       </front>
       <body>
          <div>
             <head>Intro</head>
-            <p>This sample package uses Zotero API, DTS API, IIIF APIs, XInclude pointing to local
-               and external resources to build with Xquery and FOP a PDF output. The result mixes
-               information retrieved from the APIs. An additional layer of transformation is added
-               to prepare inscriptions before inclusion which uses the EpiDoc example XSLT.</p>
+            <p>This article prepares a submission for the journal Aethiopica, because it is based on a branch of a project set up with those requirements. It use the same setup to print a collection of papyri. The text of the papyri is rendered using a local copy of the EpiDoc example XSLT</p>
             <div>
-               <head>Other things you can do in your encoding</head>
+               <head>Things you can do in your encoding include...</head>
                <p> You can use here <list>
-                     <item><ref target="http://www.thelevantinefoundation.co.uk"/></item>
-                     <item>ref with type figure, internal, manuscript, work with respectively the
-                        ids of a figure in a figure element, a chapter or any other node with a
-                        xml:id, a manuscript in BM a work in BM</item>
-                     <item><bibl><ptr target="bm:Meinardus1961Monks"/><citedRange unit="page"
-                              >117</citedRange></bibl></item>
+                     <item>links <ref target="http://www.thelevantinefoundation.co.uk"/></item>
                      <item><note>to make a footnote</note></item>
                      <item>lists like this one</item>
-                     <item>cit and quote</item>
+                     <item>cit and quote for quoted passages</item>
                   </list>
                </p>
                <div type="section">
                   <head>section head</head>
-                  <p>my section text</p>
+                  <p>In this section I am using pointers to bibliographical items which are not in the editions of the papyri.
+                     <bibl><ptr target="pietro:epidoc"/></bibl><bibl><ptr target="pietro:xslt"/></bibl><bibl><ptr target="pietro:xquery"/></bibl></p>
                </div>
             </div>
          </div>
@@ -144,19 +129,14 @@
       <back>
          <div>
             <head>Plates</head>
-            <p>examples of mixing and matching different images from different sources.</p>
+            <p></p>
             <table>
                <row role="label">
                   <cell/>
                   <cell/>
                </row>
                <row>
-                  <cell><figure>
-                        <graphic url="images/AP-046_014.jpg">
-                           <desc>Image on the left using a TEI table from a locally stored
-                              image</desc>
-                        </graphic>
-                     </figure></cell>
+                  <cell></cell>
                   <cell>
                   </cell>
                </row>
