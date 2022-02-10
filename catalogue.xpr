@@ -38,7 +38,27 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>papyri/</String>
+                                    <String>driver.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>catalogue2PDF</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XML_XQUERY</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>inscriptions2fo.xslt</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -58,16 +78,16 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>driver.xml</String>
+                                    <String>papyri/</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>catalogue2PDF</String>
+                                        <String>epidocFO</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
                                     <list>
-                                        <String>XML_XQUERY</String>
+                                        <String>XSL</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
@@ -587,7 +607,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${pd}/catalogue.pdf</String>
+                                    <String>${pd}/output.pdf</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>

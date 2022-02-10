@@ -122,6 +122,18 @@
                   <head>section head</head>
                   <p>In this section I am using pointers to bibliographical items which are not in the editions of the papyri.
                      <bibl><ptr target="pietro:epidoc"/></bibl><bibl><ptr target="pietro:xslt"/></bibl><bibl><ptr target="pietro:xquery"/></bibl></p>
+                  <p>
+                     <cit>
+                        <quote>Writing is a public act, we must
+                           learn to share our work with a readership. See our work as worth sharing, our voices as
+                           worth hearing. Share. Publish your own work. Publishing builds community through
+                           gifts and exchange, through consideration and generosity, through the interplay and
+                           dialogue with each other’s work. You are out of excuses. Readers are a book’s aphorisms.
+                           [...] The Internet is not
+                           something that challenges who we are or how we write, it is who we are and how we
+                           write. We measure success by how many people successful next to you, here we say you
+                           broke if everybody else broke except for you. The rest of us just copy. (Derek Beaulieu in The Future of Text, p. 146)</quote></cit>
+                  </p>
                </div>
             </div>
          </div>
